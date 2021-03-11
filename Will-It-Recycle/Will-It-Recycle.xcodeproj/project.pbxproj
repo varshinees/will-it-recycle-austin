@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4282887925FABDD700E633D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282887825FABDD700E633D9 /* AppDelegate.swift */; };
+		4282887B25FABDD700E633D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282887A25FABDD700E633D9 /* SceneDelegate.swift */; };
+		4282887D25FABDD700E633D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282887C25FABDD700E633D9 /* ViewController.swift */; };
+		4282888025FABDD700E633D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282887E25FABDD700E633D9 /* Main.storyboard */; };
+		4282888325FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4282888125FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld */; };
+		4282888525FABDD800E633D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4282888425FABDD800E633D9 /* Assets.xcassets */; };
+		4282888825FABDD800E633D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282888625FABDD800E633D9 /* LaunchScreen.storyboard */; };
+		4282889125FAC0BD00E633D9 /* LoadingLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889025FAC0BD00E633D9 /* LoadingLogin.storyboard */; };
+		4282889625FAC1C700E633D9 /* Recycle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889525FAC1C700E633D9 /* Recycle.storyboard */; };
+		4282889925FAC1DB00E633D9 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889825FAC1DB00E633D9 /* Welcome.storyboard */; };
+		4282889C25FAC1F000E633D9 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889B25FAC1F000E633D9 /* Game.storyboard */; };
+		4282889F25FAC20C00E633D9 /* Community.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889E25FAC20C00E633D9 /* Community.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4282887525FABDD700E633D9 /* Will-It-Recycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Will-It-Recycle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4282887825FABDD700E633D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4282887A25FABDD700E633D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4282887C25FABDD700E633D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4282887F25FABDD700E633D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4282888225FABDD700E633D9 /* Will_It_Recycle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Will_It_Recycle.xcdatamodel; sourceTree = "<group>"; };
+		4282888425FABDD800E633D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4282888725FABDD800E633D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4282888925FABDD800E633D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4282889025FAC0BD00E633D9 /* LoadingLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingLogin.storyboard; sourceTree = "<group>"; };
+		4282889525FAC1C700E633D9 /* Recycle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recycle.storyboard; sourceTree = "<group>"; };
+		4282889825FAC1DB00E633D9 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		4282889B25FAC1F000E633D9 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		4282889E25FAC20C00E633D9 /* Community.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Community.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4282887225FABDD700E633D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4282886C25FABDD700E633D9 = {
+			isa = PBXGroup;
+			children = (
+				4282887725FABDD700E633D9 /* Will-It-Recycle */,
+				4282887625FABDD700E633D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4282887625FABDD700E633D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4282887525FABDD700E633D9 /* Will-It-Recycle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4282887725FABDD700E633D9 /* Will-It-Recycle */ = {
+			isa = PBXGroup;
+			children = (
+				4282889325FAC10600E633D9 /* Storyboards */,
+				4282887825FABDD700E633D9 /* AppDelegate.swift */,
+				4282887A25FABDD700E633D9 /* SceneDelegate.swift */,
+				4282887C25FABDD700E633D9 /* ViewController.swift */,
+				4282888425FABDD800E633D9 /* Assets.xcassets */,
+				4282888625FABDD800E633D9 /* LaunchScreen.storyboard */,
+				4282888925FABDD800E633D9 /* Info.plist */,
+				4282888125FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld */,
+			);
+			path = "Will-It-Recycle";
+			sourceTree = "<group>";
+		};
+		4282889325FAC10600E633D9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4282887E25FABDD700E633D9 /* Main.storyboard */,
+				4282889E25FAC20C00E633D9 /* Community.storyboard */,
+				4282889B25FAC1F000E633D9 /* Game.storyboard */,
+				4282889825FAC1DB00E633D9 /* Welcome.storyboard */,
+				4282889525FAC1C700E633D9 /* Recycle.storyboard */,
+				4282889025FAC0BD00E633D9 /* LoadingLogin.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4282887425FABDD700E633D9 /* Will-It-Recycle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4282888C25FABDD800E633D9 /* Build configuration list for PBXNativeTarget "Will-It-Recycle" */;
+			buildPhases = (
+				4282887125FABDD700E633D9 /* Sources */,
+				4282887225FABDD700E633D9 /* Frameworks */,
+				4282887325FABDD700E633D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Will-It-Recycle";
+			productName = "Will-It-Recycle";
+			productReference = 4282887525FABDD700E633D9 /* Will-It-Recycle.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4282886D25FABDD700E633D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					4282887425FABDD700E633D9 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 4282887025FABDD700E633D9 /* Build configuration list for PBXProject "Will-It-Recycle" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4282886C25FABDD700E633D9;
+			productRefGroup = 4282887625FABDD700E633D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4282887425FABDD700E633D9 /* Will-It-Recycle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4282887325FABDD700E633D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4282889F25FAC20C00E633D9 /* Community.storyboard in Resources */,
+				4282888825FABDD800E633D9 /* LaunchScreen.storyboard in Resources */,
+				4282889125FAC0BD00E633D9 /* LoadingLogin.storyboard in Resources */,
+				4282889C25FAC1F000E633D9 /* Game.storyboard in Resources */,
+				4282888525FABDD800E633D9 /* Assets.xcassets in Resources */,
+				4282889625FAC1C700E633D9 /* Recycle.storyboard in Resources */,
+				4282888025FABDD700E633D9 /* Main.storyboard in Resources */,
+				4282889925FAC1DB00E633D9 /* Welcome.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4282887125FABDD700E633D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4282887D25FABDD700E633D9 /* ViewController.swift in Sources */,
+				4282887925FABDD700E633D9 /* AppDelegate.swift in Sources */,
+				4282888325FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld in Sources */,
+				4282887B25FABDD700E633D9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4282887E25FABDD700E633D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4282887F25FABDD700E633D9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4282888625FABDD800E633D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4282888725FABDD800E633D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4282888A25FABDD800E633D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4282888B25FABDD800E633D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4282888D25FABDD800E633D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Will-It-Recycle/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "team10.Will-It-Recycle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4282888E25FABDD800E633D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Will-It-Recycle/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "team10.Will-It-Recycle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4282887025FABDD700E633D9 /* Build configuration list for PBXProject "Will-It-Recycle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4282888A25FABDD800E633D9 /* Debug */,
+				4282888B25FABDD800E633D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4282888C25FABDD800E633D9 /* Build configuration list for PBXNativeTarget "Will-It-Recycle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4282888D25FABDD800E633D9 /* Debug */,
+				4282888E25FABDD800E633D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4282888125FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4282888225FABDD700E633D9 /* Will_It_Recycle.xcdatamodel */,
+			);
+			currentVersion = 4282888225FABDD700E633D9 /* Will_It_Recycle.xcdatamodel */;
+			path = Will_It_Recycle.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4282886D25FABDD700E633D9 /* Project object */;
+}
