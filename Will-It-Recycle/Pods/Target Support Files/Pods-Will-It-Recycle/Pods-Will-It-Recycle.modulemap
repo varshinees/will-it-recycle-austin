@@ -1,0 +1,6 @@
+framework module Pods_Will_It_Recycle {
+  umbrella header "Pods-Will-It-Recycle-umbrella.h"
+
+  export *
+  module * { export * }
+}

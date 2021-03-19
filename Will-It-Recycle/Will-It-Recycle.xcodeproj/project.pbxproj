@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4210B2572603CE7E000435BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4210B2562603CE7E000435BD /* GoogleService-Info.plist */; };
 		4282887925FABDD700E633D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282887825FABDD700E633D9 /* AppDelegate.swift */; };
 		4282887B25FABDD700E633D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282887A25FABDD700E633D9 /* SceneDelegate.swift */; };
 		4282887D25FABDD700E633D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282887C25FABDD700E633D9 /* ViewController.swift */; };
@@ -19,9 +20,11 @@
 		4282889925FAC1DB00E633D9 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889825FAC1DB00E633D9 /* Welcome.storyboard */; };
 		4282889C25FAC1F000E633D9 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889B25FAC1F000E633D9 /* Game.storyboard */; };
 		4282889F25FAC20C00E633D9 /* Community.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889E25FAC20C00E633D9 /* Community.storyboard */; };
+		8188043EA3113E27FDA1AE1E /* Pods_Will_It_Recycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FAD6D3C69A519F7E4CE289 /* Pods_Will_It_Recycle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4210B2562603CE7E000435BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4282887525FABDD700E633D9 /* Will-It-Recycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Will-It-Recycle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4282887825FABDD700E633D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4282887A25FABDD700E633D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		4282889825FAC1DB00E633D9 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		4282889B25FAC1F000E633D9 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 		4282889E25FAC20C00E633D9 /* Community.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Community.storyboard; sourceTree = "<group>"; };
+		53FAD6D3C69A519F7E4CE289 /* Pods_Will_It_Recycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Will_It_Recycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68C8AF049FB5F205B15DA2F0 /* Pods-Will-It-Recycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Will-It-Recycle.release.xcconfig"; path = "Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle.release.xcconfig"; sourceTree = "<group>"; };
+		DA6F76637CACBFBBBC2F7C63 /* Pods-Will-It-Recycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Will-It-Recycle.debug.xcconfig"; path = "Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +49,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8188043EA3113E27FDA1AE1E /* Pods_Will_It_Recycle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30F9DEE4903A43377B4F26F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA6F76637CACBFBBBC2F7C63 /* Pods-Will-It-Recycle.debug.xcconfig */,
+				68C8AF049FB5F205B15DA2F0 /* Pods-Will-It-Recycle.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4282886C25FABDD700E633D9 = {
 			isa = PBXGroup;
 			children = (
 				4282887725FABDD700E633D9 /* Will-It-Recycle */,
 				4282887625FABDD700E633D9 /* Products */,
+				30F9DEE4903A43377B4F26F8 /* Pods */,
+				D8B23E2B693C37B510C2ACFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +87,7 @@
 		4282887725FABDD700E633D9 /* Will-It-Recycle */ = {
 			isa = PBXGroup;
 			children = (
+				4210B2562603CE7E000435BD /* GoogleService-Info.plist */,
 				4282889325FAC10600E633D9 /* Storyboards */,
 				4282887825FABDD700E633D9 /* AppDelegate.swift */,
 				4282887A25FABDD700E633D9 /* SceneDelegate.swift */,
@@ -93,6 +113,14 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		D8B23E2B693C37B510C2ACFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53FAD6D3C69A519F7E4CE289 /* Pods_Will_It_Recycle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4282888C25FABDD800E633D9 /* Build configuration list for PBXNativeTarget "Will-It-Recycle" */;
 			buildPhases = (
+				3FF7B465C215B1985021C3AA /* [CP] Check Pods Manifest.lock */,
 				4282887125FABDD700E633D9 /* Sources */,
 				4282887225FABDD700E633D9 /* Frameworks */,
 				4282887325FABDD700E633D9 /* Resources */,
+				85D13AC9E0C24AC687F1DFC0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +182,7 @@
 			files = (
 				4282889F25FAC20C00E633D9 /* Community.storyboard in Resources */,
 				4282888825FABDD800E633D9 /* LaunchScreen.storyboard in Resources */,
+				4210B2572603CE7E000435BD /* GoogleService-Info.plist in Resources */,
 				4282889125FAC0BD00E633D9 /* LoadingLogin.storyboard in Resources */,
 				4282889C25FAC1F000E633D9 /* Game.storyboard in Resources */,
 				4282888525FABDD800E633D9 /* Assets.xcassets in Resources */,
@@ -162,6 +193,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FF7B465C215B1985021C3AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Will-It-Recycle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85D13AC9E0C24AC687F1DFC0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4282887125FABDD700E633D9 /* Sources */ = {
@@ -315,6 +388,7 @@
 		};
 		4282888D25FABDD800E633D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA6F76637CACBFBBBC2F7C63 /* Pods-Will-It-Recycle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -333,6 +407,7 @@
 		};
 		4282888E25FABDD800E633D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68C8AF049FB5F205B15DA2F0 /* Pods-Will-It-Recycle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
