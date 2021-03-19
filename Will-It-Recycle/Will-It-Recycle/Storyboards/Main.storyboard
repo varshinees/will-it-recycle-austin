@@ -16,8 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HI!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7F-sC-6JY">
-                                <rect key="frame" x="153" y="238" width="22" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icons" translatesAutoresizingMaskIntoConstraints="NO" id="PNZ-36-bXg">
+                                <rect key="frame" x="76" y="303" width="262" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SAVING THE PLANET..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5O-wB-Ozs">
+                                <rect key="frame" x="119" y="471" width="177" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -28,25 +32,24 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <segue destination="gnV-hd-f7Y" kind="presentation" identifier="LoginSegue" id="oM5-1y-Cpa"/>
+                        <segue destination="LXl-ma-d8J" kind="presentation" identifier="LoginSegue" modalPresentationStyle="fullScreen" id="6Bu-3y-UKf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vMr-aS-JH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64" y="98"/>
+            <point key="canvasLocation" x="63.768115942028992" y="97.767857142857139"/>
         </scene>
-        <!--Welcome-->
-        <scene sceneID="whf-Ip-nSF">
+        <!--Temp-->
+        <scene sceneID="zXP-Wa-tDK">
             <objects>
-                <viewControllerPlaceholder storyboardName="Welcome" id="gnV-hd-f7Y" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="nbu-gL-TWm"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wzP-Gm-aco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Temp" id="LXl-ma-d8J" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lJL-Md-7pT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702" y="98"/>
+            <point key="canvasLocation" x="736" y="100"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Icons" width="88" height="125"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
