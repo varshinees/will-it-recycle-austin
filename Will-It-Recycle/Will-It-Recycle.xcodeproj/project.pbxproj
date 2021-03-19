@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		4282889925FAC1DB00E633D9 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889825FAC1DB00E633D9 /* Welcome.storyboard */; };
 		4282889C25FAC1F000E633D9 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889B25FAC1F000E633D9 /* Game.storyboard */; };
 		4282889F25FAC20C00E633D9 /* Community.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889E25FAC20C00E633D9 /* Community.storyboard */; };
+		42DB208F2604287200CFBDAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DB208E2604287200CFBDAF /* LoginViewController.swift */; };
 		8188043EA3113E27FDA1AE1E /* Pods_Will_It_Recycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FAD6D3C69A519F7E4CE289 /* Pods_Will_It_Recycle.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		4282889825FAC1DB00E633D9 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		4282889B25FAC1F000E633D9 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 		4282889E25FAC20C00E633D9 /* Community.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Community.storyboard; sourceTree = "<group>"; };
+		42DB208E2604287200CFBDAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		53FAD6D3C69A519F7E4CE289 /* Pods_Will_It_Recycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Will_It_Recycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68C8AF049FB5F205B15DA2F0 /* Pods-Will-It-Recycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Will-It-Recycle.release.xcconfig"; path = "Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle.release.xcconfig"; sourceTree = "<group>"; };
 		DA6F76637CACBFBBBC2F7C63 /* Pods-Will-It-Recycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Will-It-Recycle.debug.xcconfig"; path = "Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,7 +64,6 @@
 				DA6F76637CACBFBBBC2F7C63 /* Pods-Will-It-Recycle.debug.xcconfig */,
 				68C8AF049FB5F205B15DA2F0 /* Pods-Will-It-Recycle.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -96,6 +97,7 @@
 				4282888625FABDD800E633D9 /* LaunchScreen.storyboard */,
 				4282888925FABDD800E633D9 /* Info.plist */,
 				4282888125FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld */,
+				42DB208E2604287200CFBDAF /* LoginViewController.swift */,
 			);
 			path = "Will-It-Recycle";
 			sourceTree = "<group>";
@@ -133,6 +135,7 @@
 				4282887225FABDD700E633D9 /* Frameworks */,
 				4282887325FABDD700E633D9 /* Resources */,
 				85D13AC9E0C24AC687F1DFC0 /* [CP] Embed Pods Frameworks */,
+				83C5E5CCBD71AB5660E26220 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,6 +220,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		83C5E5CCBD71AB5660E26220 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		85D13AC9E0C24AC687F1DFC0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +264,7 @@
 				4282887D25FABDD700E633D9 /* ViewController.swift in Sources */,
 				4282887925FABDD700E633D9 /* AppDelegate.swift in Sources */,
 				4282888325FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld in Sources */,
+				42DB208F2604287200CFBDAF /* LoginViewController.swift in Sources */,
 				4282887B25FABDD700E633D9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +414,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "Will-It-Recycle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -412,6 +434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Will-It-Recycle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

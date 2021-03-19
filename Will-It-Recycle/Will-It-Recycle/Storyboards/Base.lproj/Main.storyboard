@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Loading/Login"/>
                                 <connections>
-                                    <segue destination="Z2j-RB-Cfy" kind="show" id="qSW-PF-zCs"/>
+                                    <segue destination="Z2j-RB-Cfy" kind="presentation" id="Gqh-cr-bj4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzh-JK-GIC">
@@ -73,7 +73,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNh-06-u8U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="579" y="-141"/>
+            <point key="canvasLocation" x="578" y="-164"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="OUB-04-4Zu">
