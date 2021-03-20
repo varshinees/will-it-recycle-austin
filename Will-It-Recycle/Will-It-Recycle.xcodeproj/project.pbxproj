@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		423696FF2606A4AE002E3FF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 423696FE2606A4AE002E3FF9 /* GoogleService-Info.plist */; };
+		4236970F2606A628002E3FF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4236970E2606A628002E3FF9 /* GoogleService-Info.plist */; };
 		4282887925FABDD700E633D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282887825FABDD700E633D9 /* AppDelegate.swift */; };
 		4282887B25FABDD700E633D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282887A25FABDD700E633D9 /* SceneDelegate.swift */; };
 		4282887D25FABDD700E633D9 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282887C25FABDD700E633D9 /* TempViewController.swift */; };
@@ -26,7 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		423696FE2606A4AE002E3FF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4236970E2606A628002E3FF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		4282887525FABDD700E633D9 /* Will-It-Recycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Will-It-Recycle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4282887825FABDD700E633D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4282887A25FABDD700E633D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		4282887725FABDD700E633D9 /* Will-It-Recycle */ = {
 			isa = PBXGroup;
 			children = (
-				423696FE2606A4AE002E3FF9 /* GoogleService-Info.plist */,
+				4236970E2606A628002E3FF9 /* GoogleService-Info.plist */,
 				4282889325FAC10600E633D9 /* Storyboards */,
 				4282887825FABDD700E633D9 /* AppDelegate.swift */,
 				4282887A25FABDD700E633D9 /* SceneDelegate.swift */,
@@ -193,7 +193,7 @@
 				4282889C25FAC1F000E633D9 /* Game.storyboard in Resources */,
 				4282888525FABDD800E633D9 /* Assets.xcassets in Resources */,
 				4282889625FAC1C700E633D9 /* Recycle.storyboard in Resources */,
-				423696FF2606A4AE002E3FF9 /* GoogleService-Info.plist in Resources */,
+				4236970F2606A628002E3FF9 /* GoogleService-Info.plist in Resources */,
 				4282888025FABDD700E633D9 /* Temp.storyboard in Resources */,
 				4282889925FAC1DB00E633D9 /* Welcome.storyboard in Resources */,
 			);
