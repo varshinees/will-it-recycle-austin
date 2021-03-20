@@ -70,7 +70,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="zYm-e7-BPf"/>
                     <connections>
-                        <segue destination="NXz-n8-Zlr" kind="presentation" identifier="BackToStart" id="zJi-IS-AVY"/>
+                        <segue destination="NXz-n8-Zlr" kind="presentation" identifier="BackToStart" modalPresentationStyle="fullScreen" id="zJi-IS-AVY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
