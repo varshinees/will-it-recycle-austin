@@ -2,6 +2,11 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
+.DS_Store
+Will-It_Recyle/Pods
+Will-It_Recyle/Podfile.lock
+Will-It_Recyle/Will-It-Recycle.xcworkspace
+
 ## User settings
 xcuserdata/
 
