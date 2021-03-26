@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420EE359260E439500366E1F /* Horse.png in Resources */ = {isa = PBXBuildFile; fileRef = 420EE358260E439400366E1F /* Horse.png */; };
 		4236970F2606A628002E3FF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4236970E2606A628002E3FF9 /* GoogleService-Info.plist */; };
 		4282887925FABDD700E633D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282887825FABDD700E633D9 /* AppDelegate.swift */; };
 		4282887B25FABDD700E633D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282887A25FABDD700E633D9 /* SceneDelegate.swift */; };
@@ -25,7 +26,6 @@
 		6D297F18260AE6450037DC52 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D297F17260AE6450037DC52 /* WelcomeViewController.swift */; };
 		6D297F1B260AE6550037DC52 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D297F1A260AE6550037DC52 /* SettingsViewController.swift */; };
 		6D8B75E2260E279000876EA8 /* Frog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75E1260E278F00876EA8 /* Frog.png */; };
-		6D8B75E5260E27B500876EA8 /* Horse.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75E4260E27B500876EA8 /* Horse.png */; };
 		6D8B75E8260E27BC00876EA8 /* Hippo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75E7260E27BC00876EA8 /* Hippo.png */; };
 		6D8B75EB260E27C200876EA8 /* Dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75EA260E27C200876EA8 /* Dragon.png */; };
 		6D8B75EE260E27D200876EA8 /* Dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75ED260E27D200876EA8 /* Dog.png */; };
@@ -38,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		420EE358260E439400366E1F /* Horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Horse.png; sourceTree = "<group>"; };
 		4236970E2606A628002E3FF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		4282887525FABDD700E633D9 /* Will-It-Recycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Will-It-Recycle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4282887825FABDD700E633D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +61,6 @@
 		6D297F17260AE6450037DC52 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6D297F1A260AE6550037DC52 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6D8B75E1260E278F00876EA8 /* Frog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog.png; sourceTree = "<group>"; };
-		6D8B75E4260E27B500876EA8 /* Horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Horse.png; path = ../../../../Downloads/Horse.png; sourceTree = "<group>"; };
 		6D8B75E7260E27BC00876EA8 /* Hippo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hippo.png; sourceTree = "<group>"; };
 		6D8B75EA260E27C200876EA8 /* Dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dragon.png; sourceTree = "<group>"; };
 		6D8B75ED260E27D200876EA8 /* Dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dog.png; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 				6D8B75F6260E280500876EA8 /* Fish.png */,
 				6D8B75F3260E27F700876EA8 /* Cat.png */,
 				6D8B75ED260E27D200876EA8 /* Dog.png */,
-				6D8B75E4260E27B500876EA8 /* Horse.png */,
+				420EE358260E439400366E1F /* Horse.png */,
 				6D8B75EA260E27C200876EA8 /* Dragon.png */,
 				6D8B75E7260E27BC00876EA8 /* Hippo.png */,
 				4282888425FABDD800E633D9 /* Assets.xcassets */,
@@ -229,7 +229,6 @@
 				6D8B75EE260E27D200876EA8 /* Dog.png in Resources */,
 				6D8B75F1260E27E200876EA8 /* Ellipse 1.png in Resources */,
 				4282889C25FAC1F000E633D9 /* Game.storyboard in Resources */,
-				6D8B75E5260E27B500876EA8 /* Horse.png in Resources */,
 				6D8B75E8260E27BC00876EA8 /* Hippo.png in Resources */,
 				4282888525FABDD800E633D9 /* Assets.xcassets in Resources */,
 				6D8B75F7260E280500876EA8 /* Fish.png in Resources */,
@@ -239,6 +238,7 @@
 				6D8B75F4260E27F700876EA8 /* Cat.png in Resources */,
 				4282888025FABDD700E633D9 /* Temp.storyboard in Resources */,
 				6D8B75E2260E279000876EA8 /* Frog.png in Resources */,
+				420EE359260E439500366E1F /* Horse.png in Resources */,
 				4282889925FAC1DB00E633D9 /* Welcome.storyboard in Resources */,
 				6D8DE56E260BF37400C2DD2A /* Settings.storyboard in Resources */,
 				6D8B75EB260E27C200876EA8 /* Dragon.png in Resources */,
@@ -467,6 +467,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6K2S78C227;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "Will-It-Recycle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -486,7 +487,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6K2S78C227;
+				DEVELOPMENT_TEAM = H539TGDULS;
 				INFOPLIST_FILE = "Will-It-Recycle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
