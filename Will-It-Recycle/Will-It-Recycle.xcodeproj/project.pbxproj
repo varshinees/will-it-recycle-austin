@@ -25,7 +25,6 @@
 		6D297F18260AE6450037DC52 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D297F17260AE6450037DC52 /* WelcomeViewController.swift */; };
 		6D297F1B260AE6550037DC52 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D297F1A260AE6550037DC52 /* SettingsViewController.swift */; };
 		6D8B75E2260E279000876EA8 /* Frog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75E1260E278F00876EA8 /* Frog.png */; };
-		6D8B75E5260E27B500876EA8 /* Horse.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75E4260E27B500876EA8 /* Horse.png */; };
 		6D8B75E8260E27BC00876EA8 /* Hippo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75E7260E27BC00876EA8 /* Hippo.png */; };
 		6D8B75EB260E27C200876EA8 /* Dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75EA260E27C200876EA8 /* Dragon.png */; };
 		6D8B75EE260E27D200876EA8 /* Dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75ED260E27D200876EA8 /* Dog.png */; };
@@ -35,6 +34,7 @@
 		6D8B75FA260E281100876EA8 /* Bird.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75F9260E281100876EA8 /* Bird.png */; };
 		6D8DE56E260BF37400C2DD2A /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D8DE56D260BF37400C2DD2A /* Settings.storyboard */; };
 		8188043EA3113E27FDA1AE1E /* Pods_Will_It_Recycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FAD6D3C69A519F7E4CE289 /* Pods_Will_It_Recycle.framework */; };
+		C9211C0D261052DA00F400B3 /* Horse.png in Resources */ = {isa = PBXBuildFile; fileRef = C9211C0C261052DA00F400B3 /* Horse.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,7 +60,6 @@
 		6D297F17260AE6450037DC52 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6D297F1A260AE6550037DC52 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6D8B75E1260E278F00876EA8 /* Frog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog.png; sourceTree = "<group>"; };
-		6D8B75E4260E27B500876EA8 /* Horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Horse.png; path = ../../../../Downloads/Horse.png; sourceTree = "<group>"; };
 		6D8B75E7260E27BC00876EA8 /* Hippo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hippo.png; sourceTree = "<group>"; };
 		6D8B75EA260E27C200876EA8 /* Dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dragon.png; sourceTree = "<group>"; };
 		6D8B75ED260E27D200876EA8 /* Dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dog.png; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		6D8B75F6260E280500876EA8 /* Fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fish.png; sourceTree = "<group>"; };
 		6D8B75F9260E281100876EA8 /* Bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bird.png; sourceTree = "<group>"; };
 		6D8DE56D260BF37400C2DD2A /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		C9211C0C261052DA00F400B3 /* Horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Horse.png; sourceTree = "<group>"; };
 		DA6F76637CACBFBBBC2F7C63 /* Pods-Will-It-Recycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Will-It-Recycle.debug.xcconfig"; path = "Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,10 +128,10 @@
 				6D8B75F6260E280500876EA8 /* Fish.png */,
 				6D8B75F3260E27F700876EA8 /* Cat.png */,
 				6D8B75ED260E27D200876EA8 /* Dog.png */,
-				6D8B75E4260E27B500876EA8 /* Horse.png */,
 				6D8B75EA260E27C200876EA8 /* Dragon.png */,
 				6D8B75E7260E27BC00876EA8 /* Hippo.png */,
 				4282888425FABDD800E633D9 /* Assets.xcassets */,
+				C9211C0C261052DA00F400B3 /* Horse.png */,
 				42AA5BEC26053A3100BA02AE /* Vector.png */,
 				4282888925FABDD800E633D9 /* Info.plist */,
 				4282888125FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld */,
@@ -229,7 +229,6 @@
 				6D8B75EE260E27D200876EA8 /* Dog.png in Resources */,
 				6D8B75F1260E27E200876EA8 /* Ellipse 1.png in Resources */,
 				4282889C25FAC1F000E633D9 /* Game.storyboard in Resources */,
-				6D8B75E5260E27B500876EA8 /* Horse.png in Resources */,
 				6D8B75E8260E27BC00876EA8 /* Hippo.png in Resources */,
 				4282888525FABDD800E633D9 /* Assets.xcassets in Resources */,
 				6D8B75F7260E280500876EA8 /* Fish.png in Resources */,
@@ -239,6 +238,7 @@
 				6D8B75F4260E27F700876EA8 /* Cat.png in Resources */,
 				4282888025FABDD700E633D9 /* Temp.storyboard in Resources */,
 				6D8B75E2260E279000876EA8 /* Frog.png in Resources */,
+				C9211C0D261052DA00F400B3 /* Horse.png in Resources */,
 				4282889925FAC1DB00E633D9 /* Welcome.storyboard in Resources */,
 				6D8DE56E260BF37400C2DD2A /* Settings.storyboard in Resources */,
 				6D8B75EB260E27C200876EA8 /* Dragon.png in Resources */,
