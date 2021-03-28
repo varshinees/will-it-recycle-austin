@@ -25,7 +25,6 @@
 		6D297F18260AE6450037DC52 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D297F17260AE6450037DC52 /* WelcomeViewController.swift */; };
 		6D297F1B260AE6550037DC52 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D297F1A260AE6550037DC52 /* SettingsViewController.swift */; };
 		6D8B75E2260E279000876EA8 /* Frog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75E1260E278F00876EA8 /* Frog.png */; };
-		6D8B75E5260E27B500876EA8 /* Horse.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75E4260E27B500876EA8 /* Horse.png */; };
 		6D8B75E8260E27BC00876EA8 /* Hippo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75E7260E27BC00876EA8 /* Hippo.png */; };
 		6D8B75EB260E27C200876EA8 /* Dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75EA260E27C200876EA8 /* Dragon.png */; };
 		6D8B75EE260E27D200876EA8 /* Dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75ED260E27D200876EA8 /* Dog.png */; };
@@ -35,6 +34,9 @@
 		6D8B75FA260E281100876EA8 /* Bird.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75F9260E281100876EA8 /* Bird.png */; };
 		6D8DE56E260BF37400C2DD2A /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D8DE56D260BF37400C2DD2A /* Settings.storyboard */; };
 		8188043EA3113E27FDA1AE1E /* Pods_Will_It_Recycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FAD6D3C69A519F7E4CE289 /* Pods_Will_It_Recycle.framework */; };
+		8662A2F92610F44200A45EA2 /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8662A2F82610F44200A45EA2 /* LocalViewController.swift */; };
+		8662A2FC2610F47100A45EA2 /* RecycleHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8662A2FB2610F47100A45EA2 /* RecycleHistoryViewController.swift */; };
+		86EF1D8F260E44BE004D0BA9 /* Horse.png in Resources */ = {isa = PBXBuildFile; fileRef = 86EF1D8E260E44BE004D0BA9 /* Horse.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,7 +62,6 @@
 		6D297F17260AE6450037DC52 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6D297F1A260AE6550037DC52 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6D8B75E1260E278F00876EA8 /* Frog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog.png; sourceTree = "<group>"; };
-		6D8B75E4260E27B500876EA8 /* Horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Horse.png; path = ../../../../Downloads/Horse.png; sourceTree = "<group>"; };
 		6D8B75E7260E27BC00876EA8 /* Hippo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hippo.png; sourceTree = "<group>"; };
 		6D8B75EA260E27C200876EA8 /* Dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dragon.png; sourceTree = "<group>"; };
 		6D8B75ED260E27D200876EA8 /* Dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dog.png; sourceTree = "<group>"; };
@@ -69,6 +70,9 @@
 		6D8B75F6260E280500876EA8 /* Fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fish.png; sourceTree = "<group>"; };
 		6D8B75F9260E281100876EA8 /* Bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bird.png; sourceTree = "<group>"; };
 		6D8DE56D260BF37400C2DD2A /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		8662A2F82610F44200A45EA2 /* LocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalViewController.swift; sourceTree = "<group>"; };
+		8662A2FB2610F47100A45EA2 /* RecycleHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleHistoryViewController.swift; sourceTree = "<group>"; };
+		86EF1D8E260E44BE004D0BA9 /* Horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Horse.png; sourceTree = "<group>"; };
 		DA6F76637CACBFBBBC2F7C63 /* Pods-Will-It-Recycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Will-It-Recycle.debug.xcconfig"; path = "Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +118,7 @@
 		4282887725FABDD700E633D9 /* Will-It-Recycle */ = {
 			isa = PBXGroup;
 			children = (
+				86EF1D8E260E44BE004D0BA9 /* Horse.png */,
 				4236970E2606A628002E3FF9 /* GoogleService-Info.plist */,
 				4282889325FAC10600E633D9 /* Storyboards */,
 				4282887825FABDD700E633D9 /* AppDelegate.swift */,
@@ -128,7 +133,6 @@
 				6D8B75F6260E280500876EA8 /* Fish.png */,
 				6D8B75F3260E27F700876EA8 /* Cat.png */,
 				6D8B75ED260E27D200876EA8 /* Dog.png */,
-				6D8B75E4260E27B500876EA8 /* Horse.png */,
 				6D8B75EA260E27C200876EA8 /* Dragon.png */,
 				6D8B75E7260E27BC00876EA8 /* Hippo.png */,
 				4282888425FABDD800E633D9 /* Assets.xcassets */,
@@ -136,6 +140,8 @@
 				4282888925FABDD800E633D9 /* Info.plist */,
 				4282888125FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld */,
 				42DB208E2604287200CFBDAF /* LoginViewController.swift */,
+				8662A2F82610F44200A45EA2 /* LocalViewController.swift */,
+				8662A2FB2610F47100A45EA2 /* RecycleHistoryViewController.swift */,
 			);
 			path = "Will-It-Recycle";
 			sourceTree = "<group>";
@@ -229,9 +235,9 @@
 				6D8B75EE260E27D200876EA8 /* Dog.png in Resources */,
 				6D8B75F1260E27E200876EA8 /* Ellipse 1.png in Resources */,
 				4282889C25FAC1F000E633D9 /* Game.storyboard in Resources */,
-				6D8B75E5260E27B500876EA8 /* Horse.png in Resources */,
 				6D8B75E8260E27BC00876EA8 /* Hippo.png in Resources */,
 				4282888525FABDD800E633D9 /* Assets.xcassets in Resources */,
+				86EF1D8F260E44BE004D0BA9 /* Horse.png in Resources */,
 				6D8B75F7260E280500876EA8 /* Fish.png in Resources */,
 				4282889625FAC1C700E633D9 /* Recycle.storyboard in Resources */,
 				6D8B75FA260E281100876EA8 /* Bird.png in Resources */,
@@ -317,6 +323,8 @@
 				4282888325FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld in Sources */,
 				6D297F18260AE6450037DC52 /* WelcomeViewController.swift in Sources */,
 				42DB208F2604287200CFBDAF /* LoginViewController.swift in Sources */,
+				8662A2FC2610F47100A45EA2 /* RecycleHistoryViewController.swift in Sources */,
+				8662A2F92610F44200A45EA2 /* LocalViewController.swift in Sources */,
 				4282887B25FABDD700E633D9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

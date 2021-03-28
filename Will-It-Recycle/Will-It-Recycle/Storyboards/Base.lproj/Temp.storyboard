@@ -16,7 +16,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewI-Jt-SzT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1427" y="218"/>
+            <point key="canvasLocation" x="1721" y="-419"/>
         </scene>
         <!--Main-->
         <scene sceneID="LB9-yJ-4ys">
@@ -24,9 +24,9 @@
                 <viewControllerPlaceholder storyboardName="Main" id="NXz-n8-Zlr" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vrk-ur-dOL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1321" y="288"/>
+            <point key="canvasLocation" x="2230.434782608696" y="287.94642857142856"/>
         </scene>
-        <!--Temp View Controller-->
+        <!--Dashboard-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TempViewController" customModule="Will_It_Recycle" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,65 +35,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzh-JK-GIC">
-                                <rect key="frame" x="134" y="241" width="147" height="30"/>
+                                <rect key="frame" x="134" y="317" width="147" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Welcome, Dashboard"/>
                                 <connections>
                                     <segue destination="puA-el-nuT" kind="show" id="bhC-ht-68T"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sT-zE-bNP">
-                                <rect key="frame" x="157" y="407" width="100" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Game Screens"/>
-                                <connections>
-                                    <segue destination="PM2-Wl-Cfb" kind="show" id="FoV-SV-lzo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3p-M4-c4P">
-                                <rect key="frame" x="138" y="498" width="138" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Community Screens"/>
-                                <connections>
-                                    <segue destination="e7e-dH-2av" kind="show" id="lvM-tF-dsK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Id-E1-6KW">
-                                <rect key="frame" x="150" y="325" width="114" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Recycle Screens"/>
-                                <connections>
-                                    <segue destination="0ra-8i-QdZ" kind="show" id="ZPt-PM-2aK"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvT-BA-1ht">
-                                <rect key="frame" x="168" y="730" width="79" height="30"/>
+                                <rect key="frame" x="168" y="528" width="79" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign out"/>
                                 <connections>
                                     <action selector="signOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBz-Z9-9iw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5J-rL-l0l">
-                                <rect key="frame" x="153" y="566" width="109" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Settings Screen"/>
-                                <connections>
-                                    <segue destination="kLu-KO-KRl" kind="show" id="CeD-Vc-oH4"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zYm-e7-BPf"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="house" catalog="system" id="raT-PR-3ot"/>
                     <connections>
                         <segue destination="NXz-n8-Zlr" kind="presentation" identifier="BackToStart" modalPresentationStyle="fullScreen" id="zJi-IS-AVY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="811.59420289855075" y="77.678571428571431"/>
+            <point key="canvasLocation" x="1721.7391304347827" y="77.678571428571431"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="OUB-04-4Zu">
@@ -103,37 +71,40 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GHm-qg-Jaj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1471.0144927536232" y="-59.598214285714285"/>
+            <point key="canvasLocation" x="2380.434782608696" y="-59.598214285714285"/>
         </scene>
         <!--Recycle-->
         <scene sceneID="lJn-JF-8JT">
             <objects>
                 <viewControllerPlaceholder storyboardName="Recycle" id="0ra-8i-QdZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="8FV-cB-Ezd"/>
                     <navigationItem key="navigationItem" id="1uI-S2-f44"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rcj-xX-0Vm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1471.0144927536232" y="0.6696428571428571"/>
+            <point key="canvasLocation" x="1722" y="461"/>
         </scene>
         <!--Game-->
         <scene sceneID="5pz-3S-vNg">
             <objects>
                 <viewControllerPlaceholder storyboardName="Game" id="PM2-Wl-Cfb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="fwr-zN-IGm"/>
                     <navigationItem key="navigationItem" id="ABp-xl-SaH"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nC-hX-VDb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1478.985507246377" y="57.589285714285708"/>
+            <point key="canvasLocation" x="1722" y="553"/>
         </scene>
         <!--Community-->
         <scene sceneID="Goj-2Y-XZy">
             <objects>
                 <viewControllerPlaceholder storyboardName="Community" id="e7e-dH-2av" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="UPF-4X-EVl"/>
                     <navigationItem key="navigationItem" id="bIY-CY-cbl"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezO-rj-2K4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486.9565217391305" y="120.53571428571428"/>
+            <point key="canvasLocation" x="1722" y="-327"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="o1L-QO-mih">
@@ -143,18 +114,50 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qfL-Y5-tJ3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xQv-GZ-nC4"/>
+                        <segue destination="0CT-zg-Hsf" kind="relationship" relationship="rootViewController" id="xQv-GZ-nC4"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilz-9p-2B3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="78.348214285714278"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="fAN-Dp-mqQ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0CT-zg-Hsf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="nGK-QO-1Kl">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" image="seal" catalog="system" id="TZU-YF-84O">
+                            <connections>
+                                <segue destination="kLu-KO-KRl" kind="presentation" modalPresentationStyle="fullScreen" id="5mo-7G-LiO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3JT-qT-1ze">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="VxL-kR-15B"/>
+                        <segue destination="e7e-dH-2av" kind="relationship" relationship="viewControllers" id="pqM-3g-xN7"/>
+                        <segue destination="0ra-8i-QdZ" kind="relationship" relationship="viewControllers" id="8RV-Oj-8Ud"/>
+                        <segue destination="PM2-Wl-Cfb" kind="relationship" relationship="viewControllers" id="pCo-VI-G5d"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M1E-la-XcJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="811.59420289855075" y="77.678571428571431"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="seal" catalog="system" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

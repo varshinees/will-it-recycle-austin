@@ -429,6 +429,14 @@ PODS:
   - "MaterialComponents/Buttons+TypographyThemer (124.1.1)":
     - MaterialComponents/Buttons
     - MaterialComponents/schemes/Typography
+  - MaterialComponents/Cards (124.1.1):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Icons/ic_check_circle
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Shapes
   - MaterialComponents/Elevation (124.1.1):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
@@ -437,9 +445,21 @@ PODS:
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
+  - MaterialComponents/List (124.1.1):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
   - MaterialComponents/private/Application (124.1.1)
   - MaterialComponents/private/Color (124.1.1):
     - MaterialComponents/Availability
+  - MaterialComponents/private/Icons/Base (124.1.1)
+  - MaterialComponents/private/Icons/ic_check_circle (124.1.1):
+    - MaterialComponents/private/Icons/Base
   - MaterialComponents/private/Math (124.1.1)
   - MaterialComponents/Ripple (124.1.1):
     - MaterialComponents/AnimationTiming
@@ -496,6 +516,8 @@ DEPENDENCIES:
   - FirebaseUI/Google
   - MaterialComponents/Buttons
   - "MaterialComponents/Buttons+Theming"
+  - MaterialComponents/Cards
+  - MaterialComponents/List
 
 SPEC REPOS:
   trunk:
@@ -562,6 +584,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
 
-PODFILE CHECKSUM: a116e9325f5e8ebc6143a019c2499ebe8cfbe00b
+PODFILE CHECKSUM: ca8c3d43304f13a8492a95a4f6fd2a2b26d74346
 
 COCOAPODS: 1.10.1
