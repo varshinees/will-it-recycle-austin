@@ -25,6 +25,7 @@
 		6D297F18260AE6450037DC52 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D297F17260AE6450037DC52 /* WelcomeViewController.swift */; };
 		6D297F1B260AE6550037DC52 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D297F1A260AE6550037DC52 /* SettingsViewController.swift */; };
 		6D42F03F260E54230016446B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D42F03E260E54230016446B /* DashboardViewController.swift */; };
+		6D4E7F662611231700870213 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D4E7F652611231700870213 /* Dashboard.storyboard */; };
 		6D8B75E2260E279000876EA8 /* Frog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75E1260E278F00876EA8 /* Frog.png */; };
 		6D8B75E8260E27BC00876EA8 /* Hippo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75E7260E27BC00876EA8 /* Hippo.png */; };
 		6D8B75EB260E27C200876EA8 /* Dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75EA260E27C200876EA8 /* Dragon.png */; };
@@ -63,6 +64,7 @@
 		6D297F17260AE6450037DC52 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6D297F1A260AE6550037DC52 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6D42F03E260E54230016446B /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		6D4E7F652611231700870213 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		6D8B75E1260E278F00876EA8 /* Frog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog.png; sourceTree = "<group>"; };
 		6D8B75E7260E27BC00876EA8 /* Hippo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hippo.png; sourceTree = "<group>"; };
 		6D8B75EA260E27C200876EA8 /* Dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dragon.png; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				4282889E25FAC20C00E633D9 /* Community.storyboard */,
 				4282889B25FAC1F000E633D9 /* Game.storyboard */,
 				4282889825FAC1DB00E633D9 /* Welcome.storyboard */,
+				6D4E7F652611231700870213 /* Dashboard.storyboard */,
 				6D8DE56D260BF37400C2DD2A /* Settings.storyboard */,
 				4282889525FAC1C700E633D9 /* Recycle.storyboard */,
 				4282889025FAC0BD00E633D9 /* Main.storyboard */,
@@ -250,6 +253,7 @@
 				6D8B75E2260E279000876EA8 /* Frog.png in Resources */,
 				4282889925FAC1DB00E633D9 /* Welcome.storyboard in Resources */,
 				6D8DE56E260BF37400C2DD2A /* Settings.storyboard in Resources */,
+				6D4E7F662611231700870213 /* Dashboard.storyboard in Resources */,
 				6D8B75EB260E27C200876EA8 /* Dragon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,6 @@ import UIKit
 import MaterialComponents
 import MaterialComponents.MaterialButtons
 import MaterialComponents.MaterialButtons_Theming
-import MaterialComponents.MaterialSlider
 
 class SettingsViewController: UIViewController {
 
@@ -18,7 +17,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let newSwiftColor = UIColor(red: 252, green: 108, blue: 133)
+        let newSwiftColor = UIColor(red: 252, green: 108, blue: 133, alpha: 255)
         
         updateButton.setTitle("Update", for: .normal)
         updateButton.setBackgroundColor(newSwiftColor, for: .normal)

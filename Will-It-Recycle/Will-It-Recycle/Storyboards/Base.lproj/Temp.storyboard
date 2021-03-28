@@ -95,6 +95,17 @@
             </objects>
             <point key="canvasLocation" x="1722" y="553"/>
         </scene>
+        <!--Dashboard-->
+        <scene sceneID="rtJ-OA-VPk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Dashboard" id="LEa-8q-eBQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ucj-QU-g2g"/>
+                    <navigationItem key="navigationItem" id="ADl-Xo-llL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B4D-cM-4Ov" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1142" y="-334"/>
+        </scene>
         <!--Community-->
         <scene sceneID="Goj-2Y-XZy">
             <objects>
@@ -138,21 +149,22 @@
                         </barButtonItem>
                     </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3JT-qT-1ze">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.0" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="VxL-kR-15B"/>
                         <segue destination="e7e-dH-2av" kind="relationship" relationship="viewControllers" id="pqM-3g-xN7"/>
                         <segue destination="0ra-8i-QdZ" kind="relationship" relationship="viewControllers" id="8RV-Oj-8Ud"/>
                         <segue destination="PM2-Wl-Cfb" kind="relationship" relationship="viewControllers" id="pCo-VI-G5d"/>
+                        <segue destination="LEa-8q-eBQ" kind="relationship" relationship="viewControllers" id="ctu-q6-R9L"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1E-la-XcJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="811.59420289855075" y="77.678571428571431"/>
+            <point key="canvasLocation" x="814" y="63"/>
         </scene>
     </scenes>
     <resources>
