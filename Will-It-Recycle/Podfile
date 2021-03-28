@@ -13,5 +13,7 @@ pod 'FirebaseUI/Email'
 pod 'FirebaseUI/Google'
 pod 'MaterialComponents/Buttons'
 pod 'MaterialComponents/Buttons+Theming'
+pod 'MaterialComponents/Slider'
+pod 'MaterialComponents/Cards'
 
 end
