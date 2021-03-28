@@ -24,6 +24,7 @@
 		42DB208F2604287200CFBDAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DB208E2604287200CFBDAF /* LoginViewController.swift */; };
 		6D297F18260AE6450037DC52 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D297F17260AE6450037DC52 /* WelcomeViewController.swift */; };
 		6D297F1B260AE6550037DC52 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D297F1A260AE6550037DC52 /* SettingsViewController.swift */; };
+		6D42F03F260E54230016446B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D42F03E260E54230016446B /* DashboardViewController.swift */; };
 		6D8B75E2260E279000876EA8 /* Frog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75E1260E278F00876EA8 /* Frog.png */; };
 		6D8B75E8260E27BC00876EA8 /* Hippo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75E7260E27BC00876EA8 /* Hippo.png */; };
 		6D8B75EB260E27C200876EA8 /* Dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75EA260E27C200876EA8 /* Dragon.png */; };
@@ -61,6 +62,7 @@
 		68C8AF049FB5F205B15DA2F0 /* Pods-Will-It-Recycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Will-It-Recycle.release.xcconfig"; path = "Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle.release.xcconfig"; sourceTree = "<group>"; };
 		6D297F17260AE6450037DC52 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6D297F1A260AE6550037DC52 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		6D42F03E260E54230016446B /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		6D8B75E1260E278F00876EA8 /* Frog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog.png; sourceTree = "<group>"; };
 		6D8B75E7260E27BC00876EA8 /* Hippo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hippo.png; sourceTree = "<group>"; };
 		6D8B75EA260E27C200876EA8 /* Dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dragon.png; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				4282887825FABDD700E633D9 /* AppDelegate.swift */,
 				4282887A25FABDD700E633D9 /* SceneDelegate.swift */,
 				6D297F17260AE6450037DC52 /* WelcomeViewController.swift */,
+				6D42F03E260E54230016446B /* DashboardViewController.swift */,
 				4282888625FABDD800E633D9 /* LaunchScreen.storyboard */,
 				6D297F1A260AE6550037DC52 /* SettingsViewController.swift */,
 				4282887C25FABDD700E633D9 /* TempViewController.swift */,
@@ -326,6 +329,7 @@
 				8662A2FC2610F47100A45EA2 /* RecycleHistoryViewController.swift in Sources */,
 				8662A2F92610F44200A45EA2 /* LocalViewController.swift in Sources */,
 				4282887B25FABDD700E633D9 /* SceneDelegate.swift in Sources */,
+				6D42F03F260E54230016446B /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

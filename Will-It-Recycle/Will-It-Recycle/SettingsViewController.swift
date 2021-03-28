@@ -6,24 +6,23 @@
 //
 
 import UIKit
+import MaterialComponents
+import MaterialComponents.MaterialButtons
+import MaterialComponents.MaterialButtons_Theming
+import MaterialComponents.MaterialSlider
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var updateButton: MDCButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let newSwiftColor = UIColor(red: 252, green: 108, blue: 133)
+        
+        updateButton.setTitle("Update", for: .normal)
+        updateButton.setBackgroundColor(newSwiftColor, for: .normal)
 
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
