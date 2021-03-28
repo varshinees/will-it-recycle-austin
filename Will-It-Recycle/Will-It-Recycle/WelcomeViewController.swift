@@ -14,12 +14,12 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var recycleButton: MDCButton!
     
-    //let buttonScheme = MDCButtonScheme()
+//    let buttonScheme = MDCButtonScheme()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //MDCContainedButtonThemer.applyScheme(buttonScheme, to: recycleButton)
+//        MDCContainedButtonThemer.applyScheme(buttonScheme, to: recycleButton)
         
         recycleButton.setTitle("Start Recycling!", for: .normal)
     }
