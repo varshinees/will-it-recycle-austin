@@ -9,7 +9,7 @@ import UIKit
 import MaterialComponents
 import MaterialComponents.MaterialButtons
 import MaterialComponents.MaterialButtons_Theming
-import MaterialComponents.MaterialSlider
+//import MaterialComponents.MaterialSlider
 import MaterialComponents.MaterialCards
 
 class DashboardViewController: UIViewController {
@@ -27,7 +27,7 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let newSwiftColor = UIColor(red: 252, green: 108, blue: 133)
+        let newSwiftColor = UIColor(red: 252, green: 108, blue: 133, alpha: 255)
         
         statsCard.setShadowElevation(ShadowElevation(rawValue: 10),for: .normal)
         
@@ -41,14 +41,14 @@ class DashboardViewController: UIViewController {
         recycleItemsButton.setTitle("Recycle Items Now", for: .normal)
         recycleItemsButton.setTitleColor(newSwiftColor, for: .normal)
         
-        let slider = MDCSlider(frame: CGRect(x: 50, y: 50, width: 100, height: 27))
-          slider.addTarget(self,
-                           action: #selector(didChangeSliderValue(senderSlider:)),
-                           for: .valueChanged)
-          view.addSubview(slider)
+//        let slider = MDCSlider(frame: CGRect(x: 50, y: 50, width: 100, height: 27))
+//          slider.addTarget(self,
+//                           action: #selector(didChangeSliderValue(senderSlider:)),
+//                           for: .valueChanged)
+//          view.addSubview(slider)
     }
     
-    @objc func didChangeSliderValue(senderSlider:MDCSlider) {
-      print("Did change slider value to: \(senderSlider.value)")
-    }
+//    @objc func didChangeSliderValue(senderSlider:MDCSlider) {
+//      print("Did change slider value to: \(senderSlider.value)")
+//    }
 }
