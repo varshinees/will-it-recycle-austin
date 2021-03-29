@@ -401,6 +401,11 @@ PODS:
   - leveldb-library (1.22.1)
   - MaterialComponents/AnimationTiming (124.1.1)
   - MaterialComponents/Availability (124.1.1)
+  - MaterialComponents/Banner (124.1.1):
+    - MaterialComponents/Availability
+    - MaterialComponents/Buttons
+    - MaterialComponents/Elevation
+    - MaterialComponents/Typography
   - MaterialComponents/Buttons (124.1.1):
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
@@ -437,6 +442,18 @@ PODS:
     - MaterialComponents/Ripple
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Shapes
+  - MaterialComponents/Chips (124.1.1):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
+    - MaterialComponents/TextFields
+    - MaterialComponents/Typography
+    - MDFInternationalization
   - MaterialComponents/Elevation (124.1.1):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
@@ -454,6 +471,7 @@ PODS:
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Typography
     - MDFInternationalization
+  - MaterialComponents/Palettes (124.1.1)
   - MaterialComponents/private/Application (124.1.1)
   - MaterialComponents/private/Color (124.1.1):
     - MaterialComponents/Availability
@@ -492,6 +510,14 @@ PODS:
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
+  - MaterialComponents/TextFields (124.1.1):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Buttons
+    - MaterialComponents/Elevation
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Math
+    - MaterialComponents/Typography
+    - MDFInternationalization
   - MaterialComponents/Typography (124.1.1):
     - MaterialComponents/private/Application
     - MaterialComponents/private/Math
@@ -514,9 +540,11 @@ DEPENDENCIES:
   - FirebaseUI
   - FirebaseUI/Email
   - FirebaseUI/Google
+  - MaterialComponents/Banner
   - MaterialComponents/Buttons
   - "MaterialComponents/Buttons+Theming"
   - MaterialComponents/Cards
+  - MaterialComponents/Chips
   - MaterialComponents/List
 
 SPEC REPOS:
@@ -584,6 +612,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
 
-PODFILE CHECKSUM: ca8c3d43304f13a8492a95a4f6fd2a2b26d74346
+PODFILE CHECKSUM: 1f60adc69a5fe4f4030e9ee415ed4a53ee779636
 
 COCOAPODS: 1.10.1

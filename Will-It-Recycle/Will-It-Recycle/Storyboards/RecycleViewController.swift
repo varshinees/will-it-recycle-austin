@@ -6,24 +6,23 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialButtons
 
 class RecycleViewController: UIViewController {
 
+    @IBOutlet weak var scanBtn: MDCButton!
+    @IBOutlet weak var enterBtn: MDCButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        scanBtn.setTitle("SCAN NEW ITEMS", for: .normal)
+        scanBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        
+        enterBtn.setTitle("ENTER ITEMS MANUALLY", for: .normal)
+        enterBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
