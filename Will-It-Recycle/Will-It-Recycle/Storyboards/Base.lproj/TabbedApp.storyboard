@@ -55,7 +55,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="house" catalog="system" id="raT-PR-3ot"/>
-                    <navigationItem key="navigationItem" id="HoX-8X-kYw"/>
                     <connections>
                         <segue destination="NXz-n8-Zlr" kind="presentation" identifier="BackToStart" modalPresentationStyle="fullScreen" id="zJi-IS-AVY"/>
                     </connections>
@@ -75,24 +74,26 @@
             <point key="canvasLocation" x="3309" y="169"/>
         </scene>
         <!--Recycle-->
-        <scene sceneID="wlw-LH-gfB">
+        <scene sceneID="lJn-JF-8JT">
             <objects>
-                <viewControllerPlaceholder storyboardName="Recycle" id="00g-gJ-n9B" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="oGI-nW-nCB"/>
+                <viewControllerPlaceholder storyboardName="Recycle" id="0ra-8i-QdZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="8FV-cB-Ezd"/>
+                    <navigationItem key="navigationItem" id="1uI-S2-f44"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rla-TG-tre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rcj-xX-0Vm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1694" y="51"/>
+            <point key="canvasLocation" x="1706" y="1"/>
         </scene>
         <!--Game-->
-        <scene sceneID="adW-fl-KnU">
+        <scene sceneID="5pz-3S-vNg">
             <objects>
-                <viewControllerPlaceholder storyboardName="Game" id="4E5-uI-cq4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="r3u-wh-OHv"/>
+                <viewControllerPlaceholder storyboardName="Game" id="PM2-Wl-Cfb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="fwr-zN-IGm"/>
+                    <navigationItem key="navigationItem" id="ABp-xl-SaH"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vg6-SY-oGb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7nC-hX-VDb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1709" y="166"/>
+            <point key="canvasLocation" x="1707" y="145"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="rtJ-OA-VPk">
@@ -128,7 +129,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="0CT-zg-Hsf" kind="relationship" relationship="rootViewController" id="N85-8I-OVR"/>
+                        <segue destination="0CT-zg-Hsf" kind="relationship" relationship="rootViewController" id="xQv-GZ-nC4"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilz-9p-2B3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -156,9 +157,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="LEa-8q-eBQ" kind="relationship" relationship="viewControllers" id="1YF-Cn-I28"/>
-                        <segue destination="00g-gJ-n9B" kind="relationship" relationship="viewControllers" id="xLZ-xo-y5s"/>
-                        <segue destination="4E5-uI-cq4" kind="relationship" relationship="viewControllers" id="Zjd-vv-bLG"/>
-                        <segue destination="e7e-dH-2av" kind="relationship" relationship="viewControllers" id="WLC-M1-LNJ"/>
+                        <segue destination="0ra-8i-QdZ" kind="relationship" relationship="viewControllers" id="p6l-eR-Hvc"/>
+                        <segue destination="PM2-Wl-Cfb" kind="relationship" relationship="viewControllers" id="8uC-kY-MYE"/>
+                        <segue destination="e7e-dH-2av" kind="relationship" relationship="viewControllers" id="5WB-D4-91A"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1E-la-XcJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
