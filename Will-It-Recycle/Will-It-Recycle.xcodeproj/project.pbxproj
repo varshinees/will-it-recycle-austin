@@ -11,7 +11,7 @@
 		4282887925FABDD700E633D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282887825FABDD700E633D9 /* AppDelegate.swift */; };
 		4282887B25FABDD700E633D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282887A25FABDD700E633D9 /* SceneDelegate.swift */; };
 		4282887D25FABDD700E633D9 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282887C25FABDD700E633D9 /* TempViewController.swift */; };
-		4282888025FABDD700E633D9 /* Temp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282887E25FABDD700E633D9 /* Temp.storyboard */; };
+		4282888025FABDD700E633D9 /* TabbedApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282887E25FABDD700E633D9 /* TabbedApp.storyboard */; };
 		4282888325FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4282888125FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld */; };
 		4282888525FABDD800E633D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4282888425FABDD800E633D9 /* Assets.xcassets */; };
 		4282888825FABDD800E633D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282888625FABDD800E633D9 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		4282889625FAC1C700E633D9 /* Recycle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889525FAC1C700E633D9 /* Recycle.storyboard */; };
 		4282889925FAC1DB00E633D9 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889825FAC1DB00E633D9 /* Welcome.storyboard */; };
 		4282889C25FAC1F000E633D9 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889B25FAC1F000E633D9 /* Game.storyboard */; };
-		4282889F25FAC20C00E633D9 /* Community.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889E25FAC20C00E633D9 /* Community.storyboard */; };
+		4282889F25FAC20C00E633D9 /* Local.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889E25FAC20C00E633D9 /* Local.storyboard */; };
 		42AA5BED26053A3100BA02AE /* Vector.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AA5BEC26053A3100BA02AE /* Vector.png */; };
 		42DB208F2604287200CFBDAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DB208E2604287200CFBDAF /* LoginViewController.swift */; };
 		6D297F18260AE6450037DC52 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D297F17260AE6450037DC52 /* WelcomeViewController.swift */; };
@@ -47,7 +47,7 @@
 		4282887825FABDD700E633D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4282887A25FABDD700E633D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4282887C25FABDD700E633D9 /* TempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
-		4282887F25FABDD700E633D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Temp.storyboard; sourceTree = "<group>"; };
+		4282887F25FABDD700E633D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TabbedApp.storyboard; sourceTree = "<group>"; };
 		4282888225FABDD700E633D9 /* Will_It_Recycle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Will_It_Recycle.xcdatamodel; sourceTree = "<group>"; };
 		4282888425FABDD800E633D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4282888725FABDD800E633D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		4282889525FAC1C700E633D9 /* Recycle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recycle.storyboard; sourceTree = "<group>"; };
 		4282889825FAC1DB00E633D9 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		4282889B25FAC1F000E633D9 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
-		4282889E25FAC20C00E633D9 /* Community.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Community.storyboard; sourceTree = "<group>"; };
+		4282889E25FAC20C00E633D9 /* Local.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Local.storyboard; sourceTree = "<group>"; };
 		42AA5BEC26053A3100BA02AE /* Vector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Vector.png; path = Assets.xcassets/Vector.png; sourceTree = "<group>"; };
 		42DB208E2604287200CFBDAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		53FAD6D3C69A519F7E4CE289 /* Pods_Will_It_Recycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Will_It_Recycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,8 +154,8 @@
 		4282889325FAC10600E633D9 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				4282887E25FABDD700E633D9 /* Temp.storyboard */,
-				4282889E25FAC20C00E633D9 /* Community.storyboard */,
+				4282887E25FABDD700E633D9 /* TabbedApp.storyboard */,
+				4282889E25FAC20C00E633D9 /* Local.storyboard */,
 				4282889B25FAC1F000E633D9 /* Game.storyboard */,
 				4282889825FAC1DB00E633D9 /* Welcome.storyboard */,
 				6D4E7F652611231700870213 /* Dashboard.storyboard */,
@@ -234,7 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4282889F25FAC20C00E633D9 /* Community.storyboard in Resources */,
+				4282889F25FAC20C00E633D9 /* Local.storyboard in Resources */,
 				4282888825FABDD800E633D9 /* LaunchScreen.storyboard in Resources */,
 				42AA5BED26053A3100BA02AE /* Vector.png in Resources */,
 				4282889125FAC0BD00E633D9 /* Main.storyboard in Resources */,
@@ -249,7 +249,7 @@
 				6D8B75FA260E281100876EA8 /* Bird.png in Resources */,
 				4236970F2606A628002E3FF9 /* GoogleService-Info.plist in Resources */,
 				6D8B75F4260E27F700876EA8 /* Cat.png in Resources */,
-				4282888025FABDD700E633D9 /* Temp.storyboard in Resources */,
+				4282888025FABDD700E633D9 /* TabbedApp.storyboard in Resources */,
 				6D8B75E2260E279000876EA8 /* Frog.png in Resources */,
 				4282889925FAC1DB00E633D9 /* Welcome.storyboard in Resources */,
 				6D8DE56E260BF37400C2DD2A /* Settings.storyboard in Resources */,
@@ -340,12 +340,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4282887E25FABDD700E633D9 /* Temp.storyboard */ = {
+		4282887E25FABDD700E633D9 /* TabbedApp.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4282887F25FABDD700E633D9 /* Base */,
 			);
-			name = Temp.storyboard;
+			name = TabbedApp.storyboard;
 			sourceTree = "<group>";
 		};
 		4282888625FABDD800E633D9 /* LaunchScreen.storyboard */ = {
