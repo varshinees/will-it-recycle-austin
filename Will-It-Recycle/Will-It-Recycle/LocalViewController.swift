@@ -7,103 +7,67 @@
 
 import UIKit
 import MaterialComponents.MaterialCards
-
-public struct LocalNewsItem: Hashable {
-    let id: Int
-    let title: String
-    
-    init(id: Int, title: String) {
-        self.id = id
-        self.title = title
-    }
-}
-
-public var LocalNewsData = [
-    LocalNewsItem(id: 0, title: "Recycle & Reuse Drop-off Center"),
-    LocalNewsItem(id: 1, title: "My Collection Schedule"),
-    LocalNewsItem(id: 2, title: "HOW TO RECYCLE IN AUSTIN"),
-    LocalNewsItem(id: 3, title: "Reducing waste at events"),
-    LocalNewsItem(id: 4, title: "Volunteer to Clean Lady Bird Lake"),
-    LocalNewsItem(id: 5, title: "Austin Creative Reuse Volunteer Opportunities"),
-    LocalNewsItem(id: 6, title: "Keep Austin Beautiful Volunteer Opportunities")
-]
+import MaterialComponents.MaterialButtons
 
 class LocalViewController: UIViewController {
     
-    // Define section identifier type
-    enum Section {
-        case main
-    }
-    var dataSource: UICollectionViewDiffableDataSource<Section, LocalNewsItem>!
-    var snapshot: NSDiffableDataSourceSnapshot<Section, LocalNewsItem>!
-    
     @IBOutlet weak var localCollectionView: UICollectionView!
+    @IBOutlet weak var News1Card: MDCCard!
+    @IBOutlet weak var News1Button: MDCButton!
+    @IBOutlet weak var NewsTitleLabel1: UILabel!
+    @IBOutlet weak var NewsCard2: MDCCard!
+    @IBOutlet weak var NewsButton2: MDCButton!
+    @IBOutlet weak var NewsTitleLabel2: UILabel!
+    @IBOutlet weak var NewsCard3: MDCCard!
+    @IBOutlet weak var NewsButton3: MDCButton!
+    @IBOutlet weak var NewsTitleLabel3: UILabel!
+    @IBOutlet weak var NewsLocationLabel3: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        localCollectionView.backgroundColor = UIColor.white
         
-        // Create list layout
-        let layoutConfig = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
-        let listLayout = UICollectionViewCompositionalLayout.list(using: layoutConfig)
-        self.localCollectionView.collectionViewLayout = listLayout
-
-        // Make collection view take up the entire view
-        localCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            localCollectionView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 0.0),
-            localCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0.0),
-            localCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 00.0),
-            localCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100.0),
-        ])
+        let white = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        let recyclePink = UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0)
+        let fadedRecyclePink = UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 0.8)
+        let extraFadedRecyclePink = UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 0.5)
         
-        // Register cells with material-ui
-//        localCollectionView.register(MDCCardCollectionCell.self, forCellWithReuseIdentifier: "localNewsCellIdentifier")
+        News1Card.setShadowElevation(ShadowElevation(rawValue: 10),for: .normal)
+        News1Button.setTitle("READ MORE", for: .normal)
+        News1Button.setTitleColor(white, for: .normal)
+        News1Button.setBackgroundColor(recyclePink, for: .normal)
+        NewsTitleLabel1.textColor = fadedRecyclePink
         
-        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, LocalNewsItem> { (cell, indexPath, item) in
-
-            // Define how data should be shown using content configuration
-            var content = cell.defaultContentConfiguration()
-//            content.image = item.image
-            content.text = item.title
-
-            // Assign content configuration to cell
-            cell.contentConfiguration = content
-        }
+        NewsCard2.setShadowElevation(ShadowElevation(rawValue: 10),for: .normal)
+        NewsButton2.setTitle("READ MORE", for: .normal)
+        NewsButton2.setTitleColor(white, for: .normal)
+        NewsButton2.setBackgroundColor(recyclePink, for: .normal)
+        NewsTitleLabel2.textColor = fadedRecyclePink
         
-        dataSource = UICollectionViewDiffableDataSource<Section, LocalNewsItem>(collectionView: localCollectionView) {
-            (collectionView: UICollectionView, indexPath: IndexPath, identifier: LocalNewsItem) -> UICollectionViewCell? in
-            
-            // Dequeue reusable cell using cell registration (Reuse identifier no longer needed)
-            let cell = self.localCollectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: identifier)
-            // Configure cell appearance
-            cell.accessories = [.disclosureIndicator()]
-            return cell
-        }
+        NewsCard3.setShadowElevation(ShadowElevation(rawValue: 10),for: .normal)
+        NewsButton3.setTitle("READ MORE", for: .normal)
+        NewsButton3.setTitleColor(white, for: .normal)
+        NewsButton3.setBackgroundColor(recyclePink, for: .normal)
+        NewsTitleLabel3.textColor = fadedRecyclePink
         
-        // Create a snapshot that define the current state of data source's data
-        snapshot = NSDiffableDataSourceSnapshot<Section, LocalNewsItem>()
-        snapshot.appendSections([.main])
-        snapshot.appendItems(LocalNewsData, toSection: .main)
-
-        // Display data in the collection view by applying the snapshot to data source
-        dataSource.apply(snapshot, animatingDifferences: false)
+        NewsLocationLabel3.textColor = extraFadedRecyclePink
     }
     
-    // Material-ui connection
-    func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = localCollectionView.dequeueReusableCell(withReuseIdentifier: "localNewsCellIdentifier",
-                                                    for: indexPath) as! MDCCardCollectionCell
-        // If you wanted to have the card show the selected state when tapped
-        // then you need to turn isSelectable to true, otherwise the default is false.
-        print(indexPath)
-        cell.isSelectable = true
-        cell.cornerRadius = 8
-        
-        cell.setShadowColor(UIColor.black, for: .highlighted)
-        return cell
+    @IBAction func NewsButton1Pressed(_ sender: Any) {
+        if let url = URL(string: "https://www.austintexas.gov/department/recycle-reuse-drop-center") {
+            UIApplication.shared.open(url)
+        }
     }
-
+    
+    @IBAction func NewsButton2Pressed(_ sender: Any) {
+        if let url = URL(string: "https://www.austinlocal.com/recycling-in-austin-what-is-recyclable-and-what-is-not.html") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    @IBAction func NewsButton3Pressed(_ sender: Any) {
+        if let url = URL(string: "https://www.austincreativereuse.org/2021/03/march-reuse-and-rethink-reuse-in-the-yard/") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
 }
