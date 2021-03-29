@@ -54,7 +54,7 @@ class RecycleHistoryViewController: UIViewController {
         super.viewDidLoad()
         
         // Set material-ui button style
-        returnToSettingsButton.setTitle("Back To Settings", for: .normal)
+        returnToSettingsButton.setTitle("BACK TO SETTINGS", for: .normal)
         returnToSettingsButton.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         returnToSettingsButton.setBackgroundColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
         recyclingCollectionView.backgroundColor = UIColor.white

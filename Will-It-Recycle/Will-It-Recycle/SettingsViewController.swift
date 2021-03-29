@@ -9,7 +9,6 @@ import UIKit
 import MaterialComponents
 import MaterialComponents.MaterialButtons
 import MaterialComponents.MaterialButtons_Theming
-//import MaterialComponents.MaterialSlider
 
 class SettingsViewController: UIViewController {
 

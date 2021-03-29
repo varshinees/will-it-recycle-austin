@@ -9,7 +9,6 @@ import UIKit
 import MaterialComponents
 import MaterialComponents.MaterialButtons
 import MaterialComponents.MaterialButtons_Theming
-//import MaterialComponents.MaterialSlider
 import MaterialComponents.MaterialCards
 
 class DashboardViewController: UIViewController {
@@ -40,15 +39,5 @@ class DashboardViewController: UIViewController {
         recycleItemsButton.applyTextTheme(withScheme: containerScheme)
         recycleItemsButton.setTitle("Recycle Items Now", for: .normal)
         recycleItemsButton.setTitleColor(newSwiftColor, for: .normal)
-        
-//        let slider = MDCSlider(frame: CGRect(x: 50, y: 50, width: 100, height: 27))
-//          slider.addTarget(self,
-//                           action: #selector(didChangeSliderValue(senderSlider:)),
-//                           for: .valueChanged)
-//          view.addSubview(slider)
     }
-    
-//    @objc func didChangeSliderValue(senderSlider:MDCSlider) {
-//      print("Did change slider value to: \(senderSlider.value)")
-//    }
 }
