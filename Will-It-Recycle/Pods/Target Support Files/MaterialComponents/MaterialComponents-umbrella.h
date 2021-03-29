@@ -15,6 +15,8 @@
 #import "UIView+MDCTimingFunction.h"
 #import "MaterialAvailability.h"
 #import "MDCAvailability.h"
+#import "MaterialBanner.h"
+#import "MDCBannerView.h"
 #import "MaterialButtons.h"
 #import "MDCButton.h"
 #import "MDCFlatButton.h"

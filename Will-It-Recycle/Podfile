@@ -15,5 +15,6 @@ pod 'MaterialComponents/Buttons'
 pod 'MaterialComponents/Buttons+Theming'
 pod 'MaterialComponents/List'
 pod 'MaterialComponents/Cards'
+pod 'MaterialComponents/Banner'
 
 end

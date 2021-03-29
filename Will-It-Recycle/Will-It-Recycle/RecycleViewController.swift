@@ -8,24 +8,34 @@
 import UIKit
 import MaterialComponents
 import MaterialComponents.MaterialButtons
+import MaterialComponents.MaterialButtons_Theming
 
 class RecycleViewController: UIViewController {
 
   
-    @IBOutlet weak var scanBtn: MDCFloatingButton!
-    @IBOutlet weak var enterBtn: MDCFloatingButton!
+    @IBOutlet weak var scanBtn: MDCButton!
+    @IBOutlet weak var enterBtn: MDCButton!
     
+//    let containerScheme = MDCContainerScheme()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        scanBtn.mode = .expanded
+        let newSwiftColor = UIColor(red: 252, green: 108, blue: 133, alpha: 255)
+//        scanBtn.applyTextTheme(withScheme: containerScheme)
         scanBtn.setTitle("Scan New Item", for: .normal)
-        scanBtn.setTitleColor(UIColor.white, for: .normal)
-        enterBtn.mode = .expanded
-        enterBtn.setTitle("Enter Items Manually", for: .normal)
-        enterBtn.setTitleColor(UIColor.white, for: .normal)
+//        scanBtn.setTitleColor(newSwiftColor, for: .normal)
+        
+//        enterBtn.applyTextTheme(withScheme: containerScheme)
+        enterBtn.setTitle("Enter Item Manually", for: .normal)
+//        enterBtn.setTitleColor(newSwiftColor, for: .normal)
+        
+//        scanBtn.mode = .expanded
+//        scanBtn.setTitle("Scan New Item", for: .normal)
+//        scanBtn.setTitleColor(newSwiftColor, for: .normal)
+//
+//        enterBtn.mode = .expanded
+//        enterBtn.setTitle("Enter Items Manually", for: .normal)
+//        enterBtn.setTitleColor(newSwiftColor, for: .normal)
     }
     
 

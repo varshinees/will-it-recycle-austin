@@ -8,20 +8,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Recycle View Controller-->
+        <!--Recycle-->
         <scene sceneID="TCg-9x-HHm">
             <objects>
-                <viewController id="NNM-Wf-nyo" customClass="RecycleViewController" customModule="Will_It_Recycle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Recycle" id="NNM-Wf-nyo" customClass="RecycleViewController" customModule="Will_It_Recycle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d7k-Jp-Vmm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNP-NR-3lL">
-                                <rect key="frame" x="136" y="554" width="143" height="30"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="09X-F6-Vbm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="Oov-oJ-F9n"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjw-IK-HPs">
+                                <rect key="frame" x="169" y="262" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scan Items"/>
+                                <connections>
+                                    <segue destination="i8V-Ra-PMk" kind="show" id="aOq-er-4hw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HC5-cc-01I">
+                                <rect key="frame" x="136" y="580" width="143" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Enter Items Manually"/>
                                 <connections>
-                                    <segue destination="GT7-fY-d0f" kind="show" identifier="EnterSegue" id="be8-2G-TmL"/>
+                                    <segue destination="GT7-fY-d0f" kind="show" id="WMP-52-YKE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ow-1c-ay9">
@@ -31,21 +46,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2US-B6-6Yi">
-                                <rect key="frame" x="156" y="306" width="103" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Scan New Item"/>
-                                <connections>
-                                    <segue destination="i8V-Ra-PMk" kind="show" identifier="ScanSegue" id="IQu-bD-7yQ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O27-G7-hYN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Recycle" image="arrow.3.trianglepath" catalog="system" id="UwZ-Uf-oN4"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="ScanBtn" destination="2US-B6-6Yi" id="iVU-af-eNS"/>
-                        <outlet property="enterBtn" destination="nNP-NR-3lL" id="fY6-5V-Vy6"/>
+                        <outlet property="enterBtn" destination="HC5-cc-01I" id="wA8-8p-FAy"/>
+                        <outlet property="scanBtn" destination="sjw-IK-HPs" id="1jB-px-RBl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfI-8D-87G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -86,6 +95,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.3.trianglepath" catalog="system" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
