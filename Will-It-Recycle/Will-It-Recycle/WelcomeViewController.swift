@@ -14,13 +14,15 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var recycleButton: MDCButton!
     
-    //let buttonScheme = MDCButtonScheme()
+    @IBOutlet weak var dogButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //MDCContainedButtonThemer.applyScheme(buttonScheme, to: recycleButton)
+        dogButton.showsTouchWhenHighlighted = true
         
         recycleButton.setTitle("Start Recycling!", for: .normal)
     }
+    
+    
 }
