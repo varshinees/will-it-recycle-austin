@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MaterialComponents
 import MaterialComponents.MaterialButtons
 import MaterialComponents.MaterialButtons_Theming
 
@@ -20,14 +19,13 @@ class RecycleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let newSwiftColor = UIColor(red: 252, green: 108, blue: 133, alpha: 255)
-//        scanBtn.applyTextTheme(withScheme: containerScheme)
-        scanBtn.setTitle("Scan New Item", for: .normal)
-//        scanBtn.setTitleColor(newSwiftColor, for: .normal)
+        scanBtn.setTitle("SCAN NEW ITEMS", for: .normal)
+        scanBtn.setTitleColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
+//        scanBtn.setBackgroundColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
         
-//        enterBtn.applyTextTheme(withScheme: containerScheme)
-        enterBtn.setTitle("Enter Item Manually", for: .normal)
-//        enterBtn.setTitleColor(newSwiftColor, for: .normal)
+        enterBtn.setTitle("ENTER ITEMS MANUALLY", for: .normal)
+        enterBtn.setTitleColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
+//        enterBtn.setBackgroundColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
         
 //        scanBtn.mode = .expanded
 //        scanBtn.setTitle("Scan New Item", for: .normal)
