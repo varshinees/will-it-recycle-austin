@@ -7,7 +7,6 @@
 
 import UIKit
 import MaterialComponents.MaterialButtons
-import MaterialComponents.MaterialChips
 
 class ScanViewController: UIViewController {
 

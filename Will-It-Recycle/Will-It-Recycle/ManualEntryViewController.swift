@@ -7,7 +7,6 @@
 
 import UIKit
 import MaterialComponents.MaterialButtons
-import MaterialComponents.MaterialBanner
 import MaterialComponents.MaterialList
 
 public struct ManualEntryItem: Hashable {
