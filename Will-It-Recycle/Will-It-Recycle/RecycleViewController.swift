@@ -15,17 +15,14 @@ class RecycleViewController: UIViewController {
     @IBOutlet weak var scanBtn: MDCButton!
     @IBOutlet weak var enterBtn: MDCButton!
     
-//    let containerScheme = MDCContainerScheme()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         scanBtn.setTitle("SCAN NEW ITEMS", for: .normal)
-        scanBtn.setTitleColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
-//        scanBtn.setBackgroundColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
+        scanBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         
         enterBtn.setTitle("ENTER ITEMS MANUALLY", for: .normal)
-        enterBtn.setTitleColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
-//        enterBtn.setBackgroundColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
+        enterBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         
 //        scanBtn.mode = .expanded
 //        scanBtn.setTitle("Scan New Item", for: .normal)

@@ -32,7 +32,7 @@ class ScanViewController: UIViewController {
         backBtn.setTitle("< BACK", for: .normal)
         
         takePicBtn.setTitle("TAKE PICTURE", for: .normal)
-        takePicBtn.setTitleColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
+        takePicBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
 
         // Do any additional setup after loading the view.
     }

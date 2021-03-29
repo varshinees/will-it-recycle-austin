@@ -49,10 +49,9 @@ class ManualEntryViewController: UIViewController {
         super.viewDidLoad()
         
         redeemBtn.setTitle("REDEEM", for: .normal)
-        redeemBtn.setTitleColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
-//        redeemBtn.setBackgroundColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
+        redeemBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         backBtn.setTitle("< BACK", for: .normal)
-        backBtn.setTitleColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
+        backBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         entryCollectionView.backgroundColor = UIColor.white
 
         let layoutConfig = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
