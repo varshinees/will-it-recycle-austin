@@ -21,17 +21,17 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         storeBtn.setTitle("STORE", for: .normal)
-        storeBtn.setTitleColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
+        storeBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
 //        storeBtn.setBackgroundColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
         // Do any additional setup after loading the view.
         removeBtn.setTitle("REMOVE ITEM", for: .normal)
-        removeBtn.setTitleColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
+        removeBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         
         claimBtn.setTitle("CLAIM TODAY'S REWARDS", for: .normal)
-        claimBtn.setTitleColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
+        claimBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         
         inventoryBtn.setTitle("INVENTORY", for: .normal)
-        inventoryBtn.setTitleColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
+        inventoryBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
     }
     
 

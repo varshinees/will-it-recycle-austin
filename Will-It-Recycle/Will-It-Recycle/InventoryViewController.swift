@@ -53,7 +53,7 @@ class InventoryViewController: UIViewController {
         super.viewDidLoad()
 
         backBtn.setTitle("BACK TO MY LAND", for: .normal)
-        backBtn.setTitleColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
+        backBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
 //        backBtn.setBackgroundColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
         inventoryCollectionView.backgroundColor = UIColor.white
     
