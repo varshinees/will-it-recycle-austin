@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="-830.43478260869574" y="-151.33928571428569"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--TabbedApp-->
         <scene sceneID="M2D-gL-X93">
             <objects>
-                <viewControllerPlaceholder id="kTb-CX-1tI" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="TabbedApp" id="kTb-CX-1tI" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="kV3-ms-rKD"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgr-yM-5fo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
