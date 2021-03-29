@@ -8,20 +8,81 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Recycle View Controller-->
         <scene sceneID="TCg-9x-HHm">
             <objects>
-                <viewController id="NNM-Wf-nyo" sceneMemberID="viewController">
+                <viewController id="NNM-Wf-nyo" customClass="RecycleViewController" customModule="Will_It_Recycle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d7k-Jp-Vmm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNP-NR-3lL">
+                                <rect key="frame" x="136" y="554" width="143" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Enter Items Manually"/>
+                                <connections>
+                                    <segue destination="GT7-fY-d0f" kind="show" identifier="EnterSegue" id="be8-2G-TmL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ow-1c-ay9">
+                                <rect key="frame" x="198" y="438" width="19" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2US-B6-6Yi">
+                                <rect key="frame" x="156" y="306" width="103" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scan New Item"/>
+                                <connections>
+                                    <segue destination="i8V-Ra-PMk" kind="show" identifier="ScanSegue" id="IQu-bD-7yQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="O27-G7-hYN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="ScanBtn" destination="2US-B6-6Yi" id="iVU-af-eNS"/>
+                        <outlet property="enterBtn" destination="nNP-NR-3lL" id="fY6-5V-Vy6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfI-8D-87G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136" y="52"/>
+        </scene>
+        <!--Manual Entry View Controller-->
+        <scene sceneID="EHX-yr-6qP">
+            <objects>
+                <viewController id="GT7-fY-d0f" customClass="ManualEntryViewController" customModule="Will_It_Recycle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oDP-4h-hOz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yIC-kf-7X3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CuP-is-DEp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DoR-MK-qyr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1232" y="575"/>
+        </scene>
+        <!--Scan View Controller-->
+        <scene sceneID="y5j-QG-cKi">
+            <objects>
+                <viewController id="i8V-Ra-PMk" customClass="ScanViewController" customModule="Will_It_Recycle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="09P-K0-D5E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Zdw-yh-5Vt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="h7g-Ux-aZW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="71u-tA-wsp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1232" y="-273"/>
         </scene>
     </scenes>
     <resources>
