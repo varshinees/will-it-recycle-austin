@@ -38,6 +38,10 @@
 		8188043EA3113E27FDA1AE1E /* Pods_Will_It_Recycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FAD6D3C69A519F7E4CE289 /* Pods_Will_It_Recycle.framework */; };
 		8662A2F92610F44200A45EA2 /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8662A2F82610F44200A45EA2 /* LocalViewController.swift */; };
 		8662A2FC2610F47100A45EA2 /* RecycleHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8662A2FB2610F47100A45EA2 /* RecycleHistoryViewController.swift */; };
+		86CEE48826121E3D009BA9FC /* RecycleDropOffImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 86CEE48726121E3C009BA9FC /* RecycleDropOffImg.png */; };
+		86CEE48B2612236F009BA9FC /* HowToRecycleImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86CEE48A2612236F009BA9FC /* HowToRecycleImg.jpg */; };
+		86CEE48F26122899009BA9FC /* CreativeReuseImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86CEE48E26122898009BA9FC /* CreativeReuseImg.jpg */; };
+		86CEE49926123CAF009BA9FC /* LocationIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 86CEE49826123CAE009BA9FC /* LocationIcon.png */; };
 		86EF1D8F260E44BE004D0BA9 /* Horse.png in Resources */ = {isa = PBXBuildFile; fileRef = 86EF1D8E260E44BE004D0BA9 /* Horse.png */; };
 		C9211F412611B46800F400B3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9211F402611B46700F400B3 /* GameViewController.swift */; };
 		C9211F442611B4A200F400B3 /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9211F432611B4A200F400B3 /* InventoryViewController.swift */; };
@@ -82,6 +86,10 @@
 		6D8DE56D260BF37400C2DD2A /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		8662A2F82610F44200A45EA2 /* LocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalViewController.swift; sourceTree = "<group>"; };
 		8662A2FB2610F47100A45EA2 /* RecycleHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleHistoryViewController.swift; sourceTree = "<group>"; };
+		86CEE48726121E3C009BA9FC /* RecycleDropOffImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RecycleDropOffImg.png; sourceTree = "<group>"; };
+		86CEE48A2612236F009BA9FC /* HowToRecycleImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HowToRecycleImg.jpg; sourceTree = "<group>"; };
+		86CEE48E26122898009BA9FC /* CreativeReuseImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CreativeReuseImg.jpg; sourceTree = "<group>"; };
+		86CEE49826123CAE009BA9FC /* LocationIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LocationIcon.png; sourceTree = "<group>"; };
 		86EF1D8E260E44BE004D0BA9 /* Horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Horse.png; sourceTree = "<group>"; };
 		C9211F402611B46700F400B3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C9211F432611B4A200F400B3 /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
@@ -134,7 +142,10 @@
 		4282887725FABDD700E633D9 /* Will-It-Recycle */ = {
 			isa = PBXGroup;
 			children = (
-				86EF1D8E260E44BE004D0BA9 /* Horse.png */,
+				86CEE49826123CAE009BA9FC /* LocationIcon.png */,
+				86CEE48E26122898009BA9FC /* CreativeReuseImg.jpg */,
+				86CEE48726121E3C009BA9FC /* RecycleDropOffImg.png */,
+				86CEE48A2612236F009BA9FC /* HowToRecycleImg.jpg */,
 				4236970E2606A628002E3FF9 /* GoogleService-Info.plist */,
 				4282889325FAC10600E633D9 /* Storyboards */,
 				4282887825FABDD700E633D9 /* AppDelegate.swift */,
@@ -157,6 +168,7 @@
 				6D8B75F3260E27F700876EA8 /* Cat.png */,
 				6D8B75ED260E27D200876EA8 /* Dog.png */,
 				6D8B75EA260E27C200876EA8 /* Dragon.png */,
+				86EF1D8E260E44BE004D0BA9 /* Horse.png */,
 				6D8B75E7260E27BC00876EA8 /* Hippo.png */,
 				4282888425FABDD800E633D9 /* Assets.xcassets */,
 				42AA5BEC26053A3100BA02AE /* Vector.png */,
@@ -252,12 +264,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86CEE48B2612236F009BA9FC /* HowToRecycleImg.jpg in Resources */,
 				4282889F25FAC20C00E633D9 /* Local.storyboard in Resources */,
 				4282888825FABDD800E633D9 /* LaunchScreen.storyboard in Resources */,
+				86CEE49926123CAF009BA9FC /* LocationIcon.png in Resources */,
 				42AA5BED26053A3100BA02AE /* Vector.png in Resources */,
 				4282889125FAC0BD00E633D9 /* Main.storyboard in Resources */,
 				6D8B75EE260E27D200876EA8 /* Dog.png in Resources */,
 				6D8B75F1260E27E200876EA8 /* Ellipse 1.png in Resources */,
+				86CEE48826121E3D009BA9FC /* RecycleDropOffImg.png in Resources */,
 				4282889C25FAC1F000E633D9 /* Game.storyboard in Resources */,
 				6D8B75E8260E27BC00876EA8 /* Hippo.png in Resources */,
 				4282888525FABDD800E633D9 /* Assets.xcassets in Resources */,
@@ -265,6 +280,7 @@
 				6D8B75F7260E280500876EA8 /* Fish.png in Resources */,
 				4282889625FAC1C700E633D9 /* Recycle.storyboard in Resources */,
 				6D8B75FA260E281100876EA8 /* Bird.png in Resources */,
+				86CEE48F26122899009BA9FC /* CreativeReuseImg.jpg in Resources */,
 				4236970F2606A628002E3FF9 /* GoogleService-Info.plist in Resources */,
 				6D8B75F4260E27F700876EA8 /* Cat.png in Resources */,
 				4282888025FABDD700E633D9 /* TabbedApp.storyboard in Resources */,
