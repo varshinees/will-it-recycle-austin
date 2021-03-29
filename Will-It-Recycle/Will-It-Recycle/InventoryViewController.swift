@@ -13,27 +13,25 @@ public struct InventoryItem: Hashable {
     let id: Int
     let item: String
     let count: String
-    let button: String
     
-    init(id: Int, item: String, count: String, button: String) {
+    init(id: Int, item: String, count: String) {
         self.id = id
         self.item = item
         self.count = count
-        self.button = button
     }
 }
 
 public var inventoryData = [
-    InventoryItem(id: 0, item: "Solar Panels", count: "3", button: "PLACE"),
-    InventoryItem(id: 1, item: "Wind Turbines", count: "1", button: "PLACE"),
-    InventoryItem(id: 2, item: "Watering Cans", count: "2", button: "PLACE"),
-    InventoryItem(id: 3, item: "Succulents", count: "1", button: "PLACE"),
-    InventoryItem(id: 4, item: "Mulch", count: "1", button: "PLACE"),
-    InventoryItem(id: 5, item: "Beehive", count: "2", button: "PLACE"),
-    InventoryItem(id: 6, item: "Shovels", count: "1", button: "PLACE"),
-    InventoryItem(id: 7, item: "Wheelbarrows", count: "1", button: "PLACE"),
-    InventoryItem(id: 8, item: "Seeds", count: "50", button: "PLACE"),
-    InventoryItem(id: 9, item: "Trees", count: "10", button: "PLACE"),
+    InventoryItem(id: 0, item: "Solar Panels", count: "3"),
+    InventoryItem(id: 1, item: "Wind Turbines", count: "1"),
+    InventoryItem(id: 2, item: "Watering Cans", count: "2"),
+    InventoryItem(id: 3, item: "Succulents", count: "1"),
+    InventoryItem(id: 4, item: "Mulch", count: "1"),
+    InventoryItem(id: 5, item: "Beehive", count: "2"),
+    InventoryItem(id: 6, item: "Shovels", count: "1"),
+    InventoryItem(id: 7, item: "Wheelbarrows", count: "1"),
+    InventoryItem(id: 8, item: "Seeds", count: "50"),
+    InventoryItem(id: 9, item: "Trees", count: "10"),
     
 ]
 
@@ -75,7 +73,7 @@ class InventoryViewController: UIViewController {
         // Define how data should be shown using content configuration
         var content = cell.defaultContentConfiguration()
 //            content.image = item.image
-        content.text = item.item + " (x" + item.count + ")               " + item.button
+        content.text = item.item + " (x" + item.count + ")"
 
         // Assign content configuration to cell
         cell.contentConfiguration = content
