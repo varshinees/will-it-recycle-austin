@@ -33,11 +33,12 @@
                     </view>
                     <connections>
                         <segue destination="LXl-ma-d8J" kind="presentation" identifier="LoginSegue" modalPresentationStyle="fullScreen" id="6Bu-3y-UKf"/>
+                        <segue destination="Wj3-4x-ciR" kind="presentation" identifier="WelcomeSegue" id="8xG-bC-KLf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vMr-aS-JH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="63.768115942028992" y="97.767857142857139"/>
+            <point key="canvasLocation" x="72" y="88"/>
         </scene>
         <!--TabbedApp-->
         <scene sceneID="zXP-Wa-tDK">
@@ -45,7 +46,15 @@
                 <viewControllerPlaceholder storyboardName="TabbedApp" id="LXl-ma-d8J" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lJL-Md-7pT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="736" y="100"/>
+            <point key="canvasLocation" x="744" y="-27"/>
+        </scene>
+        <!--Welcome-->
+        <scene sceneID="W27-9k-uyH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Welcome" id="Wj3-4x-ciR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sP5-Z4-1jD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="735" y="216"/>
         </scene>
     </scenes>
     <resources>

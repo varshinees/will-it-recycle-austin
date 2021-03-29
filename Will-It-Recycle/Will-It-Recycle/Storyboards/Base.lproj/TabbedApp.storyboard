@@ -136,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="78.348214285714278"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tabbed App View Controller-->
         <scene sceneID="fAN-Dp-mqQ">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0CT-zg-Hsf" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0CT-zg-Hsf" customClass="TabbedAppViewController" customModule="Will_It_Recycle" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="nGK-QO-1Kl">
                         <barButtonItem key="rightBarButtonItem" title="Settings" image="seal" catalog="system" id="TZU-YF-84O">

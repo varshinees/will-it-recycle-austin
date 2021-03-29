@@ -13,13 +13,19 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Hello")
+        
+        
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+          print ("Error signing out: %@", signOutError)
+        }
         
         Auth.auth().addStateDidChangeListener() {
           auth, user in
 
           if user != nil {
-            let temp = TempViewController()
+            //let temp = TabbedAppViewController()
             //self.present(temp, animated: false, completion: nil)
             self.performSegue(withIdentifier: "LoginSegue", sender: nil)
           }
