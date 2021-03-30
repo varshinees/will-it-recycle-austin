@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4236970F2606A628002E3FF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4236970E2606A628002E3FF9 /* GoogleService-Info.plist */; };
-		42732E3326129CD400AC4463 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42732E3126129CD400AC4463 /* GameViewController.swift */; };
-		42732E3626129CD400AC4463 /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42732E2C26129CD400AC4463 /* InventoryViewController.swift */; };
 		42732E3B26129DC400AC4463 /* RecycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42732E3A26129DC400AC4463 /* RecycleViewController.swift */; };
 		42732E4226129F9200AC4463 /* LocationIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42732E3E26129F9200AC4463 /* LocationIcon.png */; };
 		42732E4326129F9200AC4463 /* CreativeReuseImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42732E3F26129F9200AC4463 /* CreativeReuseImg.jpg */; };
@@ -17,6 +15,7 @@
 		42732E4526129F9300AC4463 /* RecycleDropOffImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 42732E4126129F9200AC4463 /* RecycleDropOffImg.png */; };
 		4282887925FABDD700E633D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282887825FABDD700E633D9 /* AppDelegate.swift */; };
 		4282887B25FABDD700E633D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282887A25FABDD700E633D9 /* SceneDelegate.swift */; };
+		4282887D25FABDD700E633D9 /* TabbedAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4282887C25FABDD700E633D9 /* TabbedAppViewController.swift */; };
 		4282888025FABDD700E633D9 /* TabbedApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282887E25FABDD700E633D9 /* TabbedApp.storyboard */; };
 		4282888325FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4282888125FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld */; };
 		4282888525FABDD800E633D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4282888425FABDD800E633D9 /* Assets.xcassets */; };
@@ -27,15 +26,11 @@
 		4282889C25FAC1F000E633D9 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889B25FAC1F000E633D9 /* Game.storyboard */; };
 		4282889F25FAC20C00E633D9 /* Local.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889E25FAC20C00E633D9 /* Local.storyboard */; };
 		42AA5BED26053A3100BA02AE /* Vector.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AA5BEC26053A3100BA02AE /* Vector.png */; };
+		42DB208F2604287200CFBDAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DB208E2604287200CFBDAF /* LoginViewController.swift */; };
+		6D297F18260AE6450037DC52 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D297F17260AE6450037DC52 /* WelcomeViewController.swift */; };
+		6D297F1B260AE6550037DC52 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D297F1A260AE6550037DC52 /* SettingsViewController.swift */; };
+		6D42F03F260E54230016446B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D42F03E260E54230016446B /* DashboardViewController.swift */; };
 		6D4E7F662611231700870213 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D4E7F652611231700870213 /* Dashboard.storyboard */; };
-		6D5CBE822612B9EC0048E99F /* ManualEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CBE812612B9EC0048E99F /* ManualEntryViewController.swift */; };
-		6D5CBE862612B9FC0048E99F /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CBE852612B9FC0048E99F /* ScanViewController.swift */; };
-		6D5CBE8A2612BA070048E99F /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CBE892612BA070048E99F /* StoreViewController.swift */; };
-		6D5CBE912612BA610048E99F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CBE902612BA600048E99F /* DashboardViewController.swift */; };
-		6D5CBE992612BA8A0048E99F /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CBE982612BA8A0048E99F /* LocalViewController.swift */; };
-		6D5CBE9C2612BA920048E99F /* RecycleHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CBE9B2612BA920048E99F /* RecycleHistoryViewController.swift */; };
-		6D5CBEA42612BAB60048E99F /* TabbedAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CBEA32612BAB60048E99F /* TabbedAppViewController.swift */; };
-		6D5CBEA72612BAC20048E99F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CBEA62612BAC20048E99F /* LoginViewController.swift */; };
 		6D8B75E2260E279000876EA8 /* Frog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75E1260E278F00876EA8 /* Frog.png */; };
 		6D8B75E8260E27BC00876EA8 /* Hippo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75E7260E27BC00876EA8 /* Hippo.png */; };
 		6D8B75EB260E27C200876EA8 /* Dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75EA260E27C200876EA8 /* Dragon.png */; };
@@ -45,16 +40,21 @@
 		6D8B75F7260E280500876EA8 /* Fish.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75F6260E280500876EA8 /* Fish.png */; };
 		6D8B75FA260E281100876EA8 /* Bird.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75F9260E281100876EA8 /* Bird.png */; };
 		6D8DE56E260BF37400C2DD2A /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D8DE56D260BF37400C2DD2A /* Settings.storyboard */; };
-		6DADAA9726137F100086F8D4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADAA9626137F100086F8D4 /* WelcomeViewController.swift */; };
-		6DADAA9E26137FEF0086F8D4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DADAA9D26137FEF0086F8D4 /* SettingsViewController.swift */; };
 		8188043EA3113E27FDA1AE1E /* Pods_Will_It_Recycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FAD6D3C69A519F7E4CE289 /* Pods_Will_It_Recycle.framework */; };
+		8662A2F92610F44200A45EA2 /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8662A2F82610F44200A45EA2 /* LocalViewController.swift */; };
+		8662A2FC2610F47100A45EA2 /* RecycleHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8662A2FB2610F47100A45EA2 /* RecycleHistoryViewController.swift */; };
 		86EF1D8F260E44BE004D0BA9 /* Horse.png in Resources */ = {isa = PBXBuildFile; fileRef = 86EF1D8E260E44BE004D0BA9 /* Horse.png */; };
+		C921224F2612B51D00F400B3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C921224A2612B51C00F400B3 /* GameViewController.swift */; };
+		C92122502612B51D00F400B3 /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C921224B2612B51C00F400B3 /* InventoryViewController.swift */; };
+		C92122512612B51D00F400B3 /* ManualEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C921224C2612B51C00F400B3 /* ManualEntryViewController.swift */; };
+		C92122522612B51D00F400B3 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C921224D2612B51D00F400B3 /* ScanViewController.swift */; };
+		C92122532612B51D00F400B3 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C921224E2612B51D00F400B3 /* StoreViewController.swift */; };
+		C92122602612E0F200F400B3 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C921225F2612E0F200F400B3 /* StoreTableViewCell.swift */; };
+		C92122632613703D00F400B3 /* InventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92122622613703D00F400B3 /* InventoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4236970E2606A628002E3FF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		42732E2C26129CD400AC4463 /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InventoryViewController.swift; path = "/Users/chelsie_barrientos/Desktop/will-it-recycle-austin/Will-It-Recycle/Will-It-Recycle/InventoryViewController.swift"; sourceTree = "<absolute>"; };
-		42732E3126129CD400AC4463 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = "/Users/chelsie_barrientos/Desktop/will-it-recycle-austin/Will-It-Recycle/Will-It-Recycle/GameViewController.swift"; sourceTree = "<absolute>"; };
 		42732E3A26129DC400AC4463 /* RecycleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecycleViewController.swift; path = "Will-It-Recycle/Storyboards/RecycleViewController.swift"; sourceTree = SOURCE_ROOT; };
 		42732E3E26129F9200AC4463 /* LocationIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LocationIcon.png; sourceTree = "<group>"; };
 		42732E3F26129F9200AC4463 /* CreativeReuseImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CreativeReuseImg.jpg; sourceTree = "<group>"; };
@@ -63,6 +63,7 @@
 		4282887525FABDD700E633D9 /* Will-It-Recycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Will-It-Recycle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4282887825FABDD700E633D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4282887A25FABDD700E633D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4282887C25FABDD700E633D9 /* TabbedAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedAppViewController.swift; sourceTree = "<group>"; };
 		4282887F25FABDD700E633D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TabbedApp.storyboard; sourceTree = "<group>"; };
 		4282888225FABDD700E633D9 /* Will_It_Recycle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Will_It_Recycle.xcdatamodel; sourceTree = "<group>"; };
 		4282888425FABDD800E633D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,17 +75,13 @@
 		4282889B25FAC1F000E633D9 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 		4282889E25FAC20C00E633D9 /* Local.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Local.storyboard; sourceTree = "<group>"; };
 		42AA5BEC26053A3100BA02AE /* Vector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Vector.png; sourceTree = "<group>"; };
+		42DB208E2604287200CFBDAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		53FAD6D3C69A519F7E4CE289 /* Pods_Will_It_Recycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Will_It_Recycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68C8AF049FB5F205B15DA2F0 /* Pods-Will-It-Recycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Will-It-Recycle.release.xcconfig"; path = "Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle.release.xcconfig"; sourceTree = "<group>"; };
+		6D297F17260AE6450037DC52 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		6D297F1A260AE6550037DC52 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		6D42F03E260E54230016446B /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		6D4E7F652611231700870213 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
-		6D5CBE812612B9EC0048E99F /* ManualEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManualEntryViewController.swift; path = "Will-It-Recycle/ManualEntryViewController.swift"; sourceTree = SOURCE_ROOT; };
-		6D5CBE852612B9FC0048E99F /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScanViewController.swift; path = "Will-It-Recycle/ScanViewController.swift"; sourceTree = SOURCE_ROOT; };
-		6D5CBE892612BA070048E99F /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreViewController.swift; path = "Will-It-Recycle/StoreViewController.swift"; sourceTree = SOURCE_ROOT; };
-		6D5CBE902612BA600048E99F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		6D5CBE982612BA8A0048E99F /* LocalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalViewController.swift; sourceTree = "<group>"; };
-		6D5CBE9B2612BA920048E99F /* RecycleHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecycleHistoryViewController.swift; sourceTree = "<group>"; };
-		6D5CBEA32612BAB60048E99F /* TabbedAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbedAppViewController.swift; sourceTree = "<group>"; };
-		6D5CBEA62612BAC20048E99F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6D8B75E1260E278F00876EA8 /* Frog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog.png; sourceTree = "<group>"; };
 		6D8B75E7260E27BC00876EA8 /* Hippo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hippo.png; sourceTree = "<group>"; };
 		6D8B75EA260E27C200876EA8 /* Dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dragon.png; sourceTree = "<group>"; };
@@ -94,9 +91,16 @@
 		6D8B75F6260E280500876EA8 /* Fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fish.png; sourceTree = "<group>"; };
 		6D8B75F9260E281100876EA8 /* Bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bird.png; sourceTree = "<group>"; };
 		6D8DE56D260BF37400C2DD2A /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
-		6DADAA9626137F100086F8D4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		6DADAA9D26137FEF0086F8D4 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8662A2F82610F44200A45EA2 /* LocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalViewController.swift; sourceTree = "<group>"; };
+		8662A2FB2610F47100A45EA2 /* RecycleHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleHistoryViewController.swift; sourceTree = "<group>"; };
 		86EF1D8E260E44BE004D0BA9 /* Horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Horse.png; sourceTree = "<group>"; };
+		C921224A2612B51C00F400B3 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		C921224B2612B51C00F400B3 /* InventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
+		C921224C2612B51C00F400B3 /* ManualEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualEntryViewController.swift; sourceTree = "<group>"; };
+		C921224D2612B51D00F400B3 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		C921224E2612B51D00F400B3 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		C921225F2612E0F200F400B3 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
+		C92122622613703D00F400B3 /* InventoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTableViewCell.swift; sourceTree = "<group>"; };
 		DA6F76637CACBFBBBC2F7C63 /* Pods-Will-It-Recycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Will-It-Recycle.debug.xcconfig"; path = "Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +155,8 @@
 				4282888925FABDD800E633D9 /* Info.plist */,
 				4282888125FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld */,
 				42969C4126122C6800CE60B2 /* ViewControllers */,
+				C921225F2612E0F200F400B3 /* StoreTableViewCell.swift */,
+				C92122622613703D00F400B3 /* InventoryTableViewCell.swift */,
 			);
 			path = "Will-It-Recycle";
 			sourceTree = "<group>";
@@ -174,19 +180,19 @@
 		42969C4126122C6800CE60B2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6DADAA9D26137FEF0086F8D4 /* SettingsViewController.swift */,
 				42732E3A26129DC400AC4463 /* RecycleViewController.swift */,
-				6DADAA9626137F100086F8D4 /* WelcomeViewController.swift */,
-				42732E3126129CD400AC4463 /* GameViewController.swift */,
-				6D5CBE9B2612BA920048E99F /* RecycleHistoryViewController.swift */,
-				6D5CBE902612BA600048E99F /* DashboardViewController.swift */,
-				6D5CBEA32612BAB60048E99F /* TabbedAppViewController.swift */,
-				6D5CBEA62612BAC20048E99F /* LoginViewController.swift */,
-				6D5CBE982612BA8A0048E99F /* LocalViewController.swift */,
-				42732E2C26129CD400AC4463 /* InventoryViewController.swift */,
-				6D5CBE812612B9EC0048E99F /* ManualEntryViewController.swift */,
-				6D5CBE852612B9FC0048E99F /* ScanViewController.swift */,
-				6D5CBE892612BA070048E99F /* StoreViewController.swift */,
+				C921224D2612B51D00F400B3 /* ScanViewController.swift */,
+				C921224C2612B51C00F400B3 /* ManualEntryViewController.swift */,
+				C921224A2612B51C00F400B3 /* GameViewController.swift */,
+				C921224B2612B51C00F400B3 /* InventoryViewController.swift */,
+				C921224E2612B51D00F400B3 /* StoreViewController.swift */,
+				6D297F17260AE6450037DC52 /* WelcomeViewController.swift */,
+				6D42F03E260E54230016446B /* DashboardViewController.swift */,
+				6D297F1A260AE6550037DC52 /* SettingsViewController.swift */,
+				4282887C25FABDD700E633D9 /* TabbedAppViewController.swift */,
+				8662A2FB2610F47100A45EA2 /* RecycleHistoryViewController.swift */,
+				8662A2F82610F44200A45EA2 /* LocalViewController.swift */,
+				42DB208E2604287200CFBDAF /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -374,22 +380,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D5CBE912612BA610048E99F /* DashboardViewController.swift in Sources */,
-				6DADAA9726137F100086F8D4 /* WelcomeViewController.swift in Sources */,
+				4282887D25FABDD700E633D9 /* TabbedAppViewController.swift in Sources */,
+				C92122502612B51D00F400B3 /* InventoryViewController.swift in Sources */,
 				4282887925FABDD700E633D9 /* AppDelegate.swift in Sources */,
-				6D5CBEA72612BAC20048E99F /* LoginViewController.swift in Sources */,
+				6D297F1B260AE6550037DC52 /* SettingsViewController.swift in Sources */,
 				4282888325FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld in Sources */,
-				6D5CBE8A2612BA070048E99F /* StoreViewController.swift in Sources */,
-				6D5CBE862612B9FC0048E99F /* ScanViewController.swift in Sources */,
-				6DADAA9E26137FEF0086F8D4 /* SettingsViewController.swift in Sources */,
-				42732E3626129CD400AC4463 /* InventoryViewController.swift in Sources */,
-				6D5CBE9C2612BA920048E99F /* RecycleHistoryViewController.swift in Sources */,
-				6D5CBE992612BA8A0048E99F /* LocalViewController.swift in Sources */,
+				6D297F18260AE6450037DC52 /* WelcomeViewController.swift in Sources */,
+				C92122522612B51D00F400B3 /* ScanViewController.swift in Sources */,
+				C92122602612E0F200F400B3 /* StoreTableViewCell.swift in Sources */,
+				C921224F2612B51D00F400B3 /* GameViewController.swift in Sources */,
+				42DB208F2604287200CFBDAF /* LoginViewController.swift in Sources */,
+				C92122632613703D00F400B3 /* InventoryTableViewCell.swift in Sources */,
+				C92122512612B51D00F400B3 /* ManualEntryViewController.swift in Sources */,
+				8662A2FC2610F47100A45EA2 /* RecycleHistoryViewController.swift in Sources */,
+				8662A2F92610F44200A45EA2 /* LocalViewController.swift in Sources */,
 				4282887B25FABDD700E633D9 /* SceneDelegate.swift in Sources */,
-				6D5CBE822612B9EC0048E99F /* ManualEntryViewController.swift in Sources */,
 				42732E3B26129DC400AC4463 /* RecycleViewController.swift in Sources */,
-				42732E3326129CD400AC4463 /* GameViewController.swift in Sources */,
-				6D5CBEA42612BAB60048E99F /* TabbedAppViewController.swift in Sources */,
+				6D42F03F260E54230016446B /* DashboardViewController.swift in Sources */,
+				C92122532612B51D00F400B3 /* StoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

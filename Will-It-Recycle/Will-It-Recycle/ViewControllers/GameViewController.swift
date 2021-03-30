@@ -17,6 +17,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var claimBtn: MDCButton!
     @IBOutlet weak var storeBtn: MDCButton!
     
+    @IBOutlet weak var gameView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
