@@ -41,7 +41,7 @@ class ManualEntryViewController: UIViewController {
     var dataSource: UICollectionViewDiffableDataSource<Section, ManualEntryItem>!
     var snapshot: NSDiffableDataSourceSnapshot<Section, ManualEntryItem>!
 
-    @IBOutlet weak var backBtn: MDCButton!
+//    @IBOutlet weak var backBtn: MDCButton!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var quantityTextField: UITextField!
     @IBOutlet weak var manualCollectionView: UICollectionView!
@@ -50,8 +50,8 @@ class ManualEntryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        backBtn.setTitle("< BACK", for: .normal)
-        backBtn.setTitleColor(UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0), for: .normal)
+//        backBtn.setTitle("< BACK", for: .normal)
+//        backBtn.setTitleColor(UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0), for: .normal)
         
         redeemBtn.setTitle("REDEEM", for: .normal)
         redeemBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
