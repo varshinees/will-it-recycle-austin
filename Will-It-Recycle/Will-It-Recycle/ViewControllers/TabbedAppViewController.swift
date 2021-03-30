@@ -21,10 +21,10 @@ class TabbedAppViewController: UITabBarController {
 //
 //        performSegue(withIdentifier: "BackToStart", sender: nil)
 //
-////        let loginVC = LoginViewController()
-////        present(loginVC, animated: false, completion: nil)
-//
-////            navigationController?.popToRootViewController(animated: true)
+//        let loginVC = LoginViewController()
+//        present(loginVC, animated: false, completion: nil)
+
+//            navigationController?.popToRootViewController(animated: true)
 //    }
     
 }

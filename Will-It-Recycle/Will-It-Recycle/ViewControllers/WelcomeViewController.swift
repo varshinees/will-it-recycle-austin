@@ -2,27 +2,43 @@
 //  WelcomeViewController.swift
 //  Will-It-Recycle
 //
-//  Created by Chelsie Barrientos on 3/23/21.
+//  Created by Chelsie Barrientos on 3/30/21.
 //
 
 import UIKit
-import MaterialComponents
-import MaterialComponents.MaterialButtons
-import MaterialComponents.MaterialButtons_Theming
 
+//
+// A class which coordinates communication between the data
+// and view components of the Welcome View Controller.
+//
 class WelcomeViewController: UIViewController {
-
-    @IBOutlet weak var recycleButton: MDCButton!
-    
     @IBOutlet weak var dogButton: UIButton!
     
+    @IBOutlet weak var birdButton: UIButton!
+    
+    @IBOutlet weak var fishButton: UIButton!
+    
+    @IBOutlet weak var catButton: UIButton!
+    
+    @IBOutlet weak var frogButton: UIButton!
+    
+    @IBOutlet weak var horseButton: UIButton!
+    
+    @IBOutlet weak var dragonButton: UIButton!
+    
+    @IBOutlet weak var hippoButton: UIButton!
+    
+    // A method which signals that the program is ready.
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         dogButton.showsTouchWhenHighlighted = true
-        
-        recycleButton.setTitle("Start Recycling!", for: .normal)
+        birdButton.showsTouchWhenHighlighted = true
+        fishButton.showsTouchWhenHighlighted = true
+        catButton.showsTouchWhenHighlighted = true
+        frogButton.showsTouchWhenHighlighted = true
+        horseButton.showsTouchWhenHighlighted = true
+        dragonButton.showsTouchWhenHighlighted = true
+        hippoButton.showsTouchWhenHighlighted = true
     }
-    
-    
 }
