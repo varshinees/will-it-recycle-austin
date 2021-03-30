@@ -142,11 +142,6 @@
 		4282887725FABDD700E633D9 /* Will-It-Recycle */ = {
 			isa = PBXGroup;
 			children = (
-				C921224A2612B51C00F400B3 /* GameViewController.swift */,
-				C921224B2612B51C00F400B3 /* InventoryViewController.swift */,
-				C921224C2612B51C00F400B3 /* ManualEntryViewController.swift */,
-				C921224D2612B51D00F400B3 /* ScanViewController.swift */,
-				C921224E2612B51D00F400B3 /* StoreViewController.swift */,
 				4236970E2606A628002E3FF9 /* GoogleService-Info.plist */,
 				4282889325FAC10600E633D9 /* Storyboards */,
 				4282887825FABDD700E633D9 /* AppDelegate.swift */,
@@ -180,6 +175,11 @@
 			isa = PBXGroup;
 			children = (
 				42732E3A26129DC400AC4463 /* RecycleViewController.swift */,
+				C921224D2612B51D00F400B3 /* ScanViewController.swift */,
+				C921224C2612B51C00F400B3 /* ManualEntryViewController.swift */,
+				C921224A2612B51C00F400B3 /* GameViewController.swift */,
+				C921224B2612B51C00F400B3 /* InventoryViewController.swift */,
+				C921224E2612B51D00F400B3 /* StoreViewController.swift */,
 				6D297F17260AE6450037DC52 /* WelcomeViewController.swift */,
 				6D42F03E260E54230016446B /* DashboardViewController.swift */,
 				6D297F1A260AE6550037DC52 /* SettingsViewController.swift */,
