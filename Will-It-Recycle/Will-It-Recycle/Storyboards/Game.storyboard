@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Plot O' Land" id="8x0-DR-vYk"/>
+                                    <navigationItem title="Plot O' Land" largeTitleDisplayMode="always" id="8x0-DR-vYk"/>
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hS-JH-Eid">
@@ -73,6 +73,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="claimBtn" destination="jLn-iV-K9J" id="km7-rZ-pWK"/>
+                        <outlet property="gameView" destination="nmc-KZ-EJi" id="7HK-1a-leS"/>
                         <outlet property="inventoryBtn" destination="0hS-JH-Eid" id="YQQ-Tj-Mx6"/>
                         <outlet property="removeBtn" destination="Nwp-Qb-VTG" id="bGV-Ik-PT9"/>
                         <outlet property="storeBtn" destination="Q7W-hz-l0n" id="bAv-Sh-QXV"/>
@@ -80,9 +81,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EV8-nL-gb4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121.73913043478262" y="68.973214285714278"/>
+            <point key="canvasLocation" x="-165" y="145"/>
         </scene>
-        <!--Item-->
+        <!--Game-->
         <scene sceneID="rvT-hq-Dup">
             <objects>
                 <viewController id="TRL-0D-M1J" customClass="StoreViewController" customModule="Will_It_Recycle" customModuleProvider="target" sceneMemberID="viewController">
@@ -106,7 +107,7 @@
                                 <rect key="frame" x="0.0" y="13" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Store" id="aR4-hY-8BB"/>
+                                    <navigationItem title="Store" largeTitleDisplayMode="always" id="aR4-hY-8BB"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iZr-gJ-fRq">
@@ -173,7 +174,7 @@
                         <viewLayoutGuide key="safeArea" id="xIy-Ky-nqg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="rPW-Us-dpq"/>
+                    <tabBarItem key="tabBarItem" title="Game" selectedImage="die.face.3.fill" catalog="system" id="rPW-Us-dpq"/>
                     <navigationItem key="navigationItem" id="itE-xW-smo"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -185,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfE-70-Fgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1153.6231884057972" y="525"/>
+            <point key="canvasLocation" x="1154" y="520"/>
         </scene>
         <!--Game-->
         <scene sceneID="I8P-CI-FOa">
@@ -197,7 +198,7 @@
             </objects>
             <point key="canvasLocation" x="1919" y="436"/>
         </scene>
-        <!--Item-->
+        <!--Game-->
         <scene sceneID="Q4W-Vl-103">
             <objects>
                 <viewController id="zgO-Z9-ifW" customClass="InventoryViewController" customModule="Will_It_Recycle" customModuleProvider="target" sceneMemberID="viewController">
@@ -209,7 +210,7 @@
                                 <rect key="frame" x="1" y="19" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="My Inventory" id="1J8-QO-D2e"/>
+                                    <navigationItem title="My Inventory" largeTitleDisplayMode="always" id="1J8-QO-D2e"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sng-be-d35">
@@ -264,7 +265,7 @@
                         <viewLayoutGuide key="safeArea" id="ULd-M8-XT0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="v03-wK-3aU"/>
+                    <tabBarItem key="tabBarItem" title="Game" selectedImage="die.face.3.fill" catalog="system" id="v03-wK-3aU"/>
                     <navigationItem key="navigationItem" id="Pf1-LP-1rd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
