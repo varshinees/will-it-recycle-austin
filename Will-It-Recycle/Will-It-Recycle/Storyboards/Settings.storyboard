@@ -102,31 +102,55 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQw-mS-Yej">
-                                <rect key="frame" x="185" y="793" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyd-ZS-iin">
                                 <rect key="frame" x="141" y="733" width="132" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="DELETE ACCOUNT">
-                                    <color key="titleColor" red="0.0034623097162693739" green="0.99584800004959106" blue="0.90175408124923706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.43633939266011046" green="0.88015809099318243" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQw-mS-Yej">
+                                <rect key="frame" x="172" y="779" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SIGN OUT">
+                                    <color key="titleColor" red="0.43633939269999999" green="0.88015809099999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOut:" destination="Gqq-4O-Kok" eventType="touchUpInside" id="5GD-50-EbV"/>
+                                    <segue destination="FLK-BS-Ji2" kind="show" identifier="mainSegueIdentifier" id="Hxm-st-zY4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5mV-qK-a7G"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="h4p-Kq-wYE"/>
+                    <navigationItem key="navigationItem" id="h4p-Kq-wYE">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hF1-za-CvK">
+                            <connections>
+                                <segue destination="FOY-2O-oeC" kind="presentation" modalPresentationStyle="fullScreen" id="Kea-TG-amB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="changeEmail" destination="Jap-aw-5BP" id="Bbb-kM-DKf"/>
+                        <outlet property="changeUsername" destination="6me-GT-d9F" id="3ha-W9-bx6"/>
+                        <outlet property="signOutButton" destination="mQw-mS-Yej" id="zor-Pt-R6C"/>
                         <outlet property="updateButton" destination="uuW-ic-Sbh" id="MKQ-l2-QPp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ge1-Hc-O1N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="876.81159420289862" y="-151.33928571428569"/>
+        </scene>
+        <!--TabbedApp-->
+        <scene sceneID="MRx-wZ-vIf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabbedApp" id="FOY-2O-oeC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WR8-nM-bky"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D1p-kk-ZvK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1353" y="-357"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="l5S-Yc-btj">
@@ -147,6 +171,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="trN-Y7-Ill" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1408.6956521739132" y="14.732142857142856"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="Gwl-xE-Zoo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="FLK-BS-Ji2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7kW-8d-Eec"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdH-vG-gqb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1390" y="79"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mTo-JH-Va3">
