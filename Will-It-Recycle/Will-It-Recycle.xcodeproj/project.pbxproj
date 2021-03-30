@@ -49,6 +49,8 @@
 		C92122512612B51D00F400B3 /* ManualEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C921224C2612B51C00F400B3 /* ManualEntryViewController.swift */; };
 		C92122522612B51D00F400B3 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C921224D2612B51D00F400B3 /* ScanViewController.swift */; };
 		C92122532612B51D00F400B3 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C921224E2612B51D00F400B3 /* StoreViewController.swift */; };
+		C92122602612E0F200F400B3 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C921225F2612E0F200F400B3 /* StoreTableViewCell.swift */; };
+		C92122632613703D00F400B3 /* InventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92122622613703D00F400B3 /* InventoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +99,8 @@
 		C921224C2612B51C00F400B3 /* ManualEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualEntryViewController.swift; sourceTree = "<group>"; };
 		C921224D2612B51D00F400B3 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		C921224E2612B51D00F400B3 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		C921225F2612E0F200F400B3 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
+		C92122622613703D00F400B3 /* InventoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTableViewCell.swift; sourceTree = "<group>"; };
 		DA6F76637CACBFBBBC2F7C63 /* Pods-Will-It-Recycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Will-It-Recycle.debug.xcconfig"; path = "Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +155,8 @@
 				4282888925FABDD800E633D9 /* Info.plist */,
 				4282888125FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld */,
 				42969C4126122C6800CE60B2 /* ViewControllers */,
+				C921225F2612E0F200F400B3 /* StoreTableViewCell.swift */,
+				C92122622613703D00F400B3 /* InventoryTableViewCell.swift */,
 			);
 			path = "Will-It-Recycle";
 			sourceTree = "<group>";
@@ -381,8 +387,10 @@
 				4282888325FABDD700E633D9 /* Will_It_Recycle.xcdatamodeld in Sources */,
 				6D297F18260AE6450037DC52 /* WelcomeViewController.swift in Sources */,
 				C92122522612B51D00F400B3 /* ScanViewController.swift in Sources */,
+				C92122602612E0F200F400B3 /* StoreTableViewCell.swift in Sources */,
 				C921224F2612B51D00F400B3 /* GameViewController.swift in Sources */,
 				42DB208F2604287200CFBDAF /* LoginViewController.swift in Sources */,
+				C92122632613703D00F400B3 /* InventoryTableViewCell.swift in Sources */,
 				C92122512612B51D00F400B3 /* ManualEntryViewController.swift in Sources */,
 				8662A2FC2610F47100A45EA2 /* RecycleHistoryViewController.swift in Sources */,
 				8662A2F92610F44200A45EA2 /* LocalViewController.swift in Sources */,
