@@ -10,31 +10,33 @@ import FirebaseUI
 import Firebase
 
 class LoginViewController: UIViewController, FUIAuthDelegate {
+    
+    var newUser:Bool? = nil {
+        didSet {
+            if newUser == true {
+                self.performSegue(withIdentifier: "WelcomeSegue", sender: nil)
+            } else {
+                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Hello")
-        
-        Auth.auth().addStateDidChangeListener() {
-          auth, user in
 
-          if user != nil {
-            let temp = TempViewController()
-            //self.present(temp, animated: false, completion: nil)
-            self.performSegue(withIdentifier: "LoginSegue", sender: nil)
-          }
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+          print ("Error signing out: %@", signOutError)
         }
- 
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if Auth.auth().currentUser != nil {
-            self.performSegue(withIdentifier: "LoginSegue", sender: nil)
             return
         }
+        
         // Do any additional setup after loading the view.
         let authUI = FUIAuth.defaultAuthUI()
         // You need to adopt a FUIAuthDelegate protocol to receive callback
@@ -47,6 +49,7 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
         authUI?.providers = providers
         
         let authViewController = authUI!.authViewController()
+        //authViewController.navigationBar.set
         authViewController.modalPresentationStyle = .fullScreen
         
         present(authViewController, animated: false, completion: nil)
@@ -56,18 +59,11 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
       // handle user (`authDataResult.user`) and error as necessary
         if error == nil {
             //performSegue(withIdentifier: "LoginSegue", sender: nil)
+            if authDataResult!.additionalUserInfo!.isNewUser {
+                newUser = true
+            } else {
+                newUser = false
+            }
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
