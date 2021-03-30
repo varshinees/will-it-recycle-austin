@@ -36,14 +36,14 @@ class SettingsViewController: UIViewController {
     }
 
     // A method that updates the current user's email.
-    @IBAction func updatePressed(_ sender: Any) {
+    @IBAction func updateButtonPressed(_ sender: Any) {
         if (changeEmail.text != "") {
             Auth.auth().currentUser?.updateEmail(to: changeEmail.text!, completion: nil)
         }
     }
     
     // A method that signs out the current user.
-    @IBAction func signOut(_ sender: Any) {
+    @IBAction func signOutButtonPressed(_ sender: Any) {
         do {
             try Auth.auth().signOut()
             
