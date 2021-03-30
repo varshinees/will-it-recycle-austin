@@ -57,6 +57,10 @@ class RecycleHistoryViewController: UIViewController, UITableViewDelegate, UITab
         return recycleHistoryData.count
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recycleHistoryCell", for: indexPath as IndexPath) as? RecycleHistoryTableViewCell
         let row = indexPath.row

@@ -8,16 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TabbedApp-->
-        <scene sceneID="38c-qU-YYl">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TabbedApp" id="Ogj-pK-1Ej" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Tgp-Rs-K9G"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tst-Qq-eOQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-555" y="-355"/>
-        </scene>
         <!--Settings View Controller-->
         <scene sceneID="Q0l-eL-CEl">
             <objects>
@@ -98,17 +88,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9x-sS-JJp">
-                                <rect key="frame" x="17" y="80" width="63" height="22"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="BACK" image="lessthan" catalog="system">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Ogj-pK-1Ej" kind="modal" modalPresentationStyle="fullScreen" id="I71-8k-V2r"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OwH-Js-L8z">
                                 <rect key="frame" x="178" y="777" width="60" height="30"/>
                                 <state key="normal" title="Sign Out">
@@ -140,7 +119,6 @@
                             <constraint firstItem="Egp-Zv-SHC" firstAttribute="centerY" secondItem="2Qz-e0-2fc" secondAttribute="centerY" id="1k1-2d-pde"/>
                             <constraint firstItem="uuW-ic-Sbh" firstAttribute="leading" secondItem="5mV-qK-a7G" secondAttribute="leading" constant="163" id="2tA-3A-tC5"/>
                             <constraint firstItem="5mV-qK-a7G" firstAttribute="trailing" secondItem="uuW-ic-Sbh" secondAttribute="trailing" constant="161" id="47b-N3-pJb"/>
-                            <constraint firstItem="v9x-sS-JJp" firstAttribute="top" secondItem="41F-nG-ZKN" secondAttribute="bottom" constant="4" id="9Vg-t3-ac6"/>
                             <constraint firstItem="OwH-Js-L8z" firstAttribute="top" secondItem="Eyd-ZS-iin" secondAttribute="bottom" constant="20" id="9kB-Er-s0D"/>
                             <constraint firstAttribute="bottom" secondItem="uuW-ic-Sbh" secondAttribute="bottom" constant="254" id="AlK-r6-uNf"/>
                             <constraint firstItem="41F-nG-ZKN" firstAttribute="leading" secondItem="1zc-hw-yAE" secondAttribute="leadingMargin" constant="-28" id="CCR-sk-wl2"/>
@@ -157,7 +135,6 @@
                             <constraint firstItem="Eyd-ZS-iin" firstAttribute="top" secondItem="qH3-d2-SZi" secondAttribute="bottom" constant="22" id="R3o-Y3-RHq"/>
                             <constraint firstItem="Bya-th-5KT" firstAttribute="leading" secondItem="5mV-qK-a7G" secondAttribute="leading" constant="119" id="Sf4-gc-fHM"/>
                             <constraint firstItem="uuW-ic-Sbh" firstAttribute="centerX" secondItem="qH3-d2-SZi" secondAttribute="centerX" id="V4K-R9-h2E"/>
-                            <constraint firstItem="v9x-sS-JJp" firstAttribute="leading" secondItem="5mV-qK-a7G" secondAttribute="leading" constant="17" id="Vqg-aP-Emr"/>
                             <constraint firstItem="Eyd-ZS-iin" firstAttribute="leading" secondItem="5mV-qK-a7G" secondAttribute="leading" constant="141" id="WL2-gO-OXm"/>
                             <constraint firstItem="Jap-aw-5BP" firstAttribute="leading" secondItem="5mV-qK-a7G" secondAttribute="leading" constant="25" id="WPh-d9-rVW"/>
                             <constraint firstItem="eUA-a6-Dcy" firstAttribute="top" secondItem="1zc-hw-yAE" secondAttribute="top" constant="287" id="XDN-X5-gKc"/>
@@ -259,7 +236,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="Gqq-4O-Kok" kind="presentation" modalPresentationStyle="fullScreen" id="PW0-pB-YZY"/>
+                                    <action selector="backButton:" destination="prO-W7-idr" eventType="touchUpInside" id="0fU-DR-uWN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -280,7 +257,6 @@
     <resources>
         <image name="Dog.png" width="59" height="55"/>
         <image name="Ellipse 1.png" width="86" height="86"/>
-        <image name="lessthan" catalog="system" width="128" height="111"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
