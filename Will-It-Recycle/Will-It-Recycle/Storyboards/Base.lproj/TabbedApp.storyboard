@@ -143,6 +143,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="nGK-QO-1Kl">
                         <barButtonItem key="rightBarButtonItem" title="Settings" image="seal" catalog="system" id="TZU-YF-84O">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="kLu-KO-KRl" kind="presentation" modalPresentationStyle="fullScreen" id="5mo-7G-LiO"/>
                             </connections>
