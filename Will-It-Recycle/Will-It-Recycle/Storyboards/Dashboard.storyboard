@@ -72,9 +72,6 @@
                                         <state key="normal" title="REDEEM LEAVES">
                                             <color key="titleColor" red="1" green="0.47975675400000001" blue="0.55453294929999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="qqF-LH-vVx" kind="show" id="oBi-cQ-ML9"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzK-tz-h2v">
                                         <rect key="frame" x="94" y="241" width="154" height="30"/>
@@ -82,9 +79,6 @@
                                         <state key="normal" title="RECYCLE ITEMS NOW">
                                             <color key="titleColor" red="1" green="0.47975675400000001" blue="0.55453294929999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="P9h-Xt-On7" kind="show" id="IKy-KY-pjO"/>
-                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QCO-e5-eeU">
                                         <rect key="frame" x="29" y="87.5" width="31" height="33"/>
@@ -200,26 +194,6 @@
                 <exit id="dQh-Kt-3cl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-34.782608695652179" y="-148.66071428571428"/>
-        </scene>
-        <!--Game-->
-        <scene sceneID="Vu2-zy-pul">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Game" id="qqF-LH-vVx" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="HSk-NW-kH9"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4JD-g2-BRW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="498" y="-182"/>
-        </scene>
-        <!--Recycle-->
-        <scene sceneID="cKk-8r-UzP">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Recycle" id="P9h-Xt-On7" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="4tg-9v-21f"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CE5-vR-zEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="498" y="-108"/>
         </scene>
     </scenes>
     <resources>

@@ -31,6 +31,10 @@ class InventoryViewController: UIViewController, UITableViewDelegate, UITableVie
 
     }
     
+    @IBAction func backOnClick(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }

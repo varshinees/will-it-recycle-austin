@@ -30,6 +30,9 @@ class StoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
         backBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         
     }
+    @IBAction func backOnClick(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
