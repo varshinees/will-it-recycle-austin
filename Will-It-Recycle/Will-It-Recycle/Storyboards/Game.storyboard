@@ -166,6 +166,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.84679758549999995" green="0.4447577841" blue="0.50715358470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Back to my land"/>
+                                <connections>
+                                    <action selector="backOnClick:" destination="TRL-0D-M1J" eventType="touchUpInside" id="Aj9-GD-yUP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xIy-Ky-nqg"/>
@@ -244,6 +247,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.84679758549999995" green="0.4447577841" blue="0.50715358470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Back to my land"/>
+                                <connections>
+                                    <action selector="backOnClick:" destination="zgO-Z9-ifW" eventType="touchUpInside" id="ScE-Xh-fCC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ULd-M8-XT0"/>
