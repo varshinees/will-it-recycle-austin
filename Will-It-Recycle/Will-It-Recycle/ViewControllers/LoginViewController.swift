@@ -58,7 +58,28 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
       // handle user (`authDataResult.user`) and error as necessary
         if error == nil {
-            //performSegue(withIdentifier: "LoginSegue", sender: nil)
+            let ref = Database.database().reference()
+            
+            ref.child("users/\(Auth.auth().currentUser!.uid)/displayName").getData { (error, snapshot) in
+                if let error = error {
+                    print("Error getting data \(error)")
+                }
+                else if snapshot.exists() {
+                    print("Got data \(snapshot.value!)")
+                }
+                else {
+                    ref.child("users").child(Auth.auth().currentUser!.uid)
+                        .setValue([
+                            "displayName": Auth.auth().currentUser!.displayName!,
+                            "leaderboard": true,
+                            "currentLeaves": 0,
+                            "allTimeLeaves": 0,
+                            "rewardsForToday": 0,
+                            "notifications": false
+                        ])
+                }
+            }
+            
             if authDataResult!.additionalUserInfo!.isNewUser {
                 newUser = true
             } else {
