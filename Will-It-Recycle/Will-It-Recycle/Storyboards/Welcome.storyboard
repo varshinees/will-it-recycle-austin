@@ -23,7 +23,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ds-gF-v5D" customClass="MDCButton">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ds-gF-v5D">
                                 <rect key="frame" x="117" y="701" width="190" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.47975675400000001" blue="0.55453294929999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -92,6 +92,7 @@
                         <outlet property="frogButton" destination="jJk-7Y-0OC" id="Vu4-bN-0Aq"/>
                         <outlet property="hippoButton" destination="hBw-sZ-phP" id="HX6-Yx-N58"/>
                         <outlet property="horseButton" destination="NKp-ZA-WsE" id="mme-fZ-hoK"/>
+                        <outlet property="recycleButton" destination="8ds-gF-v5D" id="5JC-h4-hhp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rr0-3C-bXJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

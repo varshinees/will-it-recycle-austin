@@ -68,7 +68,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="913-ac-H2W" kind="presentation" modalPresentationStyle="fullScreen" id="EzV-g6-P31"/>
+                                    <segue destination="913-ac-H2W" kind="presentation" identifier="welcomeSegueIdentifier" modalPresentationStyle="fullScreen" id="EzV-g6-P31"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41F-nG-ZKN">
@@ -77,10 +77,16 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Egp-Zv-SHC">
                                 <rect key="frame" x="278" y="492" width="51" height="31"/>
                                 <color key="onTintColor" red="1" green="0.47975675400000001" blue="0.55453294929999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="appNotifySwitched:" destination="Gqq-4O-Kok" eventType="valueChanged" id="VTX-F7-JY4"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfW-Jp-87j">
                                 <rect key="frame" x="278" y="540" width="51" height="31"/>
                                 <color key="onTintColor" red="1" green="0.47975675400000001" blue="0.55453294929999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="leaderSettingsSwitched:" destination="Gqq-4O-Kok" eventType="valueChanged" id="vjq-b6-N8H"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leaderboard Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCO-6D-ucm">
                                 <rect key="frame" x="45" y="545" width="164" height="21"/>
@@ -158,8 +164,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ejb-p3-dK2"/>
                     <connections>
+                        <outlet property="appNotify" destination="Egp-Zv-SHC" id="p3r-72-oJH"/>
                         <outlet property="changeEmail" destination="Jap-aw-5BP" id="aXr-BB-ZO6"/>
                         <outlet property="changeUsername" destination="6me-GT-d9F" id="uRD-vh-qQm"/>
+                        <outlet property="leaderSettings" destination="dfW-Jp-87j" id="XEL-QL-k0o"/>
                         <outlet property="signOutButton" destination="OwH-Js-L8z" id="5vL-dl-o56"/>
                         <outlet property="updateButton" destination="uuW-ic-Sbh" id="MKQ-l2-QPp"/>
                     </connections>

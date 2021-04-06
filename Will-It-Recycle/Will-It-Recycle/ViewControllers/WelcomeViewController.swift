@@ -28,6 +28,7 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var hippoButton: UIButton!
     
+    @IBOutlet weak var recycleButton: UIButton!
     // A method which signals that the program is ready.
     override func viewDidLoad() {
         super.viewDidLoad()
