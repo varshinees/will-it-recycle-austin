@@ -167,7 +167,7 @@
                                 <color key="backgroundColor" red="0.84679758549999995" green="0.4447577841" blue="0.50715358470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Back to my land"/>
                                 <connections>
-                                    <segue destination="QJM-F0-PNv" kind="show" id="yve-Gi-Iwo"/>
+                                    <action selector="backOnClick:" destination="TRL-0D-M1J" eventType="touchUpInside" id="Aj9-GD-yUP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -187,16 +187,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfE-70-Fgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1154" y="520"/>
-        </scene>
-        <!--Game-->
-        <scene sceneID="I8P-CI-FOa">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Game" id="QJM-F0-PNv" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="R89-YD-yND"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MUS-m7-EOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1919" y="436"/>
         </scene>
         <!--Game-->
         <scene sceneID="Q4W-Vl-103">
@@ -258,7 +248,7 @@
                                 <color key="backgroundColor" red="0.84679758549999995" green="0.4447577841" blue="0.50715358470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Back to my land"/>
                                 <connections>
-                                    <segue destination="fp5-pF-BOi" kind="show" id="Cb5-5n-YKd"/>
+                                    <action selector="backOnClick:" destination="zgO-Z9-ifW" eventType="touchUpInside" id="ScE-Xh-fCC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -276,16 +266,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gma-81-oFs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1153.6231884057972" y="-277.23214285714283"/>
-        </scene>
-        <!--Game-->
-        <scene sceneID="7pa-0O-Aw8">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Game" id="fp5-pF-BOi" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="dFF-Wj-Y01"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fkz-k2-CDH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1789" y="-320"/>
         </scene>
     </scenes>
     <resources>
