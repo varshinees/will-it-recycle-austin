@@ -13,20 +13,22 @@ public struct StoreItem: Hashable {
     let id: Int
     let item: String
     let cost: Int
+    let key: String
     
-    init(id: Int, item: String, cost: Int) {
+    init(id: Int, item: String, cost: Int, key:String) {
         self.id = id
         self.item = item
         self.cost = cost
+        self.key = key
     }
 }
 
 public var storeItems = [
-    StoreItem(id: 0, item: "Solar Panel", cost: 50),
-    StoreItem(id: 1, item: "Wind Turbine", cost: 60),
-    StoreItem(id: 2, item: "Succulent", cost: 20),
-    StoreItem(id: 3, item: "Tree", cost: 50),
-    StoreItem(id: 4, item: "Watering Can", cost: 80)
+    StoreItem(id: 0, item: "Solar Panel", cost: 50, key: "solarPanel"),
+    StoreItem(id: 1, item: "Wind Turbine", cost: 60, key: "windTurbine"),
+    StoreItem(id: 2, item: "Succulent", cost: 20, key: "succulent"),
+    StoreItem(id: 3, item: "Tree", cost: 50, key: "tree"),
+    StoreItem(id: 4, item: "Watering Can", cost: 80, key: "wateringCan")
 ]
 
 class StoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -58,6 +60,9 @@ class StoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let row = indexPath.row
         cell?.cellLabel.text = storeItems[row].item
         cell?.detailLabel.text = "Cost: \(storeItems[row].cost)"
+//        cell?.itemKey = storeItems[row].key
+        cell?.storeItem = storeItems[row]
+        
         return cell!
     }
     
