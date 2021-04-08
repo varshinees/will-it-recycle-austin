@@ -8,13 +8,28 @@
 
 import UIKit
 import MaterialComponents.MaterialButtons
-import MaterialComponents.MaterialList
 
+public struct StoreItem: Hashable {
+    let id: Int
+    let item: String
+    let cost: Int
+    
+    init(id: Int, item: String, cost: Int) {
+        self.id = id
+        self.item = item
+        self.cost = cost
+    }
+}
+
+public var storeItems = [
+    StoreItem(id: 0, item: "Solar Panel", cost: 50),
+    StoreItem(id: 1, item: "Wind Turbine", cost: 60),
+    StoreItem(id: 2, item: "Succulent", cost: 20),
+    StoreItem(id: 3, item: "Tree", cost: 50),
+    StoreItem(id: 4, item: "Watering Can", cost: 80)
+]
 
 class StoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-        
-    let items = ["Solar Panel", "Wind Turbine", "Succulent", "Tree", "Watering Can"]
-    let details = ["Generates 3 leaves/day | Cost: 50 leaves", "Generates 5 leaves/day | Cost: 60 leaves", "Looks adorable | Cost: 20 leaves", "Generates 3 leaves/day | Cost: 50 leaves", "Doubles leaf generation | Cost: 80 leaves" ]
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var leavesLabel: UILabel!
@@ -35,14 +50,14 @@ class StoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return storeItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath as IndexPath) as? StoreTableViewCell
         let row = indexPath.row
-        cell?.cellLabel.text = items[row]
-        cell?.detailLabel.text = details[row]
+        cell?.cellLabel.text = storeItems[row].item
+        cell?.detailLabel.text = "Cost: \(storeItems[row].cost)"
         return cell!
     }
     
