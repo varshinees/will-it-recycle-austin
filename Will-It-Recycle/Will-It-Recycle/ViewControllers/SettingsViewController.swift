@@ -10,12 +10,16 @@ import Firebase
 import MaterialComponents
 import MaterialComponents.MaterialButtons
 import MaterialComponents.MaterialButtons_Theming
+import UserNotifications
+
+var notifications = false
+var leaderboard = true
 
 //
 // A class which coordinates communication between the data
 // and view components of the Settings View Controller.
 //
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate {
     @IBOutlet weak var changeUsername: UITextField!
     
     @IBOutlet weak var changeEmail: UITextField!
@@ -36,73 +40,52 @@ class SettingsViewController: UIViewController {
         
         changeEmail.clearsOnBeginEditing = true
         
-        appNotify.isOn = false
-        
-        leaderSettings.isOn = true
-        
+        if (notifications) {
+            self.appNotify.isOn = true
+        } else {
+            self.appNotify.isOn = false
+        }
+
+        if (leaderboard) {
+            self.leaderSettings.isOn = true
+        } else {
+            self.leaderSettings.isOn = false
+        }
+
         updateButton.setTitle("Update", for: .normal)
+        
+        UNUserNotificationCenter.current().delegate = self
     }
     
     @IBAction func appNotifySwitched(_ sender: Any) {
         let ref = Database.database().reference()
         
-        if (!appNotify.isOn) {
-            let controller = UIAlertController(
-                title: "Do you want to turn off app notifications?",
-                message: nil,
-                preferredStyle: .alert)
-            
-            controller.addAction(UIAlertAction(
-                                    title: "Yes",
-                                    style: .cancel,
-                                    handler: {
-                                        (action)
-                                        in self.appNotify.isOn = false
-                                    }))
-            controller.addAction(UIAlertAction(
-                                    title: "No",
-                                    style: .default,
-                                    handler: {
-                                        (action)
-                                        in self.appNotify.isOn = true
-                                    }))
-            present(controller, animated: true, completion: nil)
-            
-            if (self.appNotify.isOn) {
-                ref.child("users").child(Auth.auth().currentUser!.uid).setValue(["notifications": true])
-                
-            } else {
-                ref.child("users").child(Auth.auth().currentUser!.uid).setValue(["notifications": false])
+        // How to update appNotify and notifications?
+        
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            DispatchQueue.main.async() {
+                let alertController = UIAlertController(title: nil, message: "Do you want to change notifications settings?", preferredStyle: .alert)
+
+                let action1 = UIAlertAction(title: "Settings", style: .default) { (action:UIAlertAction) in
+                    if let appSettings = NSURL(string: UIApplication.openSettingsURLString) {
+                        UIApplication.shared.open(appSettings as URL, options: [:], completionHandler: nil)
+                    }
+                }
+
+                let action2 = UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction) in
+                }
+
+                alertController.addAction(action1)
+                alertController.addAction(action2)
+                self.present(alertController, animated: true, completion: nil)
             }
-            
-        } else {
-            let controller = UIAlertController(
-                title: "Do you want to turn on app notifications?",
-                message: nil,
-                preferredStyle: .alert)
-            
-            controller.addAction(UIAlertAction(
-                                    title: "Yes",
-                                    style: .cancel,
-                                    handler: {
-                                        (action)
-                                        in self.appNotify.isOn = true
-                                    }))
-            controller.addAction(UIAlertAction(
-                                    title: "No",
-                                    style: .default,
-                                    handler: {
-                                        (action)
-                                        in self.appNotify.isOn = false
-                                    }))
-            present(controller, animated: true, completion: nil)
         }
         
         if (self.appNotify.isOn) {
-            ref.child("users").child(Auth.auth().currentUser!.uid).setValue(["notifications": true])
+            ref.child("users/\(Auth.auth().currentUser!.uid)/notifications").setValue(true)
             
         } else {
-            ref.child("users").child(Auth.auth().currentUser!.uid).setValue(["notifications": false])
+            ref.child("users/\(Auth.auth().currentUser!.uid)/notifications").setValue(false)
         }
     }
     
@@ -120,24 +103,19 @@ class SettingsViewController: UIViewController {
                                     title: "Yes",
                                     style: .cancel,
                                     handler: {
-                                        (action)
-                                        in self.leaderSettings.isOn = false
+                                        (action) in
+                                        leaderboard = false
+                                        self.leaderSettings.isOn = false
                                     }))
             controller.addAction(UIAlertAction(
                                     title: "No",
                                     style: .default,
                                     handler: {
-                                        (action)
-                                        in self.leaderSettings.isOn = true
+                                        (action) in
+                                        leaderboard = true
+                                        self.leaderSettings.isOn = true
                                     }))
             present(controller, animated: true, completion: nil)
-            
-            if (self.leaderSettings.isOn) {
-                ref.child("users").child(Auth.auth().currentUser!.uid).setValue(["leaderboard": true])
-                
-            } else {
-                ref.child("users").child(Auth.auth().currentUser!.uid).setValue(["leaderboard": false])
-            }
             
         } else {
             let controller = UIAlertController(
@@ -149,24 +127,26 @@ class SettingsViewController: UIViewController {
                                     title: "Yes",
                                     style: .cancel,
                                     handler: {
-                                        (action)
-                                        in self.leaderSettings.isOn = true
+                                        (action) in
+                                        leaderboard = true
+                                        self.leaderSettings.isOn = true
                                     }))
             controller.addAction(UIAlertAction(
                                     title: "No",
                                     style: .default,
                                     handler: {
-                                        (action)
-                                        in self.leaderSettings.isOn = false
+                                        (action) in
+                                        leaderboard = false
+                                        self.leaderSettings.isOn = false
                                     }))
             present(controller, animated: true, completion: nil)
+        }
+        
+        if (self.leaderSettings.isOn) {
+            ref.child("users/\(Auth.auth().currentUser!.uid)/leaderboard").setValue(true)
             
-            if (self.leaderSettings.isOn) {
-                ref.child("users").child(Auth.auth().currentUser!.uid).setValue(["leaderboard": true])
-                
-            } else {
-                ref.child("users").child(Auth.auth().currentUser!.uid).setValue(["leaderboard": false])
-            }
+        } else {
+            ref.child("users/\(Auth.auth().currentUser!.uid)/leaderboard").setValue(false)
         }
     }
     
@@ -175,7 +155,7 @@ class SettingsViewController: UIViewController {
         let ref = Database.database().reference()
         
         if (changeUsername.text != "" ) {
-            ref.child("users").child(Auth.auth().currentUser!.uid).setValue(["displayName": changeUsername.text])
+            ref.child("users/\(Auth.auth().currentUser!.uid)/displayName").setValue(changeUsername.text)
         }
         
         if (changeEmail.text != "") {
