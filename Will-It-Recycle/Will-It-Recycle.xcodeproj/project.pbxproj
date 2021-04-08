@@ -52,6 +52,8 @@
 		C92122532612B51D00F400B3 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C921224E2612B51D00F400B3 /* StoreViewController.swift */; };
 		C92122602612E0F200F400B3 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C921225F2612E0F200F400B3 /* StoreTableViewCell.swift */; };
 		C92122632613703D00F400B3 /* InventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92122622613703D00F400B3 /* InventoryTableViewCell.swift */; };
+		C9E7CF0A261E8C44002F389B /* Inventory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E7CF09261E8C44002F389B /* Inventory.storyboard */; };
+		C9E7CF0D261E8C7B002F389B /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E7CF0C261E8C7B002F389B /* Store.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +105,8 @@
 		C921224E2612B51D00F400B3 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		C921225F2612E0F200F400B3 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		C92122622613703D00F400B3 /* InventoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTableViewCell.swift; sourceTree = "<group>"; };
+		C9E7CF09261E8C44002F389B /* Inventory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Inventory.storyboard; sourceTree = "<group>"; };
+		C9E7CF0C261E8C7B002F389B /* Store.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
 		DA6F76637CACBFBBBC2F7C63 /* Pods-Will-It-Recycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Will-It-Recycle.debug.xcconfig"; path = "Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +175,8 @@
 				4282887E25FABDD700E633D9 /* TabbedApp.storyboard */,
 				4282889E25FAC20C00E633D9 /* Local.storyboard */,
 				4282889B25FAC1F000E633D9 /* Game.storyboard */,
+				C9E7CF0C261E8C7B002F389B /* Store.storyboard */,
+				C9E7CF09261E8C44002F389B /* Inventory.storyboard */,
 				4282889825FAC1DB00E633D9 /* Welcome.storyboard */,
 				6D4E7F652611231700870213 /* Dashboard.storyboard */,
 				6D8DE56D260BF37400C2DD2A /* Settings.storyboard */,
@@ -292,8 +298,10 @@
 				4282889F25FAC20C00E633D9 /* Local.storyboard in Resources */,
 				4282888825FABDD800E633D9 /* LaunchScreen.storyboard in Resources */,
 				42AA5BED26053A3100BA02AE /* Vector.png in Resources */,
+				C9E7CF0A261E8C44002F389B /* Inventory.storyboard in Resources */,
 				4282889125FAC0BD00E633D9 /* Main.storyboard in Resources */,
 				6D8B75EE260E27D200876EA8 /* Dog.png in Resources */,
+				C9E7CF0D261E8C7B002F389B /* Store.storyboard in Resources */,
 				6D8B75F1260E27E200876EA8 /* Ellipse 1.png in Resources */,
 				4282889C25FAC1F000E633D9 /* Game.storyboard in Resources */,
 				42732E4426129F9200AC4463 /* HowToRecycleImg.jpg in Resources */,
