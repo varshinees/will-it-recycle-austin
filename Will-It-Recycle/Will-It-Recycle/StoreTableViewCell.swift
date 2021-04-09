@@ -9,8 +9,6 @@ import UIKit
 import FirebaseUI
 import Firebase
 
-public var itemDict:[String:Int] = [:]
-
 class StoreTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cellLabel: UILabel!

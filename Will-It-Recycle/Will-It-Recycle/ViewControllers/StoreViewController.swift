@@ -8,6 +8,8 @@
 
 import UIKit
 import MaterialComponents.MaterialButtons
+import Firebase
+import FirebaseUI
 
 public struct StoreItem: Hashable {
     let id: Int
@@ -38,6 +40,9 @@ class StoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var backBtn: MDCButton!
     @IBOutlet weak var tableView: UITableView!
     
+    let ref = Database.database().reference()
+    let user = Auth.auth().currentUser!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -45,6 +50,19 @@ class StoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         backBtn.setTitle("BACK TO MY LAND", for: .normal)
         backBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        
+        self.ref.child("users/\(user.uid)/currentLeaves").getData { (error, snapshot) in
+            if let error = error {
+                print("Error getting data \(error)")
+            }
+            else if snapshot.exists() {
+//                print("Got data \(snapshot.value!)")
+                self.leavesLabel.text = "WALLET: \(snapshot.value as! Int) LEAVES"
+            }
+            else {
+                print("No data available")
+            }
+        }
         
     }
     @IBAction func backOnClick(_ sender: Any) {
