@@ -15,6 +15,31 @@ class StoreTableViewCell: UITableViewCell {
     @IBOutlet weak var buyBtn: UIButton!
     @IBOutlet weak var detailLabel: UILabel!
     
+    //TO DELETE
+    public class gameItem {
+      let key: String
+      let item: String
+      var count: Int
+      init(key: String, item: String, count: Int) {
+        self.key = key
+        self.item = item
+        self.count = count
+      }
+      func decrementCount () {
+        self.count -= 1
+      }
+      func incrementCount () {
+        self.count += 1
+      }
+    }
+    public var inventoryItems = [gameItem]()
+    public var activeItems = [gameItem]()
+    
+    //End of delete
+    
+    
+    
+    
     let ref = Database.database().reference()
     
     var storeItem:StoreItem!
@@ -55,12 +80,16 @@ class StoreTableViewCell: UITableViewCell {
                 print("Error getting data \(error)")
             }
             else if snapshot.exists() {
-//                print("Got data \(snapshot.value!)")
+                //add to firebase
                 self.ref.child("users/\(self.user.uid)/inventory/\(self.storeItem.key)").setValue(snapshot.value as! Int + 1)
+                //add to global inventory array
+                self.inventoryItems.append(gameItem(key: self.storeItem.key, item: self.storeItem.item, count: snapshot.value as! Int + 1))
             }
             else {
-//                print("No data available")
+                //add to firebase
                 self.ref.child("users/\(self.user.uid)/inventory/\(self.storeItem.key)").setValue(1)
+                //add to global inventory array
+                self.inventoryItems.append(gameItem(key: self.storeItem.key, item: self.storeItem.item, count: 1))
                 
             }
         }
