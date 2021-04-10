@@ -67,6 +67,60 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
                 }
                 else if snapshot.exists() {
                     print("Got data \(snapshot.value!)")
+                    // grab user's inventory items
+                    ref.child("users/\(Auth.auth().currentUser!.uid)/inventory").getData { (error, snapshot) in
+                        if let error = error {
+                            print("Error getting data \(error)")
+                        }
+                        else if snapshot.exists() {
+                            let inventoryData = snapshot.value as! [String : AnyObject]
+                            for (key, value) in inventoryData {
+                                var itemName = String()
+                                var index = 0
+                                for char in key {
+                                    if char.isUppercase {
+                                        itemName = itemName + " " + char.uppercased()
+                                    } else if index == 0 {
+                                        itemName = itemName + char.uppercased()
+                                    } else {
+                                        itemName = itemName + char.lowercased()
+                                    }
+                                    index += 1
+                                }
+                                inventoryItems.append(gameItem(key: key, item: itemName, count: value as! Int, coordinates: []))
+                            }
+                        }
+                        else {
+                            // no inventory available
+                        }
+                    }
+                    // grab user's active items
+                    ref.child("users/\(Auth.auth().currentUser!.uid)/activeItems").getData { (error, snapshot) in
+                        if let error = error {
+                                 print("Error getting data \(error)")
+                        }
+                        else if snapshot.exists() {
+                            let activeItemsData = snapshot.value as! [String: [String]]
+                            for (key, value) in activeItemsData {
+                                var itemName = String()
+                                var index = 0
+                                for char in key {
+                                    if char.isUppercase {
+                                        itemName = itemName + " " + char.uppercased()
+                                    } else if index == 0 {
+                                        itemName = itemName + char.uppercased()
+                                    } else {
+                                        itemName = itemName + char.lowercased()
+                                    }
+                                         index += 1
+                                }
+                                activeItems.append(gameItem(key: key, item: itemName, count: value.count, coordinates: value))
+                            }
+                        }
+                        else {
+                            // no actively placed items available
+                        }
+                    }
                 }
                 else {
                     ref.child("users").child(Auth.auth().currentUser!.uid)
