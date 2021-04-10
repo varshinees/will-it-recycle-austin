@@ -11,6 +11,8 @@ import Firebase
 import FirebaseUI
 import UserNotifications
 
+var firstTimeUser = false
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

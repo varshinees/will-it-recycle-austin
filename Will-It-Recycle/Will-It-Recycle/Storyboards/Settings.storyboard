@@ -68,7 +68,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="913-ac-H2W" kind="presentation" identifier="welcomeSegueIdentifier" modalPresentationStyle="fullScreen" id="EzV-g6-P31"/>
+                                    <segue destination="913-ac-H2W" kind="presentation" identifier="settingsToWelcome" modalPresentationStyle="fullScreen" id="EzV-g6-P31"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41F-nG-ZKN">

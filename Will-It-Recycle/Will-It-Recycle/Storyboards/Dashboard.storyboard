@@ -165,13 +165,6 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome, Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feX-nQ-mJ6">
-                                <rect key="frame" x="85" y="108" width="244" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kzo-Th-rQA">
                                 <rect key="frame" x="-3" y="29" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -179,6 +172,13 @@
                                     <navigationItem title="Title" id="slL-zy-uep"/>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome, Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feX-nQ-mJ6">
+                                <rect key="frame" x="20" y="118" width="374" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KUZ-Hl-Yum"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -186,8 +186,11 @@
                     <tabBarItem key="tabBarItem" title="Dashboard" image="homekit" catalog="system" id="y8M-eP-I7d"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="currentLeaves" destination="3Yx-6k-80Z" id="Zkv-qB-pEQ"/>
                         <outlet property="leaderboardCard" destination="FFK-1U-1E6" id="6Vg-Vx-J22"/>
+                        <outlet property="nameLabel" destination="feX-nQ-mJ6" id="npQ-Fc-GCt"/>
                         <outlet property="statsCard" destination="O59-vI-Soq" id="vtT-g6-jI0"/>
+                        <outlet property="totalLeaves" destination="A2r-WM-Sq2" id="mYC-MU-B96"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWY-4D-nn0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

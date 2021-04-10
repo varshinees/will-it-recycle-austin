@@ -15,6 +15,22 @@ import UserNotifications
 var notifications = false
 var leaderboard = true
 
+//open class UNNotificationSettings : NSObject, NSCopying, NSSecureCoding {
+//
+//
+//    open var authorizationStatus: UNAuthorizationStatus { get }
+//
+//
+//    open var soundSetting: UNNotificationSetting { get }
+//
+//    open var badgeSetting: UNNotificationSetting { get }
+//
+//    open var alertSetting: UNNotificationSetting { get }
+//
+//
+//    open var notificationCenterSetting: UNNotificationSetting { get }
+//}
+
 //
 // A class which coordinates communication between the data
 // and view components of the Settings View Controller.
@@ -60,7 +76,8 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
     @IBAction func appNotifySwitched(_ sender: Any) {
         let ref = Database.database().reference()
         
-        // How to update appNotify and notifications?
+        // assume they are on, catch error when it fails
+        // ask if not. off or on
         
         UNUserNotificationCenter.current().getNotificationSettings { (settings) in
             DispatchQueue.main.async() {
@@ -80,6 +97,37 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
                 self.present(alertController, animated: true, completion: nil)
             }
         }
+        
+//        let center = UNUserNotificationCenter.current()
+//        center.getNotificationSettings { (settings) in
+//
+//            if(settings.authorizationStatus == .authorized) {
+//                print("Push notification is enabled")
+//                notifications = true
+//                self.appNotify.isOn = true
+//
+//            } else {
+//                print("Push notification is not enabled")
+//                notifications = false
+//                self.appNotify.isOn = false
+//            }
+//        }
+        
+//        DispatchQueue.main.async() {
+//            let isRegisteredForRemoteNotifications = UIApplication.shared.isRegisteredForRemoteNotifications
+//            if isRegisteredForRemoteNotifications {
+//                 // User is registered for notification
+//                notifications = true
+//                self.appNotify.isOn = true
+//
+//                print("Enabled")
+//            } else {
+//                 // Show alert user is not registered for notification
+//                notifications = false
+//                self.appNotify.isOn = false
+//                print("Not Enabled")
+//            }
+//        }
         
         if (self.appNotify.isOn) {
             ref.child("users/\(Auth.auth().currentUser!.uid)/notifications").setValue(true)

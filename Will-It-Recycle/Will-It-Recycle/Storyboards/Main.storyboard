@@ -33,7 +33,7 @@
                     </view>
                     <connections>
                         <segue destination="LXl-ma-d8J" kind="presentation" identifier="LoginSegue" modalPresentationStyle="fullScreen" id="6Bu-3y-UKf"/>
-                        <segue destination="Wj3-4x-ciR" kind="presentation" identifier="WelcomeSegue" modalPresentationStyle="fullScreen" id="8xG-bC-KLf"/>
+                        <segue destination="Wj3-4x-ciR" kind="presentation" identifier="loginToWelcome" modalPresentationStyle="fullScreen" id="8xG-bC-KLf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vMr-aS-JH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
