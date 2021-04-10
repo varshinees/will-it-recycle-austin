@@ -15,22 +15,6 @@ import UserNotifications
 var notifications = false
 var leaderboard = true
 
-//open class UNNotificationSettings : NSObject, NSCopying, NSSecureCoding {
-//
-//
-//    open var authorizationStatus: UNAuthorizationStatus { get }
-//
-//
-//    open var soundSetting: UNNotificationSetting { get }
-//
-//    open var badgeSetting: UNNotificationSetting { get }
-//
-//    open var alertSetting: UNNotificationSetting { get }
-//
-//
-//    open var notificationCenterSetting: UNNotificationSetting { get }
-//}
-
 //
 // A class which coordinates communication between the data
 // and view components of the Settings View Controller.
@@ -56,6 +40,38 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
         
         changeEmail.clearsOnBeginEditing = true
         
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            print("Checking notification status")
+
+            switch settings.authorizationStatus {
+            case .authorized:
+                print("authorized")
+                DispatchQueue.main.async() {
+                    self.appNotify.isOn = true
+                }
+                notifications = true
+
+            case .denied:
+                print("denied")
+                DispatchQueue.main.async() {
+                    self.appNotify.isOn = false
+                }
+                notifications = false
+
+            case .notDetermined:
+                print("notDetermined")
+
+            case .provisional:
+                print("provisional")
+                
+            case .ephemeral:
+                print("ephemeral")
+                
+            default:
+                print("error")
+            }
+        }
+        
         if (notifications) {
             self.appNotify.isOn = true
         } else {
@@ -76,58 +92,24 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
     @IBAction func appNotifySwitched(_ sender: Any) {
         let ref = Database.database().reference()
         
-        // assume they are on, catch error when it fails
-        // ask if not. off or on
-        
         UNUserNotificationCenter.current().getNotificationSettings { (settings) in
             DispatchQueue.main.async() {
                 let alertController = UIAlertController(title: nil, message: "Do you want to change notifications settings?", preferredStyle: .alert)
 
-                let action1 = UIAlertAction(title: "Settings", style: .default) { (action:UIAlertAction) in
+                let action1 = UIAlertAction(title: "Settings",
+                                            style: .default) { (action:UIAlertAction) in
                     if let appSettings = NSURL(string: UIApplication.openSettingsURLString) {
                         UIApplication.shared.open(appSettings as URL, options: [:], completionHandler: nil)
                     }
                 }
 
-                let action2 = UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction) in
-                }
+                let action2 = UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction) in }
 
                 alertController.addAction(action1)
                 alertController.addAction(action2)
                 self.present(alertController, animated: true, completion: nil)
             }
         }
-        
-//        let center = UNUserNotificationCenter.current()
-//        center.getNotificationSettings { (settings) in
-//
-//            if(settings.authorizationStatus == .authorized) {
-//                print("Push notification is enabled")
-//                notifications = true
-//                self.appNotify.isOn = true
-//
-//            } else {
-//                print("Push notification is not enabled")
-//                notifications = false
-//                self.appNotify.isOn = false
-//            }
-//        }
-        
-//        DispatchQueue.main.async() {
-//            let isRegisteredForRemoteNotifications = UIApplication.shared.isRegisteredForRemoteNotifications
-//            if isRegisteredForRemoteNotifications {
-//                 // User is registered for notification
-//                notifications = true
-//                self.appNotify.isOn = true
-//
-//                print("Enabled")
-//            } else {
-//                 // Show alert user is not registered for notification
-//                notifications = false
-//                self.appNotify.isOn = false
-//                print("Not Enabled")
-//            }
-//        }
         
         if (self.appNotify.isOn) {
             ref.child("users/\(Auth.auth().currentUser!.uid)/notifications").setValue(true)
@@ -136,7 +118,6 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
             ref.child("users/\(Auth.auth().currentUser!.uid)/notifications").setValue(false)
         }
     }
-    
     
     @IBAction func leaderSettingsSwitched(_ sender: Any) {
         let ref = Database.database().reference()
