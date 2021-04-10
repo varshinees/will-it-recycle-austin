@@ -8,105 +8,202 @@
 import UIKit
 import MaterialComponents.MaterialButtons
 import MaterialComponents.MaterialList
+import Firebase
 
 public struct ManualEntryItem: Hashable {
-    let id: Int
-    let item: String
+    let value: Int
+    let name: String
     
-    init(id: Int, item: String) {
-        self.id = id
-        self.item = item
+    init(value: Int, name: String) {
+        self.name = name
+        self.value = value
     }
 }
 
+public struct historyObject {
+    let date:String
+    let name:String
+    let quantity:Int
+}
+
+public struct UserObject {
+    let allTimeLeaves: Int
+    let currentLeaves: Int
+    let displayName: String
+    let leaderboard: Int
+    let notifications: Int
+    let rewardsForToday: Int
+    let history: [String:Any]
+}
+
 public var manualEntryData = [
-    ManualEntryItem(id: 0, item: "Aluminum Can"),
-    ManualEntryItem(id: 1, item: "Plastic Bottle"),
-    ManualEntryItem(id: 2, item: "Cardboard Box"),
-    ManualEntryItem(id: 3, item: "Glass Bottle"),
-    ManualEntryItem(id: 4, item: "Mixed Paper"),
-    ManualEntryItem(id: 5, item: "Tin Can"),
-    ManualEntryItem(id: 6, item: "Plastic Utencils"),
-    ManualEntryItem(id: 7, item: "Paperboard"),
-    ManualEntryItem(id: 8, item: "Aluminum Foil"),
-    
+    ManualEntryItem(value: 2, name: "Aluminum Can"),
+    ManualEntryItem(value: 2, name: "Plastic Bottle"),
+    ManualEntryItem(value: 3, name: "Cardboard Box"),
+    ManualEntryItem(value: 2, name: "Glass Bottle"),
+    ManualEntryItem(value: 2, name: "Mixed Paper"),
+    ManualEntryItem(value: 1, name: "Tin Can"),
+    ManualEntryItem(value: 1, name: "Plastic Utencils"),
+    ManualEntryItem(value: 1, name: "Paperboard"),
+    ManualEntryItem(value: 1, name: "Aluminum Foil"),
 ]
 
-class ManualEntryViewController: UIViewController {
+class RecycleDropdownCell: UITableViewCell {
     
-    enum Section {
-        case main
-    }
+    @IBOutlet weak var itemLabel: UILabel!
+    @IBOutlet weak var itemField: UITextField!
     
-    var dataSource: UICollectionViewDiffableDataSource<Section, ManualEntryItem>!
-    var snapshot: NSDiffableDataSourceSnapshot<Section, ManualEntryItem>!
+}
 
-//    @IBOutlet weak var backBtn: MDCButton!
+class ManualEntryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+    
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var quantityTextField: UITextField!
-    @IBOutlet weak var manualCollectionView: UICollectionView!
     @IBOutlet weak var redeemBtn: MDCButton!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var quantities:[Int] = [Int](repeating: 0, count: manualEntryData.count)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        backBtn.setTitle("< BACK", for: .normal)
-//        backBtn.setTitleColor(UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0), for: .normal)
+
+        tableView.dataSource = self
+        tableView.delegate = self
         
         redeemBtn.setTitle("REDEEM", for: .normal)
         redeemBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         
-        manualCollectionView.backgroundColor = UIColor.white
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
+    
+    // returns the length of the table
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return manualEntryData.count
+    }
+    
+    // sets a height for the rows
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
+    // creates and returns a cell for each row
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // creates the cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecycleDropdownCell", for: indexPath as IndexPath) as! RecycleDropdownCell
+        let row = indexPath.row
         
-        let layoutConfig = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
-        let listLayout = UICollectionViewCompositionalLayout.list(using: layoutConfig)
-        self.manualCollectionView.collectionViewLayout = listLayout
+        // sets the label values for the cell
+        cell.itemLabel?.text = manualEntryData[row].name
+        cell.itemField?.placeholder = "0"
+        cell.itemField.delegate = self
+        cell.itemField?.tag = row
         
-        manualCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            manualCollectionView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 140.0),
-            manualCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0.0),
-            manualCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 00.0),
-            manualCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200.0),
-        ])
-        
-        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, ManualEntryItem> { (cell, indexPath, item) in
-
-            // Define how data should be shown using content configuration
-            var content = cell.defaultContentConfiguration()
-    //            content.image = item.image
-            content.text = item.item
-
-            // Assign content configuration to cell
-            cell.contentConfiguration = content
+        if (quantities[row] != 0) {
+            cell.itemField?.text = "\(quantities[row])"
+        } else {
+            cell.itemField?.text = "0"
         }
         
-        dataSource = UICollectionViewDiffableDataSource<Section, ManualEntryItem>(collectionView: manualCollectionView) {
-            (collectionView: UICollectionView, indexPath: IndexPath, identifier: ManualEntryItem) -> UICollectionViewCell? in
+        return cell
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        quantities[textField.tag] = Int(textField.text!) ?? 0
+
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
+    }
+    
+    
+    @IBAction func redeemButtonPressed(_ sender: Any) {
+        var leaves = 0
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        // get the current date and time
+        let currentDateTime = Date()
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        formatter.dateStyle = .short
+        let dateString = formatter.string(from: currentDateTime)
+        
+        for i in 0...quantities.count-1 {
+            // calculate number of leaves earned
+            leaves += quantities[i] * manualEntryData[i].value
             
-            // Dequeue reusable cell using cell registration (Reuse identifier no longer needed)
-                let cell = self.manualCollectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: identifier)
-                // Configure cell appearance
-                cell.accessories = [.disclosureIndicator()]
-                return cell
+            if (quantities[i] > 0) {
+                
+                // update name + quantity + date to firebase
+                guard let key = ref.child("users/\(Auth.auth().currentUser!.uid)/").childByAutoId().key else { return }
+                
+                let item = ["date": dateString,
+                            "name": manualEntryData[i].name,
+                            "quantity": quantities[i]] as [String : Any]
+                let childUpdates = ["users/\(Auth.auth().currentUser!.uid)/history/\(key)": item]
+                ref.updateChildValues(childUpdates)
             }
             
-            snapshot = NSDiffableDataSourceSnapshot<Section, ManualEntryItem>()
-            snapshot.appendSections([.main])
-            snapshot.appendItems(manualEntryData, toSection: .main)
-
-            // Display data in the collection view by applying the snapshot to data source
-            dataSource.apply(snapshot, animatingDifferences: false)
+        }
         
+        // if no leaves earned, pop up error alert
+        if leaves == 0 {
+            let controller = UIAlertController(
+                title: "No items entered",
+                message: "Please enter at least one quantity",
+                preferredStyle: .alert)
+            
+            controller.addAction(UIAlertAction(
+                                    title: "OK",
+                                    style: .default,
+                                    handler: nil))
+            present(controller, animated: true, completion: nil)
+            return
+        }
+        
+        // update number of leaves and total earned leaves
+        ref.child("users/\(Auth.auth().currentUser!.uid)").getData { (error, snapshot) in
+            if let error = error {
+                print("Error getting data \(error)")
+            }
+            else if snapshot.exists() {
+                guard let user = snapshot.value as? [String: Any] else {
+                      return
+                    }
+                
+                let childUpdates:[String: Int] = ["users/\(Auth.auth().currentUser!.uid)/currentLeaves": Int(user["currentLeaves"] as! Int) + leaves,
+                                    "users/\(Auth.auth().currentUser!.uid)/allTimeLeaves": Int(user["allTimeLeaves"] as! Int) + leaves]
+                ref.updateChildValues(childUpdates)
+            }
+            else {
+                print("User does not exist")
+            }
+        }
+        
+        // send alert that indicates amount earned
+        let controller = UIAlertController(
+            title: "Success! 🌱",
+            message: "You have added \(leaves) leaves to your account.",
+            preferredStyle: .alert)
+        
+        controller.addAction(UIAlertAction(
+                                title: "Continue",
+                                style: .default,
+                                handler: nil))
+        present(controller, animated: true, completion: nil)
+        
+        // reset all textFields
+        quantities = [Int](repeating: 0, count: manualEntryData.count)
+        tableView.reloadData()
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
-        guard let cell = manualCollectionView.cellForItem(at: indexPath as IndexPath) as? MDCBaseCell else { fatalError() }
-
-        return cell
-    
+    // code to enable tapping on the background to remove software keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
-
-    
+ 
 }
