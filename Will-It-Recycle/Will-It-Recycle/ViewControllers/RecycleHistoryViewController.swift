@@ -7,41 +7,27 @@
 
 import UIKit
 import MaterialComponents.MaterialList
+import Firebase
+import Foundation
 
 public struct RecycleHistoryItem: Hashable {
-    let id: Int
     let item: String
     let count: String
     let date: String
     
-    init(id: Int, item: String, count: String, date: String) {
-        self.id = id
+    init(item: String, count: String, date: String) {
         self.item = item
         self.count = count
         self.date = date
     }
 }
 
-public var recycleHistoryData = [
-    RecycleHistoryItem(id: 0, item: "Cereal Box", count: "2", date: "3/28/2021"),
-    RecycleHistoryItem(id: 1, item: "Mail", count: "1", date: "3/28/2021"),
-    RecycleHistoryItem(id: 2, item: "Newspaper", count: "10", date: "3/28/2021"),
-    RecycleHistoryItem(id: 3, item: "Soda Can", count: "5", date: "3/27/2021"),
-    RecycleHistoryItem(id: 4, item: "Magazine", count: "3", date: "3/27/2021"),
-    RecycleHistoryItem(id: 5, item: "Water Bottle", count: "1", date: "3/27/2021"),
-    RecycleHistoryItem(id: 6, item: "Milk Carton", count: "2", date: "3/26/2021"),
-    RecycleHistoryItem(id: 7, item: "Juice Box", count: "1", date: "3/26/2021"),
-    RecycleHistoryItem(id: 8, item: "Paper Towel Roll", count: "1", date: "3/26/2021"),
-    RecycleHistoryItem(id: 9, item: "Moving Box", count: "2", date: "3/20/2021"),
-    RecycleHistoryItem(id: 10, item: "Cardboard Box", count: "1", date: "3/20/2021"),
-    RecycleHistoryItem(id: 11, item: "Aluminum Foil", count: "2", date: "3/20/2021"),
-    RecycleHistoryItem(id: 12, item: "Printer Paper", count: "10", date: "3/20/2021")
-]
-
 class RecycleHistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var returnToSettingsButton: MDCButton!
     @IBOutlet weak var tableView: UITableView!
+    
+    var recycleHistoryData:[RecycleHistoryItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +37,53 @@ class RecycleHistoryViewController: UIViewController, UITableViewDelegate, UITab
         returnToSettingsButton.setTitle("BACK TO SETTINGS", for: .normal)
         returnToSettingsButton.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         returnToSettingsButton.setBackgroundColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
+        
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        do {
+          
+        // retrieves data from Firebase
+         try ref.child("users/\(Auth.auth().currentUser!.uid)").getData { (error, snapshot) in
+            if let error = error {
+                print("Error getting data \(error)")
+            }
+            else if snapshot.exists() {
+                guard let user = snapshot.value as? [String: Any] else {
+                      return
+                    }
+                
+                guard let history = user["history"] as? [String:[String:Any]] else {
+                      return
+                    }
+                
+                // loops through items in history and adds them to the array
+                for (_, item) in history {
+                    
+                    let name = item["name"] as! String
+                    let quantity = String(item["quantity"] as! Int)
+                    let date = item["date"] as! String
+                    
+                    let historyItem = RecycleHistoryItem(item: name, count: quantity, date: date)
+                    self.recycleHistoryData.append(historyItem)
+                }
+                
+                DispatchQueue.main.async {
+                    self.recycleHistoryData = self.recycleHistoryData.sorted(by: { $0.date < $1.date })
+                    self.tableView.reloadData()
+                }
+                
+                
+            }
+            else {
+                print("User does not exist")
+            }
+        }
+        } catch {
+            print("Error loading data")
+        }
+        
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

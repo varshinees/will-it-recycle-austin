@@ -20,22 +20,6 @@ public struct ManualEntryItem: Hashable {
     }
 }
 
-public struct historyObject {
-    let date:String
-    let name:String
-    let quantity:Int
-}
-
-public struct UserObject {
-    let allTimeLeaves: Int
-    let currentLeaves: Int
-    let displayName: String
-    let leaderboard: Int
-    let notifications: Int
-    let rewardsForToday: Int
-    let history: [String:Any]
-}
-
 public var manualEntryData = [
     ManualEntryItem(value: 2, name: "Aluminum Can"),
     ManualEntryItem(value: 2, name: "Plastic Bottle"),
