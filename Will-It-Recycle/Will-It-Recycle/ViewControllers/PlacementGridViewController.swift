@@ -117,6 +117,9 @@ class PlacementGridViewController: UIViewController {
     @IBAction func onPlacementCompleted(_ sender: Any) {
         self.dismiss(animated: true)
         
+        //update local activeItem list
+        activeItems.append(activeItem)
+        
         if coordinate.count > 0 {
             // protocol back to game view controller
             

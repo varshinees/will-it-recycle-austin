@@ -31,9 +31,6 @@ class InventoryTableViewCell: UITableViewCell {
     }
     
     @IBAction func onPlaceItem(_ sender: Any) {
-        
-        //update local activeItem list
-        activeItems.append(inventoryItem)
          
         // update inventory in firebase
         self.ref.child("users/\(user.uid)/inventory/\(self.inventoryItem.key)").getData { (error, snapshot) in
