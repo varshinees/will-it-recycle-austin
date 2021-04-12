@@ -51,13 +51,16 @@ class StoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
         backBtn.setTitle("BACK TO MY LAND", for: .normal)
         backBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         
+        //display number of leaves
         self.ref.child("users/\(user.uid)/currentLeaves").getData { (error, snapshot) in
             if let error = error {
                 print("Error getting data \(error)")
             }
             else if snapshot.exists() {
-//                print("Got data \(snapshot.value!)")
-                self.leavesLabel.text = "WALLET: \(snapshot.value as! Int) LEAVES"
+                DispatchQueue.main.async {
+                    self.leavesLabel.text = "WALLET: \(snapshot.value as! Int) LEAVES"
+                }
+                
             }
             else {
                 print("No data available")
@@ -84,5 +87,20 @@ class StoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell!
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.ref.child("users/\(user.uid)/currentLeaves").getData { (error, snapshot) in
+            if let error = error {
+                print("Error getting data \(error)")
+            }
+            else if snapshot.exists() {
+                DispatchQueue.main.async {
+                    self.leavesLabel.text = "WALLET: \(snapshot.value as! Int) LEAVES"
+                }
+                
+            }
+            else {
+                print("No data available")
+            }
+        }
+    }
 }

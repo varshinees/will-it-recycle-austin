@@ -8,6 +8,7 @@
 import UIKit
 import MaterialComponents
 import MaterialComponents.MaterialButtons
+import Firebase
 
 class GameViewController: UIViewController {
     
@@ -16,6 +17,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var removeBtn: MDCButton!
     @IBOutlet weak var claimBtn: MDCButton!
     @IBOutlet weak var storeBtn: MDCButton!
+    @IBOutlet weak var leavesLabel: UILabel!
     
     @IBOutlet weak var zeroZero: UIButton!
     @IBOutlet weak var zeroOne: UIButton!
@@ -38,12 +40,10 @@ class GameViewController: UIViewController {
     @IBOutlet weak var fourTwo: UIButton!
     @IBOutlet weak var fourThree: UIButton!
     
-    
-    
-
-    var gameItem:gameItem!
-    
     @IBOutlet weak var gameView: UIView!
+    
+    let ref = Database.database().reference()
+    let user = Auth.auth().currentUser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,67 +59,141 @@ class GameViewController: UIViewController {
         
         inventoryBtn.setTitle("INVENTORY", for: .normal)
         inventoryBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        let currentImage = UIImage(named: gameItem.key)
         
-//        let numbers = [0:"zero", 1:"one", 2:"two", 3:"three", 4:"four"]
-//
-        //get numbers in coordinates
-        //let string = gameItem.coordinates[0]
-//        let string = "(0,0)"
-//        let firstNum = (string[string.index(string.startIndex, offsetBy: 1)] as? Int)!
-//        let secondNum = (string[string.index(string.startIndex, offsetBy: 3)] as? Int)!
-
-//        let buttonName = "\(numbers[firstNum])\(numbers[secondNum])"
+        //load active items onto game screen
+        for item in activeItems {
+            for coordinate in item.coordinates {
+                let currentImage = UIImage(named: item.key)
+                switch (coordinate) {
+                case "(0,0)":
+                    zeroZero.setImage(currentImage, for: .normal)
+                case "(0,1)":
+                    zeroOne.setImage(currentImage, for: .normal)
+                case "(0,2)":
+                    zeroTwo.setImage(currentImage, for: .normal)
+                case "(0,3)":
+                    zeroThree.setImage(currentImage, for: .normal)
+                case "(1,0)":
+                    oneZero.setImage(currentImage, for: .normal)
+                case "(1,1)":
+                    oneOne.setImage(currentImage, for: .normal)
+                case "(1,2)":
+                    oneTwo.setImage(currentImage, for: .normal)
+                case "(1,3)":
+                    oneThree.setImage(currentImage, for: .normal)
+                case "(2,0)":
+                    twoZero.setImage(currentImage, for: .normal)
+                case "(2,1)":
+                    twoOne.setImage(currentImage, for: .normal)
+                case "(2,2)":
+                    twoTwo.setImage(currentImage, for: .normal)
+                case "(2,3)":
+                    twoThree.setImage(currentImage, for: .normal)
+                case "(3,0)":
+                    threeZero.setImage(currentImage, for: .normal)
+                case "(3,1)":
+                    threeOne.setImage(currentImage, for: .normal)
+                case "(3,2)":
+                    threeTwo.setImage(currentImage, for: .normal)
+                case "(3,3)":
+                    threeThree.setImage(currentImage, for: .normal)
+                case "(4,0)":
+                    fourZero.setImage(currentImage, for: .normal)
+                case "(4,1)":
+                    fourOne.setImage(currentImage, for: .normal)
+                case "(4,2)":
+                    fourTwo.setImage(currentImage, for: .normal)
+                case "(4,3)":
+                    fourThree.setImage(currentImage, for: .normal)
+                default:
+                    return
+                }
+            }
+        }
         
-//        buttonName.setImage(currentImage, for: .normal)
-        
-        switch (gameItem.coordinates) {
-        case ["(0,0)"]:
-            zeroZero.setImage(currentImage, for: .normal)
-        case ["(0,1)"]:
-            zeroOne.setImage(currentImage, for: .normal)
-        case ["(0,2)"]:
-            zeroTwo.setImage(currentImage, for: .normal)
-        case ["(0,3)"]:
-            zeroThree.setImage(currentImage, for: .normal)
-        case ["(1,0)"]:
-            oneZero.setImage(currentImage, for: .normal)
-        case ["(1,1)"]:
-            oneOne.setImage(currentImage, for: .normal)
-        case ["(1,2)"]:
-            oneTwo.setImage(currentImage, for: .normal)
-        case ["(1,3)"]:
-            oneThree.setImage(currentImage, for: .normal)
-        case ["(2,0)"]:
-            twoZero.setImage(currentImage, for: .normal)
-        case ["(2,1)"]:
-            twoOne.setImage(currentImage, for: .normal)
-        case ["(2,2)"]:
-            twoTwo.setImage(currentImage, for: .normal)
-        case ["(2,3)"]:
-            twoThree.setImage(currentImage, for: .normal)
-        case ["(3,0)"]:
-            threeZero.setImage(currentImage, for: .normal)
-        case ["(3,1)"]:
-            threeOne.setImage(currentImage, for: .normal)
-        case ["(3,2)"]:
-            threeTwo.setImage(currentImage, for: .normal)
-        case ["(3,3)"]:
-            threeThree.setImage(currentImage, for: .normal)
-        case ["(4,0)"]:
-            fourZero.setImage(currentImage, for: .normal)
-        case ["(4,1)"]:
-            fourOne.setImage(currentImage, for: .normal)
-        case ["(4,2)"]:
-            fourTwo.setImage(currentImage, for: .normal)
-        case ["(4,3)"]:
-            fourThree.setImage(currentImage, for: .normal)
-        default:
-            return
+        //display number of leaves
+        self.ref.child("users/\(user.uid)/currentLeaves").getData { (error, snapshot) in
+            if let error = error {
+                print("Error getting data \(error)")
+            }
+            else if snapshot.exists() {
+                DispatchQueue.main.async {
+                    self.leavesLabel.text = "WALLET: \(snapshot.value as! Int) LEAVES"
+                }
+            }
+            else {
+                print("No data available")
+            }
         }
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.ref.child("users/\(user.uid)/currentLeaves").getData { (error, snapshot) in
+            if let error = error {
+                print("Error getting data \(error)")
+            }
+            else if snapshot.exists() {
+                DispatchQueue.main.async {
+                    self.leavesLabel.text = "WALLET: \(snapshot.value as! Int) LEAVES"
+                }
+            }
+            else {
+                print("No data available")
+            }
+        }
+        
+        //load active items onto game screen
+        for item in activeItems {
+            for coordinate in item.coordinates {
+                let currentImage = UIImage(named: item.key)
+                switch (coordinate) {
+                case "(0,0)":
+                    zeroZero.setImage(currentImage, for: .normal)
+                case "(0,1)":
+                    zeroOne.setImage(currentImage, for: .normal)
+                case "(0,2)":
+                    zeroTwo.setImage(currentImage, for: .normal)
+                case "(0,3)":
+                    zeroThree.setImage(currentImage, for: .normal)
+                case "(1,0)":
+                    oneZero.setImage(currentImage, for: .normal)
+                case "(1,1)":
+                    oneOne.setImage(currentImage, for: .normal)
+                case "(1,2)":
+                    oneTwo.setImage(currentImage, for: .normal)
+                case "(1,3)":
+                    oneThree.setImage(currentImage, for: .normal)
+                case "(2,0)":
+                    twoZero.setImage(currentImage, for: .normal)
+                case "(2,1)":
+                    twoOne.setImage(currentImage, for: .normal)
+                case "(2,2)":
+                    twoTwo.setImage(currentImage, for: .normal)
+                case "(2,3)":
+                    twoThree.setImage(currentImage, for: .normal)
+                case "(3,0)":
+                    threeZero.setImage(currentImage, for: .normal)
+                case "(3,1)":
+                    threeOne.setImage(currentImage, for: .normal)
+                case "(3,2)":
+                    threeTwo.setImage(currentImage, for: .normal)
+                case "(3,3)":
+                    threeThree.setImage(currentImage, for: .normal)
+                case "(4,0)":
+                    fourZero.setImage(currentImage, for: .normal)
+                case "(4,1)":
+                    fourOne.setImage(currentImage, for: .normal)
+                case "(4,2)":
+                    fourTwo.setImage(currentImage, for: .normal)
+                case "(4,3)":
+                    fourThree.setImage(currentImage, for: .normal)
+                default:
+                    return
+                }
+            }
+        }
+    }
+        
 
 }
