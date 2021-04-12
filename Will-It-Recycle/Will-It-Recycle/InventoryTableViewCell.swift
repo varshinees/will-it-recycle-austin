@@ -31,33 +31,6 @@ class InventoryTableViewCell: UITableViewCell {
     }
     
     @IBAction func onPlaceItem(_ sender: Any) {
-        
-        // add item to activeItems in firebase
-        self.ref.child("users/\(user.uid)/activeItems/\(self.inventoryItem.key)").getData { (error, snapshot) in
-            if let error = error {
-                print("Error getting data \(error)")
-            }
-            else if snapshot.exists() {
-                let activeItemsData = snapshot.value as! [String]
-                // set arbitrary coordinate
-                self.ref.child("users/\(self.user.uid)/activeItems/\(self.inventoryItem.key)/\(activeItemsData.count)").setValue("(0,0)")
-                // update local activeItems list
-                for item in activeItems {
-                    if item.key == self.inventoryItem.key {
-                        item.incrementCount()
-                    }
-                     item.coordinates.append("(0,0)") // temporary coordinate
-                }
-            }
-            else {
-                // set arbitrary coordinate
-                self.ref.child("users/\(self.user.uid)/activeItems/\(self.inventoryItem.key)").child("0").setValue("(0,0)")
-                // update local activeItems list
-                let newItem = gameItem(key: self.inventoryItem.key, item: self.inventoryItem.item, count: 1, coordinates: ["(0,0)"])
-                activeItems.append(newItem)
-                
-            }
-        }
          
         // update inventory in firebase
         self.ref.child("users/\(user.uid)/inventory/\(self.inventoryItem.key)").getData { (error, snapshot) in
