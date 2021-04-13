@@ -57,7 +57,7 @@ class StoreTableViewCell: UITableViewCell {
                 print("Error getting data \(error)")
             }
             else if snapshot.exists() {
-                if currentLeaves! - self.storeItem.cost < 0 {
+                if currentLeaves! - self.storeItem.cost > 0 {
                 //add to firebase
                     self.ref.child("users/\(self.user.uid)/inventory/\(self.storeItem.key)").setValue(snapshot.value as! Int + 1)
                     //add to global inventory array
@@ -65,7 +65,7 @@ class StoreTableViewCell: UITableViewCell {
                 }
             }
             else {
-                if currentLeaves! - self.storeItem.cost < 0 {
+                if currentLeaves! - self.storeItem.cost > 0 {
                     //add to firebase
                     self.ref.child("users/\(self.user.uid)/inventory/\(self.storeItem.key)").setValue(1)
                     //add to global inventory array
