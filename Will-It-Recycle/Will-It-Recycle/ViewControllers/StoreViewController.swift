@@ -8,18 +8,40 @@
 
 import UIKit
 import MaterialComponents.MaterialButtons
-import MaterialComponents.MaterialList
+import Firebase
+import FirebaseUI
 
+public struct StoreItem: Hashable {
+    let id: Int
+    let item: String
+    let cost: Int
+    let key: String
+    
+    init(id: Int, item: String, cost: Int, key:String) {
+        self.id = id
+        self.item = item
+        self.cost = cost
+        self.key = key
+    }
+}
+
+public var storeItems = [
+    StoreItem(id: 0, item: "Solar Panel", cost: 50, key: "solarPanel"),
+    StoreItem(id: 1, item: "Wind Turbine", cost: 60, key: "windTurbine"),
+    StoreItem(id: 2, item: "Succulent", cost: 20, key: "succulent"),
+    StoreItem(id: 3, item: "Tree", cost: 50, key: "tree"),
+    StoreItem(id: 4, item: "Watering Can", cost: 80, key: "wateringCan")
+]
 
 class StoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-        
-    let items = ["Solar Panel", "Wind Turbine", "Succulent", "Tree", "Watering Can"]
-    let details = ["Generates 3 leaves/day | Cost: 50 leaves", "Generates 5 leaves/day | Cost: 60 leaves", "Looks adorable | Cost: 20 leaves", "Generates 3 leaves/day | Cost: 50 leaves", "Doubles leaf generation | Cost: 80 leaves" ]
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var leavesLabel: UILabel!
     @IBOutlet weak var backBtn: MDCButton!
     @IBOutlet weak var tableView: UITableView!
+    
+    let ref = Database.database().reference()
+    let user = Auth.auth().currentUser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,22 +51,56 @@ class StoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
         backBtn.setTitle("BACK TO MY LAND", for: .normal)
         backBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         
+        //display number of leaves
+        self.ref.child("users/\(user.uid)/currentLeaves").getData { (error, snapshot) in
+            if let error = error {
+                print("Error getting data \(error)")
+            }
+            else if snapshot.exists() {
+                DispatchQueue.main.async {
+                    self.leavesLabel.text = "WALLET: \(snapshot.value as! Int) LEAVES"
+                }
+                
+            }
+            else {
+                print("No data available")
+            }
+        }
+        
     }
     @IBAction func backOnClick(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return storeItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath as IndexPath) as? StoreTableViewCell
         let row = indexPath.row
-        cell?.cellLabel.text = items[row]
-        cell?.detailLabel.text = details[row]
+        cell?.cellLabel.text = storeItems[row].item
+        cell?.detailLabel.text = "Cost: \(storeItems[row].cost)"
+//        cell?.itemKey = storeItems[row].key
+        cell?.storeItem = storeItems[row]
+        
         return cell!
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.ref.child("users/\(user.uid)/currentLeaves").getData { (error, snapshot) in
+            if let error = error {
+                print("Error getting data \(error)")
+            }
+            else if snapshot.exists() {
+                DispatchQueue.main.async {
+                    self.leavesLabel.text = "WALLET: \(snapshot.value as! Int) LEAVES"
+                }
+                
+            }
+            else {
+                print("No data available")
+            }
+        }
+    }
 }
