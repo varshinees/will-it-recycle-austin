@@ -39,7 +39,8 @@ class RecycleDropdownCell: UITableViewCell {
     
 }
 
-class ManualEntryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+class ManualEntryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UISearchBarDelegate
+ {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var redeemBtn: MDCButton!
@@ -47,11 +48,16 @@ class ManualEntryViewController: UIViewController, UITableViewDataSource, UITabl
     
     var quantities:[Int] = [Int](repeating: 0, count: manualEntryData.count)
     
+    var currentDisplayedData = manualEntryData
+    
+    var currentTextField:UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.dataSource = self
         tableView.delegate = self
+        searchBar.delegate = self
         
         redeemBtn.setTitle("REDEEM", for: .normal)
         redeemBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
@@ -59,13 +65,31 @@ class ManualEntryViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        currentDisplayedData = manualEntryData
+        quantities = [Int](repeating: 0, count: manualEntryData.count)
         tableView.reloadData()
     }
+    
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        self.currentDisplayedData = manualEntryData.filter {
+//            $0.name.range(of: searchText, options: .caseInsensitive) != nil
+//        }
+//        tableView.reloadData()
+//    }
+//
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//        self.view.endEditing(true)
+//    }
+//
+//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+//        self.currentDisplayedData = manualEntryData
+//        tableView.reloadData()
+//    }
     
     
     // returns the length of the table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return manualEntryData.count
+        return currentDisplayedData.count
     }
     
     // sets a height for the rows
@@ -80,10 +104,12 @@ class ManualEntryViewController: UIViewController, UITableViewDataSource, UITabl
         let row = indexPath.row
         
         // sets the label values for the cell
-        cell.itemLabel?.text = manualEntryData[row].name
+        cell.itemLabel?.text = currentDisplayedData[row].name
         cell.itemField?.placeholder = "0"
         cell.itemField.delegate = self
         cell.itemField?.tag = row
+        
+        cell.itemField.clearsOnBeginEditing = true
         
         if (quantities[row] != 0) {
             cell.itemField?.text = "\(quantities[row])"
@@ -94,17 +120,41 @@ class ManualEntryViewController: UIViewController, UITableViewDataSource, UITabl
         return cell
     }
     
+    // does error checking
     func textFieldDidEndEditing(_ textField: UITextField) {
-        quantities[textField.tag] = Int(textField.text!) ?? 0
+        if textField.text!.count == 0 {
+            textField.text! = "0"
+        }
+        
+        if NumberFormatter().number(from: textField.text!) == nil {
+            let controller = UIAlertController(
+                title: "Invalid input",
+                message: "Please enter a valid number",
+                preferredStyle: .alert)
+            
+            controller.addAction(UIAlertAction(
+                                    title: "OK",
+                                    style: .default,
+                                    handler: nil))
+            present(controller, animated: true, completion: nil)
+            textField.text = "0"
+            return
+        } else {
+            quantities[textField.tag] = Int(textField.text!) ?? 0
+        }
 
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.text = ""
+        currentTextField = textField
     }
     
     
     @IBAction func redeemButtonPressed(_ sender: Any) {
+        if (currentTextField != nil) {
+            currentTextField.endEditing(true)
+        }
+        
         var leaves = 0
         var ref: DatabaseReference!
         ref = Database.database().reference()
@@ -181,7 +231,7 @@ class ManualEntryViewController: UIViewController, UITableViewDataSource, UITabl
         present(controller, animated: true, completion: nil)
         
         // reset all textFields
-        quantities = [Int](repeating: 0, count: manualEntryData.count)
+        quantities = [Int](repeating: 0, count: currentDisplayedData.count)
         tableView.reloadData()
     }
     
