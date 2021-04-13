@@ -15,6 +15,8 @@ class StoreTableViewCell: UITableViewCell {
     @IBOutlet weak var buyBtn: UIButton!
     @IBOutlet weak var detailLabel: UILabel!
     
+    var delegate: UIViewController!
+    
     let ref = Database.database().reference()
     
     var storeItem:StoreItem!
@@ -57,23 +59,60 @@ class StoreTableViewCell: UITableViewCell {
                 print("Error getting data \(error)")
             }
             else if snapshot.exists() {
-                if currentLeaves! - self.storeItem.cost < 0 {
+                if currentLeaves! - self.storeItem.cost > 0 {
                 //add to firebase
                     self.ref.child("users/\(self.user.uid)/inventory/\(self.storeItem.key)").setValue(snapshot.value as! Int + 1)
                     //add to global inventory array
                     inventoryItems.append(gameItem(key: self.storeItem.key, item: self.storeItem.item, count: snapshot.value as! Int + 1, coordinates: []))
+                    self.successAlert()
+                } else {
+                    self.errorAlert()
                 }
             }
             else {
-                if currentLeaves! - self.storeItem.cost < 0 {
+                if currentLeaves! - self.storeItem.cost > 0 {
                     //add to firebase
                     self.ref.child("users/\(self.user.uid)/inventory/\(self.storeItem.key)").setValue(1)
                     //add to global inventory array
                     inventoryItems.append(gameItem(key: self.storeItem.key, item: self.storeItem.item, count: 1, coordinates: []))
+                    self.successAlert()
+                } else {
+                    self.errorAlert()
                 }
             }
         }
 
+    }
+    
+    func errorAlert() {
+        DispatchQueue.main.async {
+            let controller = UIAlertController(
+                title: "Not enough leaves :(",
+                message: "Recycle more to earn leaves!",
+                preferredStyle: .alert)
+            
+            controller.addAction(UIAlertAction(
+                                    title: "OK",
+                                    style: .default,
+                                    handler: nil))
+            self.delegate.present(controller, animated: true, completion: nil)
+        }
+    }
+    
+    func successAlert() {
+        DispatchQueue.main.async {
+            let controller = UIAlertController(
+                title: "Purchase Success! :)",
+                message: "Item has been added to your inventory",
+                preferredStyle: .alert)
+            
+            controller.addAction(UIAlertAction(
+                                    title: "OK",
+                                    style: .default,
+                                    handler: nil))
+            self.delegate.present(controller, animated: true, completion: nil)
+        }
+        
     }
     
 }

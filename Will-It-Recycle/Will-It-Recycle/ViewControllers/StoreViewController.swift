@@ -35,6 +35,7 @@ public var storeItems = [
 
 class StoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var leavesLabel: UILabel!
     @IBOutlet weak var backBtn: MDCButton!
@@ -83,7 +84,7 @@ class StoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell?.detailLabel.text = "Cost: \(storeItems[row].cost)"
 //        cell?.itemKey = storeItems[row].key
         cell?.storeItem = storeItems[row]
-        
+        cell?.delegate = self
         return cell!
     }
     
@@ -103,4 +104,5 @@ class StoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
     }
+        
 }
