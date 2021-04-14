@@ -47,6 +47,10 @@
                                 <state key="normal" title="DELETE ACCOUNT">
                                     <color key="titleColor" red="0.0034623097162693739" green="0.99584800004959106" blue="0.90175408124923706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="Gqq-4O-Kok" eventType="touchUpInside" id="8bs-Nv-5lq"/>
+                                    <segue destination="7zI-Mj-Gel" kind="show" identifier="restartSegueIdentifier" id="qy0-ZE-3bY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qH3-d2-SZi">
                                 <rect key="frame" x="118" y="675" width="180" height="30"/>
@@ -167,8 +171,10 @@
                         <outlet property="appNotify" destination="Egp-Zv-SHC" id="p3r-72-oJH"/>
                         <outlet property="changeEmail" destination="Jap-aw-5BP" id="aXr-BB-ZO6"/>
                         <outlet property="changeUsername" destination="6me-GT-d9F" id="uRD-vh-qQm"/>
+                        <outlet property="deleteButton" destination="Eyd-ZS-iin" id="6iC-yB-FaW"/>
                         <outlet property="leaderSettings" destination="dfW-Jp-87j" id="XEL-QL-k0o"/>
                         <outlet property="signOutButton" destination="OwH-Js-L8z" id="5vL-dl-o56"/>
+                        <outlet property="statsLabel" destination="2SS-80-bWu" id="MQP-D2-zb9"/>
                         <outlet property="updateButton" destination="uuW-ic-Sbh" id="MKQ-l2-QPp"/>
                     </connections>
                 </viewController>
@@ -185,6 +191,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ca-Dr-Fur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="453" y="-198"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="ejT-dh-CQA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="7zI-Mj-Gel" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0Az-CW-MqI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOA-Hm-LOK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="504" y="-71"/>
         </scene>
         <!--Main-->
         <scene sceneID="xGw-gM-q1w">
