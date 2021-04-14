@@ -115,12 +115,11 @@ class PlacementGridViewController: UIViewController {
     }
     
     @IBAction func onPlacementCompleted(_ sender: Any) {
-        self.dismiss(animated: true)
         
         //update local activeItem list
         activeItems.append(activeItem)
         
-        if coordinate.count > 0 {
+        if coordinate.count != 0 {
             // protocol back to game view controller
             
             // add coordinate to occupiedCoordinates
@@ -148,10 +147,18 @@ class PlacementGridViewController: UIViewController {
                     activeItems.append(newItem)
                 }
             }
+            self.dismiss(animated: true)
         }
         else {
             // alert to select a coordinate
-            print("select a coordinate")
+            let controller = UIAlertController(
+                title: "Invalid input",
+                message: "Please select a location for your item",
+                preferredStyle: .alert
+            )
+            
+            controller.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(controller, animated: true, completion: nil)
         }
     }
     
