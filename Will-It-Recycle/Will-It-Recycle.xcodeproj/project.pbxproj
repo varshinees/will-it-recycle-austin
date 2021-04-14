@@ -40,6 +40,10 @@
 		6D8B75F7260E280500876EA8 /* Fish.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75F6260E280500876EA8 /* Fish.png */; };
 		6D8B75FA260E281100876EA8 /* Bird.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B75F9260E281100876EA8 /* Bird.png */; };
 		6D8DE56E260BF37400C2DD2A /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D8DE56D260BF37400C2DD2A /* Settings.storyboard */; };
+		6DAA8B4F2623FB9300B55C88 /* Unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DAA8B4E2623FB9300B55C88 /* Unknown.png */; };
+		6DAA8B522623FDA500B55C88 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6DAA8B512623FDA400B55C88 /* images.jpeg */; };
+		6DAA8B552623FE0000B55C88 /* images-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6DAA8B542623FE0000B55C88 /* images-2.jpeg */; };
+		6DAA8B582623FE2F00B55C88 /* images-3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6DAA8B572623FE2F00B55C88 /* images-3.jpeg */; };
 		8188043EA3113E27FDA1AE1E /* Pods_Will_It_Recycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FAD6D3C69A519F7E4CE289 /* Pods_Will_It_Recycle.framework */; };
 		8662A2F92610F44200A45EA2 /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8662A2F82610F44200A45EA2 /* LocalViewController.swift */; };
 		8662A2FC2610F47100A45EA2 /* RecycleHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8662A2FB2610F47100A45EA2 /* RecycleHistoryViewController.swift */; };
@@ -95,6 +99,10 @@
 		6D8B75F6260E280500876EA8 /* Fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fish.png; sourceTree = "<group>"; };
 		6D8B75F9260E281100876EA8 /* Bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bird.png; sourceTree = "<group>"; };
 		6D8DE56D260BF37400C2DD2A /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		6DAA8B4E2623FB9300B55C88 /* Unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Unknown.png; sourceTree = "<group>"; };
+		6DAA8B512623FDA400B55C88 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
+		6DAA8B542623FE0000B55C88 /* images-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "images-2.jpeg"; sourceTree = "<group>"; };
+		6DAA8B572623FE2F00B55C88 /* images-3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "images-3.jpeg"; sourceTree = "<group>"; };
 		8662A2F82610F44200A45EA2 /* LocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalViewController.swift; sourceTree = "<group>"; };
 		8662A2FB2610F47100A45EA2 /* RecycleHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleHistoryViewController.swift; sourceTree = "<group>"; };
 		866703D02620FD0E00D1DD24 /* PlacementGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementGridViewController.swift; sourceTree = "<group>"; };
@@ -212,7 +220,11 @@
 		42969C4226122C8D00CE60B2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6DAA8B4E2623FB9300B55C88 /* Unknown.png */,
+				6DAA8B512623FDA400B55C88 /* images.jpeg */,
 				42732E3F26129F9200AC4463 /* CreativeReuseImg.jpg */,
+				6DAA8B572623FE2F00B55C88 /* images-3.jpeg */,
+				6DAA8B542623FE0000B55C88 /* images-2.jpeg */,
 				42732E4026129F9200AC4463 /* HowToRecycleImg.jpg */,
 				42732E3E26129F9200AC4463 /* LocationIcon.png */,
 				42732E4126129F9200AC4463 /* RecycleDropOffImg.png */,
@@ -302,18 +314,21 @@
 				4282888825FABDD800E633D9 /* LaunchScreen.storyboard in Resources */,
 				42AA5BED26053A3100BA02AE /* Vector.png in Resources */,
 				C9E7CF0A261E8C44002F389B /* Inventory.storyboard in Resources */,
+				6DAA8B552623FE0000B55C88 /* images-2.jpeg in Resources */,
 				4282889125FAC0BD00E633D9 /* Main.storyboard in Resources */,
 				6D8B75EE260E27D200876EA8 /* Dog.png in Resources */,
 				C9E7CF0D261E8C7B002F389B /* Store.storyboard in Resources */,
 				6D8B75F1260E27E200876EA8 /* Ellipse 1.png in Resources */,
 				4282889C25FAC1F000E633D9 /* Game.storyboard in Resources */,
 				42732E4426129F9200AC4463 /* HowToRecycleImg.jpg in Resources */,
+				6DAA8B4F2623FB9300B55C88 /* Unknown.png in Resources */,
 				6D8B75E8260E27BC00876EA8 /* Hippo.png in Resources */,
 				4282888525FABDD800E633D9 /* Assets.xcassets in Resources */,
 				42732E4226129F9200AC4463 /* LocationIcon.png in Resources */,
 				42732E4326129F9200AC4463 /* CreativeReuseImg.jpg in Resources */,
 				86EF1D8F260E44BE004D0BA9 /* Horse.png in Resources */,
 				6D8B75F7260E280500876EA8 /* Fish.png in Resources */,
+				6DAA8B582623FE2F00B55C88 /* images-3.jpeg in Resources */,
 				4282889625FAC1C700E633D9 /* Recycle.storyboard in Resources */,
 				6D8B75FA260E281100876EA8 /* Bird.png in Resources */,
 				4236970F2606A628002E3FF9 /* GoogleService-Info.plist in Resources */,
@@ -323,6 +338,7 @@
 				4282889925FAC1DB00E633D9 /* Welcome.storyboard in Resources */,
 				6D8DE56E260BF37400C2DD2A /* Settings.storyboard in Resources */,
 				6D4E7F662611231700870213 /* Dashboard.storyboard in Resources */,
+				6DAA8B522623FDA500B55C88 /* images.jpeg in Resources */,
 				42732E4526129F9300AC4463 /* RecycleDropOffImg.png in Resources */,
 				6D8B75EB260E27C200876EA8 /* Dragon.png in Resources */,
 			);

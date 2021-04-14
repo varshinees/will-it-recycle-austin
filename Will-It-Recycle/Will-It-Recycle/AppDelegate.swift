@@ -9,21 +9,37 @@ import UIKit
 import CoreData
 import Firebase
 import FirebaseUI
+import UserNotifications
+
+var firstTimeUser = false
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        // Request authorization for notifications from the user.
+        UNUserNotificationCenter.current().requestAuthorization(
+            options: [.alert],
+            completionHandler: {
+                (success, error) in
+                if success {
+                    DispatchQueue.main.async {
+                        notifications = true
+                    }
 
-        
-        
+                } else {
+                    DispatchQueue.main.async {
+                        notifications = false
+                    }
+                }
+            })
         
         return true
     }
-    
-
     
     func application(_ app: UIApplication, open url: URL,
                      options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {

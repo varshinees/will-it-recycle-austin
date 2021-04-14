@@ -14,6 +14,7 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
     var newUser:Bool? = nil {
         didSet {
             if newUser == true {
+                firstTimeUser = true
                 self.performSegue(withIdentifier: "WelcomeSegue", sender: nil)
             } else {
                 self.performSegue(withIdentifier: "LoginSegue", sender: nil)

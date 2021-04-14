@@ -47,6 +47,10 @@
                                 <state key="normal" title="DELETE ACCOUNT">
                                     <color key="titleColor" red="0.0034623097162693739" green="0.99584800004959106" blue="0.90175408124923706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="Gqq-4O-Kok" eventType="touchUpInside" id="8bs-Nv-5lq"/>
+                                    <segue destination="7zI-Mj-Gel" kind="show" identifier="restartSegueIdentifier" id="qy0-ZE-3bY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qH3-d2-SZi">
                                 <rect key="frame" x="118" y="675" width="180" height="30"/>
@@ -68,7 +72,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="913-ac-H2W" kind="presentation" modalPresentationStyle="fullScreen" id="EzV-g6-P31"/>
+                                    <segue destination="913-ac-H2W" kind="presentation" identifier="settingsToWelcome" modalPresentationStyle="fullScreen" id="EzV-g6-P31"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41F-nG-ZKN">
@@ -77,10 +81,16 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Egp-Zv-SHC">
                                 <rect key="frame" x="278" y="492" width="51" height="31"/>
                                 <color key="onTintColor" red="1" green="0.47975675400000001" blue="0.55453294929999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="appNotifySwitched:" destination="Gqq-4O-Kok" eventType="valueChanged" id="VTX-F7-JY4"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfW-Jp-87j">
                                 <rect key="frame" x="278" y="540" width="51" height="31"/>
                                 <color key="onTintColor" red="1" green="0.47975675400000001" blue="0.55453294929999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="leaderSettingsSwitched:" destination="Gqq-4O-Kok" eventType="valueChanged" id="vjq-b6-N8H"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leaderboard Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCO-6D-ucm">
                                 <rect key="frame" x="45" y="545" width="164" height="21"/>
@@ -158,9 +168,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ejb-p3-dK2"/>
                     <connections>
+                        <outlet property="appNotify" destination="Egp-Zv-SHC" id="p3r-72-oJH"/>
                         <outlet property="changeEmail" destination="Jap-aw-5BP" id="aXr-BB-ZO6"/>
                         <outlet property="changeUsername" destination="6me-GT-d9F" id="uRD-vh-qQm"/>
+                        <outlet property="deleteButton" destination="Eyd-ZS-iin" id="6iC-yB-FaW"/>
+                        <outlet property="leaderSettings" destination="dfW-Jp-87j" id="XEL-QL-k0o"/>
                         <outlet property="signOutButton" destination="OwH-Js-L8z" id="5vL-dl-o56"/>
+                        <outlet property="statsLabel" destination="2SS-80-bWu" id="MQP-D2-zb9"/>
                         <outlet property="updateButton" destination="uuW-ic-Sbh" id="MKQ-l2-QPp"/>
                     </connections>
                 </viewController>
@@ -177,6 +191,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ca-Dr-Fur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="453" y="-198"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="ejT-dh-CQA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="7zI-Mj-Gel" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0Az-CW-MqI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOA-Hm-LOK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="504" y="-71"/>
         </scene>
         <!--Main-->
         <scene sceneID="xGw-gM-q1w">
@@ -208,15 +232,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEt-kT-gup">
-                                                    <rect key="frame" x="271" y="11" width="82" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ITEM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1f-02-YC5">
+                                                    <rect key="frame" x="20" y="10" width="173" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ITEM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1f-02-YC5">
-                                                    <rect key="frame" x="20" y="10" width="173" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DATE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEt-kT-gup">
+                                                    <rect key="frame" x="201" y="9" width="173" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>

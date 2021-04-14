@@ -23,7 +23,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ds-gF-v5D" customClass="MDCButton">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ds-gF-v5D">
                                 <rect key="frame" x="117" y="701" width="190" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.47975675400000001" blue="0.55453294929999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -32,7 +32,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="kTb-CX-1tI" kind="presentation" modalPresentationStyle="fullScreen" id="bPa-EE-d5O"/>
+                                    <action selector="buttonPressed:" destination="kwK-FG-0lL" eventType="touchUpInside" id="7tN-Xy-XZ0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wT-59-vSz">
@@ -83,6 +83,7 @@
                         <viewLayoutGuide key="safeArea" id="u9i-Tm-Ibw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9P8-Jo-ap9"/>
                     <connections>
                         <outlet property="birdButton" destination="5wT-59-vSz" id="uCj-HT-qiQ"/>
                         <outlet property="catButton" destination="BeR-gx-qLy" id="CCL-We-Ayj"/>
@@ -92,11 +93,14 @@
                         <outlet property="frogButton" destination="jJk-7Y-0OC" id="Vu4-bN-0Aq"/>
                         <outlet property="hippoButton" destination="hBw-sZ-phP" id="HX6-Yx-N58"/>
                         <outlet property="horseButton" destination="NKp-ZA-WsE" id="mme-fZ-hoK"/>
+                        <outlet property="recycleButton" destination="8ds-gF-v5D" id="5JC-h4-hhp"/>
+                        <segue destination="kTb-CX-1tI" kind="presentation" identifier="dashboardSegueIdentifier" modalPresentationStyle="fullScreen" id="Vca-SN-JSk"/>
+                        <segue destination="F0p-cO-Nr4" kind="presentation" identifier="settingsSegueIdentifier" modalPresentationStyle="fullScreen" id="D5Q-xp-lSE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rr0-3C-bXJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-830.43478260869574" y="-151.33928571428569"/>
+            <point key="canvasLocation" x="79.710144927536234" y="-151.33928571428569"/>
         </scene>
         <!--TabbedApp-->
         <scene sceneID="M2D-gL-X93">
@@ -106,7 +110,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgr-yM-5fo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-295" y="-162"/>
+            <point key="canvasLocation" x="671.73913043478262" y="-333.48214285714283"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="tRW-eh-JTr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="F0p-cO-Nr4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5yJ-tj-WJf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Wh-Gf-9qt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="671.73913043478262" y="-11.383928571428571"/>
         </scene>
     </scenes>
     <resources>
