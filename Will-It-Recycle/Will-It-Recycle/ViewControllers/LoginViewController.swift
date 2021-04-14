@@ -115,6 +115,9 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
                                          index += 1
                                 }
                                 activeItems.append(gameItem(key: key, item: itemName, count: value.count, coordinates: value))
+                                for coordinate in value {
+                                    coordinatesOccupied.append(coordinate)
+                                }
                             }
                         }
                         else {

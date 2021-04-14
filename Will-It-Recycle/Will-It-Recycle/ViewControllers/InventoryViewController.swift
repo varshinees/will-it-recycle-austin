@@ -40,6 +40,8 @@ class InventoryViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var backBtn: MDCButton!
     @IBOutlet weak var tableView: UITableView!
     
+    var inventoryItem = gameItem(key: "", item: "", count: 0, coordinates: [])
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -65,8 +67,17 @@ class InventoryViewController: UIViewController, UITableViewDelegate, UITableVie
         let row = indexPath.row
         cell?.cellLabel.text = inventoryItems[row].item + " (\(inventoryItems[row].count))"
         cell?.inventoryItem = inventoryItems[row]
+        self.inventoryItem = inventoryItems[row]
         cell?.tableView = tableView
         return cell!
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PlacementSegueId",
+           let placementGridViewController = segue.destination as? PlacementGridViewController {
+            placementGridViewController.delegate = self
+            placementGridViewController.activeItem = inventoryItem
+        }
     }
 
 }
