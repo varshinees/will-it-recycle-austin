@@ -41,11 +41,10 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        populateDashboard()
     }
     
     // A method which signals that the view will appear.
-    func viewWillAppear() {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
         
         populateDashboard()
