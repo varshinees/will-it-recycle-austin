@@ -70,21 +70,25 @@ class ManualEntryViewController: UIViewController, UITableViewDataSource, UITabl
         tableView.reloadData()
     }
     
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        self.currentDisplayedData = manualEntryData.filter {
-//            $0.name.range(of: searchText, options: .caseInsensitive) != nil
-//        }
-//        tableView.reloadData()
-//    }
-//
-//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        self.view.endEditing(true)
-//    }
-//
-//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-//        self.currentDisplayedData = manualEntryData
-//        tableView.reloadData()
-//    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.count == 0 {
+            self.currentDisplayedData = manualEntryData
+        } else {
+            self.currentDisplayedData = manualEntryData.filter {
+                $0.name.range(of: searchText, options: .caseInsensitive) != nil
+            }
+        }
+        tableView.reloadData()
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.currentDisplayedData = manualEntryData
+        tableView.reloadData()
+    }
     
     
     // returns the length of the table
@@ -103,18 +107,19 @@ class ManualEntryViewController: UIViewController, UITableViewDataSource, UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecycleDropdownCell", for: indexPath as IndexPath) as! RecycleDropdownCell
         let row = indexPath.row
         
+        let index = manualEntryData.firstIndex{$0.name == currentDisplayedData[row].name}
+        
         // sets the label values for the cell
         cell.itemLabel?.text = currentDisplayedData[row].name
         cell.itemField?.placeholder = "0"
         cell.itemField.delegate = self
-        cell.itemField?.tag = row
+        cell.itemField?.tag = index!
         
-        cell.itemField.clearsOnBeginEditing = true
-        
-        if (quantities[row] != 0) {
-            cell.itemField?.text = "\(quantities[row])"
+        if (quantities[index!] != 0) {
+            cell.itemField?.text = "\(quantities[index!])"
         } else {
-            cell.itemField?.text = "0"
+            cell.itemField?.placeholder = "0"
+            cell.itemField?.text = ""
         }
         
         return cell
@@ -231,7 +236,9 @@ class ManualEntryViewController: UIViewController, UITableViewDataSource, UITabl
         present(controller, animated: true, completion: nil)
         
         // reset all textFields
-        quantities = [Int](repeating: 0, count: currentDisplayedData.count)
+        quantities = [Int](repeating: 0, count: manualEntryData.count)
+        currentDisplayedData = manualEntryData
+        searchBar.text = ""
         tableView.reloadData()
     }
     
