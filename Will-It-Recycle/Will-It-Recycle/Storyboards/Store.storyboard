@@ -74,6 +74,7 @@
                                             <outlet property="buyBtn" destination="SSa-Ib-s9M" id="0Jn-6p-OJ2"/>
                                             <outlet property="cellLabel" destination="UUO-Ms-4vk" id="VJK-Bd-uPE"/>
                                             <outlet property="detailLabel" destination="zmA-c8-KQC" id="h4x-Kg-GaB"/>
+                                            <outlet property="itemImage" destination="Wsc-ul-LSv" id="RYy-9x-Dxr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -14,6 +14,7 @@ class StoreTableViewCell: UITableViewCell {
     @IBOutlet weak var cellLabel: UILabel!
     @IBOutlet weak var buyBtn: UIButton!
     @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var itemImage: UIImageView!
     
     var delegate: UIViewController!
     
@@ -25,7 +26,6 @@ class StoreTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -87,7 +87,7 @@ class StoreTableViewCell: UITableViewCell {
     func errorAlert() {
         DispatchQueue.main.async {
             let controller = UIAlertController(
-                title: "Not enough leaves :(",
+                title: "Not enough leaves ☹️",
                 message: "Recycle more to earn leaves!",
                 preferredStyle: .alert)
             
@@ -102,7 +102,7 @@ class StoreTableViewCell: UITableViewCell {
     func successAlert() {
         DispatchQueue.main.async {
             let controller = UIAlertController(
-                title: "Purchase Success! :)",
+                title: "Purchase Success! 😄",
                 message: "Item has been added to your inventory",
                 preferredStyle: .alert)
             
