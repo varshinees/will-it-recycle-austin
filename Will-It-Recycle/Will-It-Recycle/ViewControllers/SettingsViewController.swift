@@ -258,7 +258,7 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
                                 style: .cancel,
                                 handler: {
                                     (action) in
-                                    Auth.auth().currentUser?.delete(completion: nil)
+                                    Auth.auth().currentUser!.delete(completion: nil)
                                     self.performSegue(withIdentifier: "restartSegueIdentifier", sender: nil)
                                 }))
         

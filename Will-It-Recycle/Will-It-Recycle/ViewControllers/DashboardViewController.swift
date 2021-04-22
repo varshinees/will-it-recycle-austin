@@ -19,8 +19,14 @@ import MaterialComponents.MaterialButtons_Theming
 class DashboardViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
-    @IBOutlet weak var totalLeaves: UILabel!
-    @IBOutlet weak var currentLeaves: UILabel!
+    @IBOutlet weak var leavesLabel: UILabel!
+    @IBOutlet weak var allTimeLabel: UILabel!
+    @IBOutlet weak var earthLabel: UILabel!
+    
+    @IBOutlet weak var leafButton: UIButton!
+    @IBOutlet weak var treeButton: UIButton!
+    @IBOutlet weak var earthButton: UIButton!
+    @IBOutlet weak var popButton: UIButton!
     
     @IBOutlet weak var statsCard: MDCCard!
     @IBOutlet weak var leaderboardCard: MDCCard!
@@ -41,15 +47,33 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        populateDashboard()
+        popButton.pop()
     }
     
     // A method which signals that the view will appear.
-    func viewWillAppear() {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
         
         populateDashboard()
+        
+        popButton.pop()
     }
+    
+    @IBAction func touchLeaf(_ sender: Any) {
+        leafButton.pulsate()
+    }
+    
+    @IBAction func touchTree(_ sender: Any) {
+        treeButton.pulsate()
+    }
+    
+    @IBAction func touchEarth(_ sender: Any) {
+        earthButton.pulsate()
+    }
+    
+    @IBAction func touchPop(_ sender: Any) {
+    }
+    
     
     // A method which populates the Dashboard according to the current user's specifications.
     func populateDashboard() {
@@ -112,9 +136,11 @@ class DashboardViewController: UIViewController {
                     
                     self.nameLabel.text = "Welcome, " + displayName + "!"
                     
-                    self.totalLeaves.text = "You have earned " + String(Int(user["allTimeLeaves"] as! Int)) + " leaves total."
+                    self.leavesLabel.text = String(Int(user["currentLeaves"] as! Int)) + " Current Leaves"
                     
-                    self.currentLeaves.text = "You have " + String(Int(user["currentLeaves"] as! Int)) + " leaves unredeemed."
+                    self.allTimeLabel.text = String(Int(user["allTimeLeaves"] as! Int)) + " All Time Leaves"
+                    
+                    self.earthLabel.text = "1 Planet Saved!"
                 }
             }
             else {
@@ -125,5 +151,30 @@ class DashboardViewController: UIViewController {
         // Add elevation to Dashboard Cards.
         statsCard.setShadowElevation(ShadowElevation(rawValue: 10),for: .normal)
         leaderboardCard.setShadowElevation(ShadowElevation(rawValue: 10),for: .normal)
+    }
+}
+
+extension UIButton {
+    func pulsate() {
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.duration = 0.4
+        pulse.fromValue = 0.98
+        pulse.toValue = 1.10
+        pulse.autoreverses = true
+        pulse.repeatCount = 1
+        pulse.initialVelocity = 0.3
+        pulse.damping = 1.0
+        layer.add(pulse, forKey: nil)
+    }
+    
+    func pop () {
+        let animation = CABasicAnimation(keyPath: "transform")
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+            animation.duration = 0.5
+        animation.repeatCount = .infinity
+            animation.autoreverses = true
+        animation.isRemovedOnCompletion = true
+        animation.toValue = NSValue(caTransform3D: CATransform3DMakeScale(1.1, 1.1, 1.0))
+        layer.add(animation, forKey: nil)
     }
 }

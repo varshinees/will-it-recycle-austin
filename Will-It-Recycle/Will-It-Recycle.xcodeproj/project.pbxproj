@@ -27,6 +27,7 @@
 		4282889F25FAC20C00E633D9 /* Local.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4282889E25FAC20C00E633D9 /* Local.storyboard */; };
 		42AA5BED26053A3100BA02AE /* Vector.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AA5BEC26053A3100BA02AE /* Vector.png */; };
 		42DB208F2604287200CFBDAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DB208E2604287200CFBDAF /* LoginViewController.swift */; };
+		6D20D36C262A761F000B17F7 /* 1024px-Kawaii_earth_clipart.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D20D36B262A761F000B17F7 /* 1024px-Kawaii_earth_clipart.svg.png */; };
 		6D297F18260AE6450037DC52 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D297F17260AE6450037DC52 /* WelcomeViewController.swift */; };
 		6D297F1B260AE6550037DC52 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D297F1A260AE6550037DC52 /* SettingsViewController.swift */; };
 		6D42F03F260E54230016446B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D42F03E260E54230016446B /* DashboardViewController.swift */; };
@@ -44,6 +45,7 @@
 		6DAA8B522623FDA500B55C88 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6DAA8B512623FDA400B55C88 /* images.jpeg */; };
 		6DAA8B552623FE0000B55C88 /* images-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6DAA8B542623FE0000B55C88 /* images-2.jpeg */; };
 		6DAA8B582623FE2F00B55C88 /* images-3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6DAA8B572623FE2F00B55C88 /* images-3.jpeg */; };
+		6DDAD2B326312BF000BCB8AB /* BiaKkx54T.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DDAD2B226312BF000BCB8AB /* BiaKkx54T.png */; };
 		8188043EA3113E27FDA1AE1E /* Pods_Will_It_Recycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FAD6D3C69A519F7E4CE289 /* Pods_Will_It_Recycle.framework */; };
 		8662A2F92610F44200A45EA2 /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8662A2F82610F44200A45EA2 /* LocalViewController.swift */; };
 		8662A2FC2610F47100A45EA2 /* RecycleHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8662A2FB2610F47100A45EA2 /* RecycleHistoryViewController.swift */; };
@@ -86,6 +88,7 @@
 		42DB208E2604287200CFBDAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		53FAD6D3C69A519F7E4CE289 /* Pods_Will_It_Recycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Will_It_Recycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68C8AF049FB5F205B15DA2F0 /* Pods-Will-It-Recycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Will-It-Recycle.release.xcconfig"; path = "Target Support Files/Pods-Will-It-Recycle/Pods-Will-It-Recycle.release.xcconfig"; sourceTree = "<group>"; };
+		6D20D36B262A761F000B17F7 /* 1024px-Kawaii_earth_clipart.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1024px-Kawaii_earth_clipart.svg.png"; sourceTree = "<group>"; };
 		6D297F17260AE6450037DC52 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6D297F1A260AE6550037DC52 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6D42F03E260E54230016446B /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 		6DAA8B512623FDA400B55C88 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
 		6DAA8B542623FE0000B55C88 /* images-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "images-2.jpeg"; sourceTree = "<group>"; };
 		6DAA8B572623FE2F00B55C88 /* images-3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "images-3.jpeg"; sourceTree = "<group>"; };
+		6DDAD2B226312BF000BCB8AB /* BiaKkx54T.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BiaKkx54T.png; sourceTree = "<group>"; };
 		8662A2F82610F44200A45EA2 /* LocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalViewController.swift; sourceTree = "<group>"; };
 		8662A2FB2610F47100A45EA2 /* RecycleHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleHistoryViewController.swift; sourceTree = "<group>"; };
 		866703D02620FD0E00D1DD24 /* PlacementGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementGridViewController.swift; sourceTree = "<group>"; };
@@ -222,8 +226,10 @@
 			children = (
 				6DAA8B4E2623FB9300B55C88 /* Unknown.png */,
 				6DAA8B512623FDA400B55C88 /* images.jpeg */,
+				6D20D36B262A761F000B17F7 /* 1024px-Kawaii_earth_clipart.svg.png */,
 				42732E3F26129F9200AC4463 /* CreativeReuseImg.jpg */,
 				6DAA8B572623FE2F00B55C88 /* images-3.jpeg */,
+				6DDAD2B226312BF000BCB8AB /* BiaKkx54T.png */,
 				6DAA8B542623FE0000B55C88 /* images-2.jpeg */,
 				42732E4026129F9200AC4463 /* HowToRecycleImg.jpg */,
 				42732E3E26129F9200AC4463 /* LocationIcon.png */,
@@ -313,6 +319,7 @@
 				4282889F25FAC20C00E633D9 /* Local.storyboard in Resources */,
 				4282888825FABDD800E633D9 /* LaunchScreen.storyboard in Resources */,
 				42AA5BED26053A3100BA02AE /* Vector.png in Resources */,
+				6DDAD2B326312BF000BCB8AB /* BiaKkx54T.png in Resources */,
 				C9E7CF0A261E8C44002F389B /* Inventory.storyboard in Resources */,
 				6DAA8B552623FE0000B55C88 /* images-2.jpeg in Resources */,
 				4282889125FAC0BD00E633D9 /* Main.storyboard in Resources */,
@@ -341,6 +348,7 @@
 				6DAA8B522623FDA500B55C88 /* images.jpeg in Resources */,
 				42732E4526129F9300AC4463 /* RecycleDropOffImg.png in Resources */,
 				6D8B75EB260E27C200876EA8 /* Dragon.png in Resources */,
+				6D20D36C262A761F000B17F7 /* 1024px-Kawaii_earth_clipart.svg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
