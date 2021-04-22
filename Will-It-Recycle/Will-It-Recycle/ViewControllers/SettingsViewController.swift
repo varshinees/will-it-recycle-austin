@@ -22,6 +22,7 @@ var leaderboard = true
 class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate {
     @IBOutlet weak var statsLabel: UILabel!
     
+    @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var changeUsername: UITextField!
     @IBOutlet weak var changeEmail: UITextField!
     
@@ -35,14 +36,11 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
     // A method which signals that the program is ready.
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        populateSettings()
     }
     
     // A method which signals that the view will appear.
-    func viewWillAppear() {
-        super.viewWillAppear(false)
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         populateSettings()
     }
     
@@ -63,6 +61,9 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
                     }
 
                 DispatchQueue.main.async() {
+                    if user["avatar"] != nil {
+                        self.avatarImage.image = UIImage(named: user["avatar"] as! String)
+                    }
                     self.statsLabel.text = user["displayName"] as! String + " | " + String(Int(user["currentLeaves"] as! Int)) + " Leaves"
                     
                     UNUserNotificationCenter.current().getNotificationSettings { (settings) in

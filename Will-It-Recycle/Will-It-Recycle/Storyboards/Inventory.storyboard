@@ -94,7 +94,7 @@
         <!--Placement Grid View Controller-->
         <scene sceneID="zY1-be-hZL">
             <objects>
-                <viewController id="Qir-St-Wm7" customClass="PlacementGridViewController" customModule="Will_It_Recycle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="placementGridId" id="Qir-St-Wm7" customClass="PlacementGridViewController" customModule="Will_It_Recycle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NuL-W6-qdl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
