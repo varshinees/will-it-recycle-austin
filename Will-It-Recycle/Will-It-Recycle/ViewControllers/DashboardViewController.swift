@@ -83,32 +83,32 @@ class DashboardViewController: UIViewController {
             var ref: DatabaseReference!
             ref = Database.database().reference()
              
-            let users = ref.child("users").queryOrdered(byChild: "allTimeLeaves").queryLimited(toFirst: 6)
+            let users = ref.child("users").queryOrdered(byChild: "allTimeLeaves").queryLimited(toFirst: 7)
 
             users.observe(.value, with: { (snapshot) in
               if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
-                var index = 1
+                var index = 0
                 for snap in snapshot.reversed() {
                     let user = snap.value as! [String:Any]
                     
                     if (user["leaderboard"] as! Int == 1) {
-                        if index == 1 {
+                        if index == 0 {
                             self.leader1.text = user["displayName"] as? String
                             self.leader1Label.text = String(Int(user["allTimeLeaves"] as! Int)) + " Leaves"
                             
-                        } else if index == 2 {
+                        } else if index == 1 {
                             self.leader2.text = user["displayName"] as? String
                             self.leader2Label.text = String(Int(user["allTimeLeaves"] as! Int)) + " Leaves"
                             
-                        } else if index == 3 {
+                        } else if index == 2 {
                             self.leader3.text = user["displayName"] as? String
                             self.leader3Label.text = String(Int(user["allTimeLeaves"] as! Int)) + " Leaves"
                             
-                        } else if index == 4 {
+                        } else if index == 3 {
                             self.leader4.text = user["displayName"] as? String
                             self.leader4Label.text = String(Int(user["allTimeLeaves"] as! Int)) + " Leaves"
                             
-                        } else {
+                        } else if index == 4 {
                             self.leader5.text = user["displayName"] as? String
                             self.leader5Label.text = String(Int(user["allTimeLeaves"] as! Int)) + " Leaves"
                         }

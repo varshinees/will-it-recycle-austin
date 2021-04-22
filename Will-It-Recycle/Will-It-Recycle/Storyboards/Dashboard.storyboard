@@ -89,6 +89,7 @@
                                         </state>
                                         <connections>
                                             <action selector="touchPop:" destination="k8s-SI-URi" eventType="touchUpInside" id="7L2-QI-38B"/>
+                                            <segue destination="OIa-8T-CG4" kind="show" id="WjO-Tw-SwB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -279,6 +280,16 @@
                 <exit id="dQh-Kt-3cl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-34.782608695652179" y="-148.66071428571428"/>
+        </scene>
+        <!--Recycle-->
+        <scene sceneID="cM2-Up-DRM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Recycle" id="OIa-8T-CG4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="aF3-QP-nxT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6f-3K-1GO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="425" y="-217"/>
         </scene>
     </scenes>
     <resources>
