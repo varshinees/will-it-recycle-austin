@@ -122,13 +122,6 @@ class GameViewController: UIViewController {
                 }
             }
         }
-//        for gameItem in inventoryItems {
-//            for storeItem in storeItems {
-//                if gameItem.key == storeItem.key {
-//                    total += storeItem.cost/10 * gameItem.count
-//                }
-//            }
-//        }
         
         //update current leaves in firebase
         self.ref.child("users/\(user.uid)/currentLeaves").getData { (error, snapshot) in
