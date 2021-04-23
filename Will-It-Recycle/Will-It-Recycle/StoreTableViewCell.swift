@@ -30,9 +30,8 @@ class StoreTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
+    
     @IBAction func buyOnClick(_ sender: Any) {
         
         var currentLeaves:Int!
@@ -43,9 +42,14 @@ class StoreTableViewCell: UITableViewCell {
                 print("Error getting data \(error)")
             }
             else if snapshot.exists() {
+                //subtract cost from currentLeaves
                 currentLeaves = snapshot.value! as! Int
                 if snapshot.value as! Int - self.storeItem.cost > 0 {
                     self.ref.child("users/\(self.user.uid)/currentLeaves").setValue(snapshot.value as! Int - self.storeItem.cost)
+                    let storeVC = self.delegate as! Leaves
+                    DispatchQueue.main.async {
+                        storeVC.displayLeaves(number: snapshot.value as! Int - self.storeItem.cost)
+                    }
                 }
             }
             else {
@@ -81,9 +85,10 @@ class StoreTableViewCell: UITableViewCell {
                 }
             }
         }
-
+        
     }
     
+    //alert for unsuccessful purchase
     func errorAlert() {
         DispatchQueue.main.async {
             let controller = UIAlertController(
@@ -99,6 +104,7 @@ class StoreTableViewCell: UITableViewCell {
         }
     }
     
+    //alert for successful purchase
     func successAlert() {
         DispatchQueue.main.async {
             let controller = UIAlertController(

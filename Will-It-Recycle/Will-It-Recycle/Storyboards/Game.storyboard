@@ -106,6 +106,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.84679758549999995" green="0.4447577841" blue="0.50715358470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Claim Today's Rewards"/>
+                                <connections>
+                                    <action selector="claimOnClick:" destination="poX-ax-26L" eventType="touchUpInside" id="iVY-8n-IPl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwp-Qb-VTG">
                                 <rect key="frame" x="229" y="179" width="150" height="30"/>
