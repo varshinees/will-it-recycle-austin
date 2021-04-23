@@ -259,7 +259,12 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
                                 style: .cancel,
                                 handler: {
                                     (action) in
+                                    let ref = Database.database().reference()
+                                    
                                     Auth.auth().currentUser!.delete(completion: nil)
+                                    
+                                    ref.child("users/\(Auth.auth().currentUser!.uid)").removeValue()
+                                    
                                     self.performSegue(withIdentifier: "restartSegueIdentifier", sender: nil)
                                 }))
         
