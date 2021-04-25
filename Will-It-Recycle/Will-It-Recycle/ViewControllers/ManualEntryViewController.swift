@@ -27,7 +27,7 @@ public var manualEntryData = [
     ManualEntryItem(value: 2, name: "Glass Bottle"),
     ManualEntryItem(value: 2, name: "Mixed Paper"),
     ManualEntryItem(value: 1, name: "Tin Can"),
-    ManualEntryItem(value: 1, name: "Plastic Utencils"),
+    ManualEntryItem(value: 1, name: "Plastic Utensils"),
     ManualEntryItem(value: 1, name: "Paperboard"),
     ManualEntryItem(value: 1, name: "Aluminum Foil"),
 ]
