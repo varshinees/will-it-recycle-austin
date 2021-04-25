@@ -15,6 +15,8 @@ import UserNotifications
 var notifications = false
 var leaderboard = true
 
+var newUsername = ""
+
 //
 // A class which coordinates communication between the data
 // and view components of the Settings View Controller.
@@ -41,6 +43,7 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
     // A method which signals that the view will appear.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
         populateSettings()
     }
     
@@ -236,10 +239,30 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
     
     // A method that updates the current user's email.
     @IBAction func updateButtonPressed(_ sender: Any) {
+                    
         let ref = Database.database().reference()
         
         if (changeUsername.text != "" ) {
             ref.child("users/\(Auth.auth().currentUser!.uid)/displayName").setValue(changeUsername.text)
+            newUsername = changeUsername.text!
+            
+            ref.child("users/\(Auth.auth().currentUser!.uid)").getData { (error, snapshot) in
+                if let error = error {
+                    print("Error getting data \(error)")
+                }
+                else if snapshot.exists() {
+                    guard let user = snapshot.value as? [String: Any] else {
+                          return
+                        }
+
+                    DispatchQueue.main.async() {
+                        if user["avatar"] != nil {
+                            self.avatarImage.image = UIImage(named: user["avatar"] as! String)
+                        }
+                        self.statsLabel.text = newUsername + " | " + String(Int(user["currentLeaves"] as! Int)) + " Leaves"
+                    }
+                }
+            }
         }
         
         if (changeEmail.text != "") {
