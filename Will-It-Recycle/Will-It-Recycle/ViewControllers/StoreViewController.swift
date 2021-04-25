@@ -58,6 +58,7 @@ class StoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         backBtn.setTitle("BACK TO MY LAND", for: .normal)
         backBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        backBtn.setBackgroundColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0))
         
         //display number of leaves
         refreshLeaves()
@@ -135,6 +136,11 @@ class StoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //protocol method for table view cells
     func displayLeaves(number: Int) {
         self.leavesLabel.text = "WALLET: \(number) LEAVES"
+    }
+    
+    //remove keyboard code
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
         
 }
