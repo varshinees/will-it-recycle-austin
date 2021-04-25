@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if success {
                     DispatchQueue.main.async {
                         notifications = true
+                        
+                        self.scheduleNotification()
                     }
 
                 } else {
@@ -39,6 +41,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         
         return true
+    }
+    
+    func scheduleNotification() {
+        let notification = UNMutableNotificationContent()
+        notification.title = "Invitation"
+        notification.subtitle = "Will It Recycle?"
+        notification.body = "Earn leaves and save the planet at Will It Recycle?"
+        
+        let date = Date()
+        
+        let calendar = Calendar(identifier: .gregorian)
+        let components = calendar.dateComponents(in: .current, from: date)
+        let newComponents = DateComponents(calendar: calendar, timeZone: .current, month: components.month, day: components.day, hour: components.hour, minute: components.minute! + 1)
+        
+        print(components.month!)
+        print(components.day!)
+        print(components.hour!)
+        print(components.minute! + 1)
+
+        
+        let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: newComponents, repeats: true)
+        
+        let request = UNNotificationRequest(
+            identifier: "notification1",
+            content: notification,
+            trigger: notificationTrigger)
+        
+        UNUserNotificationCenter.current().add(request) {
+            (error) in
+            print("Request error: ", error as Any)
+        }
+        print("Submitted")
     }
     
     func application(_ app: UIApplication, open url: URL,
@@ -112,3 +146,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension Date {
+    func get(_ components: Calendar.Component..., calendar: Calendar = Calendar.current) -> DateComponents {
+        return calendar.dateComponents(Set(components), from: self)
+    }
+
+    func get(_ component: Calendar.Component, calendar: Calendar = Calendar.current) -> Int {
+        return calendar.component(component, from: self)
+    }
+}
