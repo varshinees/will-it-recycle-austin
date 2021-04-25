@@ -89,6 +89,7 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
                                 }
                                 inventoryItems.append(gameItem(key: key, item: itemName, count: value as! Int, coordinates: []))
                             }
+                            inventoryItems.sort(by: { $0.item < $1.item })
                         }
                         else {
                             // no inventory available

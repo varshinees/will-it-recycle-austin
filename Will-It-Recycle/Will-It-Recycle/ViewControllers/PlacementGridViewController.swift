@@ -20,6 +20,8 @@ class PlacementGridViewController: UIViewController {
     let user = Auth.auth().currentUser!
 
     @IBOutlet weak var completeButton: MDCButton!
+    @IBOutlet weak var backButton: MDCButton!
+    
     @IBOutlet weak var button00: UIButton!
     @IBOutlet weak var button01: UIButton!
     @IBOutlet weak var button02: UIButton!
@@ -109,19 +111,23 @@ class PlacementGridViewController: UIViewController {
             button.backgroundColor?.withAlphaComponent(0.5)
         }
 
-        completeButton.setTitle("COMPLETE", for: .normal)
+        completeButton.setTitle("PLACE ITEM", for: .normal)
         completeButton.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         completeButton.setBackgroundColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
+        
+        backButton.setTitle(" CANCEL", for: .normal)
+        backButton.setTitleColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
+        backButton.setBackgroundColor(nil)
+    }
+    
+    @IBAction func onBackButtonPressed(_ sender: Any) {
+        
+        self.dismiss(animated: true)
     }
     
     @IBAction func onPlacementCompleted(_ sender: Any) {
         
-        //update local activeItem list
-        activeItems.append(activeItem)
-        
         if coordinate.count != 0 {
-            // protocol back to game view controller
-            
             // add coordinate to occupiedCoordinates
             coordinatesOccupied.append(coordinate)
             // add item to activeItems in firebase
@@ -146,7 +152,45 @@ class PlacementGridViewController: UIViewController {
                     let newItem = gameItem(key: self.activeItem.key, item: self.activeItem.item, count: 1, coordinates: [self.coordinate])
                     activeItems.append(newItem)
                 }
+                let mainVC = self.delegate as! localListChanger
+                mainVC.changeActiveItemsList(activeList: activeItems)
             }
+            // update inventory in firebase
+            self.ref.child("users/\(self.user.uid)/inventory/\(self.activeItem.key)").getData { (error, snapshot) in
+                if let error = error {
+                    print("Error getting data \(error)")
+                }
+                else if snapshot.exists() {
+                    if snapshot.value as! Int == 1 {
+                        // remove from child's list
+                        self.ref.child("users/\(self.user.uid)/inventory/\(self.activeItem.key)").removeValue()
+                    }
+                    else {
+                        self.ref.child("users/\(self.user.uid)/inventory/\(self.activeItem.key)").setValue(snapshot.value as! Int - 1)
+                    }
+                }
+            }
+            // update local inventory list
+            var index = 0
+            var removeIndex = -1
+            for item in inventoryItems {
+                if item.key == self.activeItem.key {
+                    // if count is 1, remove this item
+                    if item.count == 1 {
+                        removeIndex = index
+                    }
+                    else {
+                        item.decrementCount()
+                    }
+                }
+                index += 1
+            }
+            if removeIndex != -1 {
+                inventoryItems.remove(at: removeIndex)
+            }
+            let mainVC = delegate as! localListChanger
+            mainVC.changeInventoryList(inventory: inventoryItems)
+            
             self.dismiss(animated: true)
         }
         else {

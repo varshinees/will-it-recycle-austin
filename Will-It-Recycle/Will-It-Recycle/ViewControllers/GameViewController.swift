@@ -10,7 +10,11 @@ import MaterialComponents
 import MaterialComponents.MaterialButtons
 import Firebase
 
-class GameViewController: UIViewController {
+protocol activeListChanger {
+    func changeActiveItemsList(activeList: [gameItem])
+}
+
+class GameViewController: UIViewController, activeListChanger {
 
     @IBOutlet weak var inventoryBtn: MDCButton!
     @IBOutlet weak var removeBtn: MDCButton!
@@ -71,10 +75,11 @@ class GameViewController: UIViewController {
         //display number of leaves the user has
         refreshLeaves()
         
-        //load active items onto game screen
-        loadActiveItems()
-    }
+        clearItems()
         
+        //load active items onto game screen
+        loadActiveItems()    }
+    
     @IBAction func claimOnClick(_ sender: Any) {
         //get today's date
         let date = Date()
@@ -110,7 +115,6 @@ class GameViewController: UIViewController {
         }
     
     }
-    
     
     func calculate() {
         //calculate reward based on price of items in game screen
@@ -187,6 +191,29 @@ class GameViewController: UIViewController {
         }
     }
     
+    func clearItems() {
+        zeroZero.setImage(nil, for: .normal)
+        zeroOne.setImage(nil, for: .normal)
+        zeroTwo.setImage(nil, for: .normal)
+        zeroThree.setImage(nil, for: .normal)
+        oneZero.setImage(nil, for: .normal)
+        oneOne.setImage(nil, for: .normal)
+        oneTwo.setImage(nil, for: .normal)
+        oneThree.setImage(nil, for: .normal)
+        twoZero.setImage(nil, for: .normal)
+        twoOne.setImage(nil, for: .normal)
+        twoTwo.setImage(nil, for: .normal)
+        twoThree.setImage(nil, for: .normal)
+        threeZero.setImage(nil, for: .normal)
+        threeOne.setImage(nil, for: .normal)
+        threeTwo.setImage(nil, for: .normal)
+        threeThree.setImage(nil, for: .normal)
+        fourZero.setImage(nil, for: .normal)
+        fourOne.setImage(nil, for: .normal)
+        fourTwo.setImage(nil, for: .normal)
+        fourThree.setImage(nil, for: .normal)
+    }
+    
     //load active items onto game screen
     func loadActiveItems() {
         for item in activeItems {
@@ -254,6 +281,17 @@ class GameViewController: UIViewController {
                 print("No data available")
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "removeItemSegueId",
+           let removeItemViewController = segue.destination as? RemoveItemViewController {
+            removeItemViewController.delegate = self
+        }
+    }
+    
+    func changeActiveItemsList(activeList: [gameItem]) {
+        activeItems = activeList
     }
     
 }
