@@ -32,10 +32,18 @@ public class gameItem {
 }
 
 public var inventoryItems = [gameItem]()
-
 public var activeItems = [gameItem]()
 
-class InventoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol InventoryItemPlacedChanger {
+    func setInventoryItemToPlace(item: gameItem)
+}
+
+protocol localListChanger {
+    func changeInventoryList(inventory: [gameItem])
+    func changeActiveItemsList(activeList: [gameItem])
+}
+
+class InventoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, InventoryItemPlacedChanger, localListChanger {
     
     @IBOutlet weak var backBtn: MDCButton!
     @IBOutlet weak var tableView: UITableView!
@@ -49,6 +57,10 @@ class InventoryViewController: UIViewController, UITableViewDelegate, UITableVie
 
         backBtn.setTitle("BACK TO MY LAND", for: .normal)
         backBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     @IBAction func backOnClick(_ sender: Any) {
@@ -67,8 +79,7 @@ class InventoryViewController: UIViewController, UITableViewDelegate, UITableVie
         let row = indexPath.row
         cell?.cellLabel.text = inventoryItems[row].item + " (\(inventoryItems[row].count))"
         cell?.inventoryItem = inventoryItems[row]
-        self.inventoryItem = inventoryItems[row]
-        cell?.tableView = tableView
+        cell?.delegate = self
         return cell!
     }
     
@@ -78,6 +89,18 @@ class InventoryViewController: UIViewController, UITableViewDelegate, UITableVie
             placementGridViewController.delegate = self
             placementGridViewController.activeItem = inventoryItem
         }
+    }
+    
+    func setInventoryItemToPlace (item: gameItem) {
+        self.inventoryItem = item
+    }
+    
+    func changeInventoryList(inventory: [gameItem]) {
+        inventoryItems = inventory
+    }
+    
+    func changeActiveItemsList(activeList: [gameItem]) {
+        activeItems = activeList
     }
 
 }

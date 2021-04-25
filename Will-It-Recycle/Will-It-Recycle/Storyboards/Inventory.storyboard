@@ -49,7 +49,7 @@
                                                         <color key="titleColor" red="0.84679758549999995" green="0.4447577841" blue="0.50715358470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="onPlaceItem:" destination="j3H-42-vh4" eventType="touchUpInside" id="e9C-jK-xLT"/>
+                                                        <action selector="onPlaceItem:" destination="j3H-42-vh4" eventType="touchUpInside" id="dj4-1R-6yj"/>
                                                         <segue destination="Qir-St-Wm7" kind="presentation" identifier="PlacementSegueId" modalPresentationStyle="fullScreen" id="BVO-Jv-RoS"/>
                                                     </connections>
                                                 </button>
@@ -70,7 +70,9 @@
                                 <rect key="frame" x="97" y="696" width="222" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.84679758549999995" green="0.4447577841" blue="0.50715358470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Back to my land"/>
+                                <state key="normal" title="BACK TO MY LAND">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="backOnClick:" destination="zgO-Z9-ifW" eventType="touchUpInside" id="ScE-Xh-fCC"/>
                                 </connections>
@@ -103,6 +105,17 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1m-w4-amx" customClass="MDCButton">
+                                <rect key="frame" x="20" y="110" width="125" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="CANCEL" image="multiply" catalog="system">
+                                    <color key="titleColor" red="1" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBackButtonPressed:" destination="Qir-St-Wm7" eventType="touchUpInside" id="O7W-hP-OA0"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsb-iw-l1H">
                                 <rect key="frame" x="206" y="605" width="96" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -247,14 +260,6 @@
                                     <action selector="onSelectButton01:" destination="Qir-St-Wm7" eventType="touchUpInside" id="HFa-u8-4BK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siA-WB-YoY" customClass="MDCButton">
-                                <rect key="frame" x="137" y="707" width="141" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="COMPLETE"/>
-                                <connections>
-                                    <action selector="onPlacementCompleted:" destination="Qir-St-Wm7" eventType="touchUpInside" id="ebr-Jq-r6M"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doq-tk-caW">
                                 <rect key="frame" x="20" y="249" width="96" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -271,12 +276,24 @@
                                     <action selector="onSelectButton43:" destination="Qir-St-Wm7" eventType="touchUpInside" id="8Gb-0m-tnj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siA-WB-YoY" customClass="MDCButton">
+                                <rect key="frame" x="253" y="749" width="141" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="PLACE ITEM">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPlacementCompleted:" destination="Qir-St-Wm7" eventType="touchUpInside" id="ebr-Jq-r6M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ob7-D3-xIL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="XeE-Zt-ifq"/>
                     <connections>
+                        <outlet property="backButton" destination="r1m-w4-amx" id="Tec-Ln-A82"/>
                         <outlet property="button00" destination="doq-tk-caW" id="3go-8B-WxF"/>
                         <outlet property="button01" destination="kcF-76-Qlf" id="ZdQ-cK-40X"/>
                         <outlet property="button02" destination="dgT-ID-TgP" id="ONq-1J-LbK"/>
@@ -306,8 +323,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="die.face.3.fill" catalog="system" width="128" height="114"/>
+        <image name="die.face.3.fill" catalog="system" width="32" height="32"/>
         <image name="green grid" width="578" height="1024"/>
+        <image name="multiply" catalog="system" width="128" height="111"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

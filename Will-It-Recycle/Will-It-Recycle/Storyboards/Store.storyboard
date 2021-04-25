@@ -28,8 +28,8 @@
                                     <navigationItem title="Store" largeTitleDisplayMode="always" id="aR4-hY-8BB"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iZr-gJ-fRq">
-                                <rect key="frame" x="20" y="209" width="374" height="471"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iZr-gJ-fRq">
+                                <rect key="frame" x="20" y="209" width="374" height="500"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -74,6 +74,7 @@
                                             <outlet property="buyBtn" destination="SSa-Ib-s9M" id="0Jn-6p-OJ2"/>
                                             <outlet property="cellLabel" destination="UUO-Ms-4vk" id="VJK-Bd-uPE"/>
                                             <outlet property="detailLabel" destination="zmA-c8-KQC" id="h4x-Kg-GaB"/>
+                                            <outlet property="itemImage" destination="Wsc-ul-LSv" id="RYy-9x-Dxr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -82,15 +83,6 @@
                                     <outlet property="delegate" destination="TRL-0D-M1J" id="SFT-CA-wma"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AqN-8n-O0M">
-                                <rect key="frame" x="87" y="688" width="240" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.84679758549999995" green="0.4447577841" blue="0.50715358470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Back to my land"/>
-                                <connections>
-                                    <action selector="backOnClick:" destination="TRL-0D-M1J" eventType="touchUpInside" id="Aj9-GD-yUP"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WALLET: 0 LEAVES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNa-0g-eaR">
                                 <rect key="frame" x="216" y="93" width="178" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -98,6 +90,15 @@
                                 <color key="textColor" red="0.16941252500000001" green="0.44736865149999999" blue="0.18841294319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AqN-8n-O0M">
+                                <rect key="frame" x="87" y="743" width="240" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.84679758549999995" green="0.4447577841" blue="0.50715358470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Back to my land"/>
+                                <connections>
+                                    <action selector="backOnClick:" destination="TRL-0D-M1J" eventType="touchUpInside" id="Aj9-GD-yUP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xIy-Ky-nqg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

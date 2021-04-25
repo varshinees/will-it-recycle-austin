@@ -14,6 +14,7 @@ class StoreTableViewCell: UITableViewCell {
     @IBOutlet weak var cellLabel: UILabel!
     @IBOutlet weak var buyBtn: UIButton!
     @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var itemImage: UIImageView!
     
     var delegate: UIViewController!
     
@@ -25,14 +26,12 @@ class StoreTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
+    
     @IBAction func buyOnClick(_ sender: Any) {
         
         var currentLeaves:Int!
@@ -43,9 +42,14 @@ class StoreTableViewCell: UITableViewCell {
                 print("Error getting data \(error)")
             }
             else if snapshot.exists() {
+                //subtract cost from currentLeaves
                 currentLeaves = snapshot.value! as! Int
                 if snapshot.value as! Int - self.storeItem.cost > 0 {
                     self.ref.child("users/\(self.user.uid)/currentLeaves").setValue(snapshot.value as! Int - self.storeItem.cost)
+                    let storeVC = self.delegate as! Leaves
+                    DispatchQueue.main.async {
+                        storeVC.displayLeaves(number: snapshot.value as! Int - self.storeItem.cost)
+                    }
                 }
             }
             else {
@@ -81,13 +85,14 @@ class StoreTableViewCell: UITableViewCell {
                 }
             }
         }
-
+        
     }
     
+    //alert for unsuccessful purchase
     func errorAlert() {
         DispatchQueue.main.async {
             let controller = UIAlertController(
-                title: "Not enough leaves :(",
+                title: "Not enough leaves ☹️",
                 message: "Recycle more to earn leaves!",
                 preferredStyle: .alert)
             
@@ -99,10 +104,11 @@ class StoreTableViewCell: UITableViewCell {
         }
     }
     
+    //alert for successful purchase
     func successAlert() {
         DispatchQueue.main.async {
             let controller = UIAlertController(
-                title: "Purchase Success! :)",
+                title: "Purchase Success! 😄",
                 message: "Item has been added to your inventory",
                 preferredStyle: .alert)
             
