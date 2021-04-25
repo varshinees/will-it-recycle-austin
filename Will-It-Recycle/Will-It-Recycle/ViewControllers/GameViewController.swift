@@ -47,22 +47,26 @@ class GameViewController: UIViewController, activeListChanger {
     
     let ref = Database.database().reference()
     let user = Auth.auth().currentUser!
+    var reward = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         storeBtn.setTitle("STORE", for: .normal)
         storeBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
-//        storeBtn.setBackgroundColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0), for: .normal)
-        // Do any additional setup after loading the view.
+        storeBtn.setBackgroundColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0))
+        
         removeBtn.setTitle("REMOVE ITEM", for: .normal)
         removeBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        removeBtn.setBackgroundColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0))
         
         claimBtn.setTitle("CLAIM TODAY'S REWARDS", for: .normal)
         claimBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        claimBtn.setBackgroundColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0))
         
         inventoryBtn.setTitle("INVENTORY", for: .normal)
         inventoryBtn.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        inventoryBtn.setBackgroundColor(UIColor(red: 252/255, green: 108/255, blue: 133/255, alpha: 1.0))
         
         //load active items onto game screen
         loadActiveItems()
@@ -126,7 +130,7 @@ class GameViewController: UIViewController, activeListChanger {
                 }
             }
         }
-        
+        reward = total
         //update current leaves in firebase
         self.ref.child("users/\(user.uid)/currentLeaves").getData { (error, snapshot) in
             if let error = error {
@@ -180,7 +184,7 @@ class GameViewController: UIViewController, activeListChanger {
         DispatchQueue.main.async {
             let controller = UIAlertController(
                 title: "Success! 🌱",
-                message: "You claimed today's rewards",
+                message: "You claimed \(self.reward)leaves",
                 preferredStyle: .alert)
             
             controller.addAction(UIAlertAction(
@@ -267,6 +271,7 @@ class GameViewController: UIViewController, activeListChanger {
         }
     }
     
+    //get current leaves from firebase and display it
     func refreshLeaves() {
         self.ref.child("users/\(user.uid)/currentLeaves").getData { (error, snapshot) in
             if let error = error {
