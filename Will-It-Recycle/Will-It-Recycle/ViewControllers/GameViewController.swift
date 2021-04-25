@@ -184,7 +184,7 @@ class GameViewController: UIViewController, activeListChanger {
         DispatchQueue.main.async {
             let controller = UIAlertController(
                 title: "Success! 🌱",
-                message: "You claimed \(self.reward)leaves",
+                message: "You claimed \(self.reward) leaves",
                 preferredStyle: .alert)
             
             controller.addAction(UIAlertAction(
