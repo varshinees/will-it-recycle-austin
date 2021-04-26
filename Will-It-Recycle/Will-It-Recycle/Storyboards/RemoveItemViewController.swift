@@ -145,7 +145,6 @@ class RemoveItemViewController: UIViewController, UITableViewDelegate, UITableVi
                     self.ref.child("users/\(self.user.uid)/inventory").child(self.selectedItem.key).setValue(1)
                 }
             }
-            
             mainVC.changeInventoryList(inventory: inventoryItems)
             
             // dismiss screen back to my land
