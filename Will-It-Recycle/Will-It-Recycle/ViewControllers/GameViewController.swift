@@ -42,7 +42,7 @@ class GameViewController: UIViewController, localListChanger {
     @IBOutlet weak var gameView: UIView!
     
     let ref = Database.database().reference()
-    let user = Auth.auth().currentUser!
+    let user = authCurrentUser!
     var reward = 0
     
     override func viewDidLoad() {
