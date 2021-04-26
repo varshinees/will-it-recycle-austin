@@ -67,7 +67,12 @@ class StoreTableViewCell: UITableViewCell {
                 //add to firebase
                     self.ref.child("users/\(self.user.uid)/inventory/\(self.storeItem.key)").setValue(snapshot.value as! Int + 1)
                     //add to global inventory array
-                    inventoryItems.append(gameItem(key: self.storeItem.key, item: self.storeItem.item, count: snapshot.value as! Int + 1, coordinates: []))
+                    for item in inventoryItems {
+                        if item.key == self.storeItem.key {
+                            // add to count of existing inventory item
+                            item.incrementCount()
+                        }
+                    }
                     self.successAlert()
                 } else {
                     self.errorAlert()
@@ -85,7 +90,6 @@ class StoreTableViewCell: UITableViewCell {
                 }
             }
         }
-        
     }
     
     //alert for unsuccessful purchase

@@ -10,11 +10,7 @@ import MaterialComponents
 import MaterialComponents.MaterialButtons
 import Firebase
 
-protocol activeListChanger {
-    func changeActiveItemsList(activeList: [gameItem])
-}
-
-class GameViewController: UIViewController, activeListChanger {
+class GameViewController: UIViewController, localListChanger {
 
     @IBOutlet weak var inventoryBtn: MDCButton!
     @IBOutlet weak var removeBtn: MDCButton!
@@ -293,6 +289,10 @@ class GameViewController: UIViewController, activeListChanger {
            let removeItemViewController = segue.destination as? RemoveItemViewController {
             removeItemViewController.delegate = self
         }
+    }
+    
+    func changeInventoryList(inventory: [gameItem]) {
+        inventoryItems = inventory
     }
     
     func changeActiveItemsList(activeList: [gameItem]) {
