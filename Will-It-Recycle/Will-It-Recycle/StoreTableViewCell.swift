@@ -44,7 +44,7 @@ class StoreTableViewCell: UITableViewCell {
             else if snapshot.exists() {
                 //subtract cost from currentLeaves
                 currentLeaves = snapshot.value! as! Int
-                if snapshot.value as! Int - self.storeItem.cost > 0 {
+                if snapshot.value as! Int - self.storeItem.cost >= 0 {
                     self.ref.child("users/\(self.user.uid)/currentLeaves").setValue(snapshot.value as! Int - self.storeItem.cost)
                     let storeVC = self.delegate as! Leaves
                     DispatchQueue.main.async {
@@ -63,7 +63,7 @@ class StoreTableViewCell: UITableViewCell {
                 print("Error getting data \(error)")
             }
             else if snapshot.exists() {
-                if currentLeaves! - self.storeItem.cost > 0 {
+                if currentLeaves! - self.storeItem.cost >= 0 {
                 //add to firebase
                     self.ref.child("users/\(self.user.uid)/inventory/\(self.storeItem.key)").setValue(snapshot.value as! Int + 1)
                     //add to global inventory array
@@ -79,7 +79,7 @@ class StoreTableViewCell: UITableViewCell {
                 }
             }
             else {
-                if currentLeaves! - self.storeItem.cost > 0 {
+                if currentLeaves! - self.storeItem.cost >= 0 {
                     //add to firebase
                     self.ref.child("users/\(self.user.uid)/inventory/\(self.storeItem.key)").setValue(1)
                     //add to global inventory array
