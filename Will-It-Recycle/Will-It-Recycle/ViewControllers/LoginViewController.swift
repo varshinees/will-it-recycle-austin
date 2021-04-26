@@ -16,11 +16,16 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
             if newUser == true {
                 firstTimeUser = true
                 self.performSegue(withIdentifier: "WelcomeSegue", sender: nil)
-            } else {
+            } else if newUser == false {
+                print("segue")
                 self.performSegue(withIdentifier: "LoginSegue", sender: nil)
             }
         }
     }
+    
+    //var currentUser = Auth.auth().currentUser
+    
+    //var handle:AuthStateDidChangeListenerHandle!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,41 +39,61 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if Auth.auth().currentUser != nil {
-            return
+
+        let handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+            if user != nil {
+                return
+            } else {
+                // Do any additional setup after loading the view.
+                let authUI = FUIAuth.defaultAuthUI()
+                // You need to adopt a FUIAuthDelegate protocol to receive callback
+                authUI?.delegate = self
+                
+                let providers: [FUIAuthProvider] = [
+                    FUIEmailAuth(),
+                    FUIGoogleAuth()
+                ]
+                authUI?.providers = providers
+                
+                let authViewController = authUI!.authViewController()
+                //authViewController.navigationBar.set
+                authViewController.modalPresentationStyle = .fullScreen
+                
+                self.present(authViewController, animated: false, completion: nil)
+            }
         }
         
-        // Do any additional setup after loading the view.
-        let authUI = FUIAuth.defaultAuthUI()
-        // You need to adopt a FUIAuthDelegate protocol to receive callback
-        authUI?.delegate = self
         
-        let providers: [FUIAuthProvider] = [
-            FUIEmailAuth(),
-            FUIGoogleAuth()
-        ]
-        authUI?.providers = providers
-        
-        let authViewController = authUI!.authViewController()
-        //authViewController.navigationBar.set
-        authViewController.modalPresentationStyle = .fullScreen
-        
-        present(authViewController, animated: false, completion: nil)
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        newUser = nil
+//        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+//            if user != nil {
+//                self.currentUser = user
+//            } else {
+//                self.currentUser = nil
+//            }
+//        }
+//    }
+    
+//    override func viewWillDisappear(_ animated: Bool) {
+//        Auth.auth().removeStateDidChangeListener(handle!)
+//    }
     
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
       // handle user (`authDataResult.user`) and error as necessary
         if error == nil {
             let ref = Database.database().reference()
             
-            ref.child("users/\(Auth.auth().currentUser!.uid)/displayName").getData { (error, snapshot) in
+            ref.child("users/\(authDataResult!.user.uid)/displayName").getData { (error, snapshot) in
                 if let error = error {
                     print("Error getting data \(error)")
                 }
                 else if snapshot.exists() {
                     print("Got data \(snapshot.value!)")
                     // grab user's inventory items
-                    ref.child("users/\(Auth.auth().currentUser!.uid)/inventory").getData { (error, snapshot) in
+                    ref.child("users/\(authDataResult!.user.uid)/inventory").getData { (error, snapshot) in
                         if let error = error {
                             print("Error getting data \(error)")
                         }
@@ -96,7 +121,7 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
                         }
                     }
                     // grab user's active items
-                    ref.child("users/\(Auth.auth().currentUser!.uid)/activeItems").getData { (error, snapshot) in
+                    ref.child("users/\(authDataResult!.user.uid)/activeItems").getData { (error, snapshot) in
                         if let error = error {
                                  print("Error getting data \(error)")
                         }
@@ -127,9 +152,9 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
                     }
                 }
                 else {
-                    ref.child("users").child(Auth.auth().currentUser!.uid)
+                    ref.child("users").child(authDataResult!.user.uid)
                         .setValue([
-                            "displayName": Auth.auth().currentUser!.displayName!,
+                            "displayName": authDataResult!.user.displayName!,
                             "leaderboard": true,
                             "currentLeaves": 0,
                             "allTimeLeaves": 0,
@@ -138,7 +163,6 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
                         ])
                 }
             }
-            
             if authDataResult!.additionalUserInfo!.isNewUser {
                 newUser = true
             } else {
