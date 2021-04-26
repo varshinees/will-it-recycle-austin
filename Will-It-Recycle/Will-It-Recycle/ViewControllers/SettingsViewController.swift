@@ -16,13 +16,15 @@ var notifications = false
 var leaderboard = true
 
 var newUsername = ""
+var currentLeaves = 0
 
 //
 // A class which coordinates communication between the data
 // and view components of the Settings View Controller.
 //
 class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate {
-    @IBOutlet weak var statsLabel: UILabel!
+    @IBOutlet weak var nameLeavesLabel: UILabel!
+    @IBOutlet weak var leavesStatsLabel: UILabel!
     
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var changeUsername: UITextField!
@@ -67,7 +69,10 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
                     if user["avatar"] != nil {
                         self.avatarImage.image = UIImage(named: user["avatar"] as! String)
                     }
-                    self.statsLabel.text = user["displayName"] as! String + " | " + String(Int(user["currentLeaves"] as! Int)) + " Leaves"
+                    
+                    currentLeaves = Int(user["currentLeaves"] as! Int)
+                    
+                    self.nameLeavesLabel.text = user["displayName"] as! String + " | " + String(currentLeaves) + " Leaves"
                     
                     UNUserNotificationCenter.current().getNotificationSettings { (settings) in
 
@@ -246,23 +251,7 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
             ref.child("users/\(Auth.auth().currentUser!.uid)/displayName").setValue(changeUsername.text)
             newUsername = changeUsername.text!
             
-            ref.child("users/\(Auth.auth().currentUser!.uid)").getData { (error, snapshot) in
-                if let error = error {
-                    print("Error getting data \(error)")
-                }
-                else if snapshot.exists() {
-                    guard let user = snapshot.value as? [String: Any] else {
-                          return
-                        }
-
-                    DispatchQueue.main.async() {
-                        if user["avatar"] != nil {
-                            self.avatarImage.image = UIImage(named: user["avatar"] as! String)
-                        }
-                        self.statsLabel.text = newUsername + " | " + String(Int(user["currentLeaves"] as! Int)) + " Leaves"
-                    }
-                }
-            }
+            self.nameLeavesLabel.text = newUsername + " | " + String(currentLeaves) + " Leaves"
         }
         
         if (changeEmail.text != "") {
@@ -310,7 +299,7 @@ class SettingsViewController: UIViewController, UNUserNotificationCenterDelegate
         performSegue(withIdentifier: "mainSegueIdentifier", sender: nil)
     }
     
-    // code to enable tapping on the background to remove software keyboard
+    // Enable tapping on the background to remove software keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
