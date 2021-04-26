@@ -65,6 +65,7 @@ class WelcomeViewController: UIViewController {
         // segue to next VC
         if firstTimeUser {
             self.performSegue(withIdentifier: "dashboardSegueIdentifier", sender: nil)
+            firstTimeUser = false
             
         } else {
             self.dismiss(animated: true)
