@@ -87,7 +87,7 @@ class RemoveItemViewController: UIViewController, UITableViewDelegate, UITableVi
                     item.coordinates.remove(at: removeIndex)
                 }
             }
-            let mainVC = self.delegate as! activeListChanger
+            let mainVC = self.delegate as! localListChanger
             mainVC.changeActiveItemsList(activeList: activeItems)
             
             // remove item's coordinate from active list in firebase or remove altogether
@@ -113,6 +113,7 @@ class RemoveItemViewController: UIViewController, UITableViewDelegate, UITableVi
             
             removeIndex = -1
             index = 0;
+            var found = false
             for item in inventoryItems {
                 if item.item == selectedItem.item {
                     if item.count > 1 {
@@ -120,8 +121,13 @@ class RemoveItemViewController: UIViewController, UITableViewDelegate, UITableVi
                     } else {
                         removeIndex = index
                     }
+                    found = true
                 }
                 index += 1
+            }
+            if found == false {
+                let newItem = gameItem(key: selectedItem.key, item: selectedItem.item, count: 1, coordinates: [selectedCoordinate])
+                inventoryItems.append(newItem)
             }
             if removeIndex != -1 {
                 coordinatesOccupied.remove(at: removeIndex)
@@ -139,6 +145,8 @@ class RemoveItemViewController: UIViewController, UITableViewDelegate, UITableVi
                     self.ref.child("users/\(self.user.uid)/inventory").child(self.selectedItem.key).setValue(1)
                 }
             }
+            
+            mainVC.changeInventoryList(inventory: inventoryItems)
             
             // dismiss screen back to my land
             self.navigationController?.popViewController(animated: true)
