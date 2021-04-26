@@ -9,6 +9,8 @@ import UIKit
 import FirebaseUI
 import Firebase
 
+public var authCurrentUser:User?
+
 class LoginViewController: UIViewController, FUIAuthDelegate {
     
     var newUser:Bool? = nil {
@@ -42,6 +44,7 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
 
         let handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             if user != nil {
+                authCurrentUser = user
                 return
             } else {
                 // Do any additional setup after loading the view.
