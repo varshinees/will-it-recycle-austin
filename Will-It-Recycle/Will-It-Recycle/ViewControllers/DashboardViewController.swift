@@ -83,7 +83,7 @@ class DashboardViewController: UIViewController {
             var ref: DatabaseReference!
             ref = Database.database().reference()
              
-            let users = ref.child("users").queryOrdered(byChild: "allTimeLeaves").queryLimited(toLast: 5)
+            let users = ref.child("users").queryOrdered(byChild: "allTimeLeaves").queryLimited(toLast: 6)
 
             users.observe(.value, with: { (snapshot) in
               if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
