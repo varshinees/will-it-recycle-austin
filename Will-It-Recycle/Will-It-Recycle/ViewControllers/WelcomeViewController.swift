@@ -43,18 +43,16 @@ class WelcomeViewController: UIViewController {
         selectedButton.layer.cornerRadius = 50
         selectedButton.layer.borderWidth = 4
         selectedButton.layer.borderColor = UIColor.init(red: 252/256, green: 108/256, blue: 133/256, alpha: 1).cgColor
-        
     }
     
+    // A method which determines the avatar that was chosen by the user
     @IBAction func avatarPicked(_ sender: UIButton) {
         selectedButton.layer.borderColor = UIColor.clear.cgColor
         selectedButton = sender
         selectedButton.layer.cornerRadius = 50
         selectedButton.layer.borderWidth = 4
         selectedButton.layer.borderColor = UIColor.init(red: 252/256, green: 108/256, blue: 133/256, alpha: 1).cgColor
-        
     }
-    
     
     // A method which performs the appropriate segue when the button is pressed.
     @IBAction func buttonPressed(_ sender: Any) {

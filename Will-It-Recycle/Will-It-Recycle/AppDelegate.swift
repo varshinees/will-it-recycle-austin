@@ -43,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    // Schedule local notifications for the user
     func scheduleNotification() {
         let notification = UNMutableNotificationContent()
         notification.title = "Invitation"
