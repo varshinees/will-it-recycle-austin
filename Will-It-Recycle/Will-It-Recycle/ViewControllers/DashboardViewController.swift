@@ -48,7 +48,6 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         
         populateDashboard()
-        
         popButton.pop()
     }
     
@@ -57,25 +56,23 @@ class DashboardViewController: UIViewController {
         super.viewWillAppear(false)
         
         populateDashboard()
-        
         popButton.pop()
     }
     
+    // A method that pulsates the leaf button when it is pressed
     @IBAction func touchLeaf(_ sender: Any) {
         leafButton.pulsate()
     }
     
+    // A method that pulsates the tree button when it is pressed
     @IBAction func touchTree(_ sender: Any) {
         treeButton.pulsate()
     }
     
+    // A method that pulsates the earth button when it is pressed
     @IBAction func touchEarth(_ sender: Any) {
         earthButton.pulsate()
     }
-    
-    @IBAction func touchPop(_ sender: Any) {
-    }
-    
     
     // A method which populates the Dashboard according to the current user's specifications.
     func populateDashboard() {
@@ -156,6 +153,7 @@ class DashboardViewController: UIViewController {
     }
 }
 
+// An extension to UIButton that adds the pulsate and pop animations
 extension UIButton {
     func pulsate() {
         let pulse = CASpringAnimation(keyPath: "transform.scale")
