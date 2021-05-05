@@ -74,15 +74,15 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
       // handle user (`authDataResult.user`) and error as necessary
         if error == nil {
             let ref = Database.database().reference()
-            
-            
+            inventoryItems = [gameItem]()
+            activeItems = [gameItem]()
+            coordinatesOccupied = [String]()
             
             ref.child("users/\(authDataResult!.user.uid)/displayName").getData { (error, snapshot) in
                 if let error = error {
                     print("Error getting data \(error)")
                 }
                 else if snapshot.exists() {
-                    
                     
                     print("Got data \(snapshot.value!)")
                     // grab user's inventory items
@@ -91,8 +91,6 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
                             print("Error getting data \(error)")
                         }
                         else if snapshot.exists() {
-                            inventoryItems = []
-                            
                             
                             let inventoryData = snapshot.value as! [String : AnyObject]
                             for (key, value) in inventoryData {
@@ -122,8 +120,6 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
                                  print("Error getting data \(error)")
                         }
                         else if snapshot.exists() {
-                            activeItems = []
-                            coordinatesOccupied = []
                             
                             let activeItemsData = snapshot.value as! [String: [String]]
                             for (key, value) in activeItemsData {
