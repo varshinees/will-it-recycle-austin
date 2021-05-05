@@ -69,31 +69,21 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
         
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        newUser = nil
-//        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-//            if user != nil {
-//                self.currentUser = user
-//            } else {
-//                self.currentUser = nil
-//            }
-//        }
-//    }
-    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        Auth.auth().removeStateDidChangeListener(handle!)
-//    }
     
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
       // handle user (`authDataResult.user`) and error as necessary
         if error == nil {
             let ref = Database.database().reference()
             
+            
+            
             ref.child("users/\(authDataResult!.user.uid)/displayName").getData { (error, snapshot) in
                 if let error = error {
                     print("Error getting data \(error)")
                 }
                 else if snapshot.exists() {
+                    
+                    
                     print("Got data \(snapshot.value!)")
                     // grab user's inventory items
                     ref.child("users/\(authDataResult!.user.uid)/inventory").getData { (error, snapshot) in
@@ -101,6 +91,9 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
                             print("Error getting data \(error)")
                         }
                         else if snapshot.exists() {
+                            inventoryItems = []
+                            
+                            
                             let inventoryData = snapshot.value as! [String : AnyObject]
                             for (key, value) in inventoryData {
                                 var itemName = String()
@@ -129,6 +122,9 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
                                  print("Error getting data \(error)")
                         }
                         else if snapshot.exists() {
+                            activeItems = []
+                            coordinatesOccupied = []
+                            
                             let activeItemsData = snapshot.value as! [String: [String]]
                             for (key, value) in activeItemsData {
                                 var itemName = String()
