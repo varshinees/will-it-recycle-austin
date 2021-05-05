@@ -111,15 +111,12 @@ class RemoveItemViewController: UIViewController, UITableViewDelegate, UITableVi
                 }
             }
             
-            removeIndex = -1
             index = 0;
             var found = false
             for item in inventoryItems {
                 if item.item == selectedItem.item {
                     if item.count > 1 {
                         item.incrementCount()
-                    } else {
-                        removeIndex = index
                     }
                     found = true
                 }
@@ -129,9 +126,7 @@ class RemoveItemViewController: UIViewController, UITableViewDelegate, UITableVi
                 let newItem = gameItem(key: selectedItem.key, item: selectedItem.item, count: 1, coordinates: [selectedCoordinate])
                 inventoryItems.append(newItem)
             }
-            if removeIndex != -1 {
-                coordinatesOccupied.remove(at: removeIndex)
-            }
+
             // add inventory item count in firebase or create new item
             self.ref.child("users/\(user.uid)/inventory/\(selectedItem.key)").getData { (error, snapshot) in
                 if let error = error {
