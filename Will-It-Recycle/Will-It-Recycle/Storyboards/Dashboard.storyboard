@@ -88,7 +88,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="touchPop:" destination="k8s-SI-URi" eventType="touchUpInside" id="7L2-QI-38B"/>
                                             <segue destination="OIa-8T-CG4" kind="show" id="WjO-Tw-SwB"/>
                                         </connections>
                                     </button>
